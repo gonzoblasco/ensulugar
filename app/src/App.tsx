@@ -680,23 +680,17 @@ function RecetasView({
 
       {/* Modal de Lección IA */}
       {leccionModal && (
-        <div 
-          className="modal-overlay" 
-          onClick={(e) => {
-            if (e.target === e.currentTarget) {
-              setLeccionModal(null);
-            }
-          }}
-        >
-          <div className="modal-content">
+        <div className="modal-overlay">
+          <div className="modal-content" role="dialog" aria-modal="true">
             <button 
               className="modal-close" 
-              onClick={() => setLeccionModal(null)} 
+              onClick={() => setLeccionModal(null)}
               aria-label="Cerrar modal"
               type="button"
             >
               ✕
             </button>
+            <div className="modal-backdrop" onClick={() => setLeccionModal(null)} />
             {leccionModal.loading && (
               <div className="loading-inline" style={{ marginBottom: '1rem' }}>Generando lección…</div>
             )}
