@@ -88,16 +88,28 @@ export default function App() {
 
   function completarReceta(r: Receta) {
     if (!perfil) return;
-    const tecnicasDominadas = new Set(perfil.tecnicasDominadas);
-    for (const t of r.tecnicas) tecnicasDominadas.add(t);
     const recetasCompletadas = new Set(perfil.recetasCompletadas);
-    recetasCompletadas.add(r.id);
-    const nuevo: PerfilUsuario = {
-      ...perfil,
-      tecnicasDominadas: Array.from(tecnicasDominadas),
-      recetasCompletadas: Array.from(recetasCompletadas),
-    };
-    actualizarPerfil(nuevo);
+    
+    if (recetasCompletadas.has(r.id)) {
+      // Desmarcar
+      recetasCompletadas.delete(r.id);
+      const nuevo: PerfilUsuario = {
+        ...perfil,
+        recetasCompletadas: Array.from(recetasCompletadas),
+      };
+      actualizarPerfil(nuevo);
+    } else {
+      // Marcar como completada
+      const tecnicasDominadas = new Set(perfil.tecnicasDominadas);
+      for (const t of r.tecnicas) tecnicasDominadas.add(t);
+      recetasCompletadas.add(r.id);
+      const nuevo: PerfilUsuario = {
+        ...perfil,
+        tecnicasDominadas: Array.from(tecnicasDominadas),
+        recetasCompletadas: Array.from(recetasCompletadas),
+      };
+      actualizarPerfil(nuevo);
+    }
   }
 
   function reiniciarProgreso() {
@@ -467,9 +479,8 @@ function RecetasView({
                         "btn-complete" + (completada ? " completed" : "")
                       }
                       onClick={() => completarReceta(r)}
-                      disabled={completada}
                     >
-                      {completada ? "Completada" : "Marcar como completada"}
+                      {completada ? "✓ Completada (desmarcar)" : "Marcar como completada"}
                     </button>
                   </div>
 
