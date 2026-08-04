@@ -56,7 +56,7 @@ export default function App() {
   const [tecnicasSeleccionadas, setTecnicasSeleccionadas] = useState<Set<string>>(new Set());
   const [busqueda, setBusqueda] = useState<string>("");
   const [expandida, setExpandida] = useState<number | null>(null);
-  const [leccionModal, setLeccionModal] = useState<LeccionState | null>(null);
+  const [leccionPagina, setLeccionPagina] = useState<LeccionState | null>(null);
 
   useEffect(() => {
     async function cargar() {
@@ -160,7 +160,7 @@ export default function App() {
   }
 
   async function generarLeccionParaReceta(receta: Receta) {
-    setLeccionModal({
+    setLeccionPagina({
       recetaId: receta.id,
       loading: true,
       contenido: null,
@@ -176,7 +176,7 @@ export default function App() {
       });
       const data = await res.json();
       if (!res.ok) throw new Error(data.error ?? data.detail ?? `HTTP ${res.status}`);
-      setLeccionModal({
+      setLeccionPagina({
         recetaId: receta.id,
         loading: false,
         contenido: data.leccion.contenido,
@@ -187,7 +187,7 @@ export default function App() {
         fueCacheada: data.fueCacheada,
       });
     } catch (err) {
-      setLeccionModal({
+      setLeccionPagina({
         recetaId: receta.id,
         loading: false,
         contenido: null,
@@ -221,6 +221,19 @@ export default function App() {
         <code>npm run build:content</code>.
       </div>
     );
+
+  // Si hay una lección activa, mostrar la página de lección
+  if (leccionPagina) {
+    return (
+      <div id="root-inner">
+        <LeccionPage
+          leccion={leccionPagina}
+          onVolver={() => setLeccionPagina(null)}
+          renderLeccionMarkdown={renderLeccionMarkdown}
+        />
+      </div>
+    );
+  }
 
   const perfilActivo = perfil ?? defaultPerfil();
   const progresoTecnicas = perfilActivo.tecnicasDominadas.length;
@@ -280,7 +293,7 @@ export default function App() {
         completarReceta={completarReceta}
         expandida={expandida}
         setExpandida={setExpandida}
-        leccionModal={leccionModal}
+        leccionPagina={leccionPagina}
         generarLeccionParaReceta={generarLeccionParaReceta}
         tecnicasOrdenadas={tecnicasOrdenadas}
         renderLeccionMarkdown={renderLeccionMarkdown}
@@ -478,7 +491,7 @@ interface RecetasViewProps {
   completarReceta: (r: Receta) => void;
   expandida: number | null;
   setExpandida: (id: number | null) => void;
-  leccionModal: LeccionState | null;
+  leccionPagina: LeccionState | null;
   generarLeccionParaReceta: (r: Receta) => void;
   tecnicasOrdenadas: string[];
   renderLeccionMarkdown: (texto: string) => { __html: string };
@@ -495,7 +508,7 @@ function RecetasView({
   completarReceta,
   expandida,
   setExpandida,
-  leccionModal,
+  leccionPagina,
   generarLeccionParaReceta,
   tecnicasOrdenadas,
   renderLeccionMarkdown,
@@ -627,9 +640,9 @@ function RecetasView({
                     <button
                       className="btn-lesson"
                       onClick={() => generarLeccionParaReceta(r)}
-                      disabled={leccionModal?.recetaId === r.id && leccionModal?.loading}
+                      disabled={leccionPagina?.recetaId === r.id && leccionPagina?.loading}
                     >
-                      {leccionModal?.recetaId === r.id && leccionModal?.loading
+                      {leccionPagina?.recetaId === r.id && leccionPagina?.loading
                         ? "Generando lección…"
                         : "Generar lección con IA"}
                     </button>
@@ -677,73 +690,84 @@ function RecetasView({
           </div>
         )}
       </section>
+    </div>
+  );
+}
 
-      {/* Modal de Lección IA */}
-      {leccionModal && (
-        <div 
-          className="modal-overlay" 
-          onClick={(e) => {
-            console.log('OVERLAY CLICK:', e.target, e.currentTarget);
-            if (e.target === e.currentTarget) {
-              console.log('Cerrando desde overlay');
-              setLeccionModal(null);
-            }
-          }}
+interface LeccionPageProps {
+  leccion: LeccionState;
+  onVolver: () => void;
+  renderLeccionMarkdown: (texto: string) => { __html: string };
+}
+
+function LeccionPage({ leccion, onVolver, renderLeccionMarkdown }: LeccionPageProps) {
+  return (
+    <div className="leccion-page">
+      <div className="leccion-header">
+        <button 
+          className="btn-back"
+          onClick={onVolver}
+          type="button"
         >
-          <div className="modal-content" role="dialog" aria-modal="true">
-            <button 
-              className="modal-close" 
-              onClick={(e) => {
-                console.log('BOTON X CLICK!', e);
-                e.stopPropagation();
-                console.log('Cerrando desde X');
-                setLeccionModal(null);
-              }}
-              aria-label="Cerrar modal"
-              type="button"
-            >
-              ✕
-            </button>
-            {leccionModal.loading && (
-              <div className="loading-inline" style={{ marginBottom: '1rem' }}>Generando lección…</div>
-            )}
-            {leccionModal.error && (
-              <div className="lesson-error">{leccionModal.error}</div>
-            )}
-            {leccionModal.contenido && (
-              <div
-                className="lesson-content markdown-body"
-                dangerouslySetInnerHTML={renderLeccionMarkdown(leccionModal.contenido)}
-              />
-            )}
-            
-            {leccionModal.evaluacion && !leccionModal.loading && (
-              <div className="quiz-section">
-                <h4>📝 Ponete a prueba</h4>
-                {leccionModal.evaluacion.preguntas.map((q, idx) => (
-                  <QuizQuestion key={idx} question={q} />
-                ))}
+          ← Volver a recetas
+        </button>
+        {leccion.fueCacheada && (
+          <span className="badge-cached" title="Lección cacheada">⚡ Cacheado</span>
+        )}
+      </div>
+      
+      {leccion.loading && (
+        <div className="leccion-loading">
+          <div className="loading-spinner"></div>
+          <p>Generando lección personalizada…</p>
+        </div>
+      )}
+      
+      {leccion.error && (
+        <div className="lesson-error">{leccion.error}</div>
+      )}
+      
+      {leccion.contenido && (
+        <div
+          className="lesson-content markdown-body"
+          dangerouslySetInnerHTML={renderLeccionMarkdown(leccion.contenido)}
+        />
+      )}
+      
+      {leccion.evaluacion && !leccion.loading && (
+        <div className="quiz-section">
+          <h4>📝 Ponete a prueba</h4>
+          {leccion.evaluacion.preguntas.map((q, idx) => (
+            <QuizQuestion key={idx} question={q} />
+          ))}
+        </div>
+      )}
+      
+      {leccion.variaciones && !leccion.loading && (
+        <div className="variations-section">
+          <h4>🔀 Variaciones para practicar</h4>
+          <div className="variations-grid">
+            {leccion.variaciones.variaciones.map((v, idx) => (
+              <div key={idx} className="variation-card">
+                <div className="variation-name">{v.nombre}</div>
+                <div className="variation-change">{v.cambio}</div>
+                <div className="variation-challenge">{v.desafio}</div>
+                <div className="variation-level">Nivel {v.nivel} {estrellas(v.nivel)}</div>
               </div>
-            )}
-            
-            {leccionModal.variaciones && !leccionModal.loading && (
-              <div className="variations-section">
-                <h4>🔀 Variaciones para practicar</h4>
-                <div className="variations-grid">
-                  {leccionModal.variaciones.variaciones.map((v, idx) => (
-                    <div key={idx} className="variation-card">
-                      <div className="variation-name">{v.nombre}</div>
-                      <div className="variation-change">{v.cambio}</div>
-                      <div className="variation-challenge">{v.desafio}</div>
-                      <div className="variation-level">Nivel {v.nivel} {estrellas(v.nivel)}</div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            )}
+            ))}
           </div>
         </div>
       )}
+      
+      <div className="leccion-footer">
+        <button 
+          className="btn-back"
+          onClick={onVolver}
+          type="button"
+        >
+          ← Volver a recetas
+        </button>
+      </div>
     </div>
   );
 }
