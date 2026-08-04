@@ -126,13 +126,13 @@ export default function App() {
     return recetas.filter((r) => {
       const matchTecnica =
         tecnicasArray.length === 0 ||
-        tecnicasArray.some((t) => r.tecnicas.includes(t));
+        tecnicasArray.every((t) => r.tecnicas.includes(t));
       const matchBusqueda =
         q === "" ||
         normalizar(r.titulo).includes(q) ||
         normalizar(r.categoria).includes(q) ||
         r.tecnicas.some((t) => normalizar(t).includes(q));
-      const matchNivel = r.dificultad <= nivelObjetivo;
+      const matchNivel = nivelObjetivo === 0 || r.dificultad === nivelObjetivo;
       return matchTecnica && matchBusqueda && matchNivel;
     });
   }, [recetas, tecnicasSeleccionadas, busqueda, nivelObjetivo]);
@@ -533,6 +533,7 @@ function RecetasView({
             value={nivelObjetivo}
             onChange={(e) => setNivelObjetivo(Number(e.target.value) as Dificultad)}
           >
+            <option value={0}>Todas</option>
             {[1, 2, 3, 4, 5].map((n) => (
               <option key={n} value={n}>
                 Nivel {n} {estrellas(n)}

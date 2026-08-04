@@ -577,7 +577,7 @@ button {
   gap: 0.5rem;
   align-items: center;
   margin-bottom: 1rem;
-  padding: 0.75rem 1rem;
+  padding: 0.5rem 0.75rem;
   background: #fff;
   border: 1px solid #e7e5e4;
   border-radius: 0.75rem;
@@ -588,42 +588,44 @@ button {
 }
 
 .search-nivel {
-  flex: 0 0 120px;
+  flex: 0 0 100px;
 }
 
 .search-select {
   width: 100%;
-  padding: 0.5rem 0.6rem;
+  padding: 0.4rem 0.5rem;
   border: 2px solid #d6d3d1;
   border-radius: 0.5rem;
   background: #fff;
   font: inherit;
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   color: #1c1917;
   cursor: pointer;
+  height: 34px;
 }
 
 .search-texto {
-  flex: 1 1 180px;
-  min-width: 140px;
+  flex: 1 1 140px;
+  min-width: 100px;
 }
 
 .search-tecnica {
-  flex: 0 0 160px;
+  flex: 0 0 130px;
   position: relative;
 }
 
 .search-input {
   width: 100%;
-  padding: 0.5rem 0.6rem;
+  padding: 0.4rem 0.5rem;
   border: 2px solid #d6d3d1;
   border-radius: 0.5rem;
   background: #fff;
   font: inherit;
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   color: #1c1917;
   box-sizing: border-box;
   transition: border-color 0.2s ease;
+  height: 34px;
 }
 
 .search-input:focus {
@@ -643,14 +645,14 @@ button {
 .search-tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.35rem;
+  gap: 0.3rem;
   align-items: center;
   flex: 1 1 100%;
   margin-top: 0.25rem;
 }
 
 .search-clear {
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   white-space: nowrap;
 }
 
