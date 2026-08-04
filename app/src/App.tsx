@@ -329,7 +329,8 @@ export default function App() {
             No hay recetas que coincidan. Probá con otros filtros.
           </p>
         ) : (
-          recetasFiltradas.map((r) => {
+          <div className="recipe-grid">
+            {recetasFiltradas.map((r) => {
             const completada = perfilActivo.recetasCompletadas.includes(r.id);
             return (
               <article
@@ -448,7 +449,8 @@ export default function App() {
                 )}
               </article>
             );
-          })
+          })}
+          </div>
         )}
       </section>
     </div>
