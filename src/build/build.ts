@@ -8,7 +8,7 @@
  *
  * Uso: npm run build:content
  */
-import { mkdirSync, writeFileSync } from "node:fs";
+import { copyFileSync, mkdirSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import Database from "better-sqlite3";
@@ -22,6 +22,7 @@ const SRC_DIR = join(ROOT, "fichas");
 const OUT_DIR = join(ROOT, "dist");
 const DB_PATH = join(OUT_DIR, "ensulugar.db");
 const JSON_PATH = join(OUT_DIR, "ensulugar.json");
+const PUBLIC_JSON_PATH = join(ROOT, "app", "public", "ensulugar.json");
 
 function createSchema(db: Database.Database) {
   db.exec(`
@@ -119,6 +120,11 @@ async function main() {
   // JSON
   writeFileSync(JSON_PATH, JSON.stringify({ recetas }, null, 2));
   console.log(`[build] JSON generado: ${JSON_PATH}`);
+
+  // Copia para el frontend
+  mkdirSync(join(ROOT, "app", "public"), { recursive: true });
+  copyFileSync(JSON_PATH, PUBLIC_JSON_PATH);
+  console.log(`[build] JSON copiado para la app: ${PUBLIC_JSON_PATH}`);
 }
 
 main().catch((err) => {
