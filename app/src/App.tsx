@@ -56,7 +56,7 @@ export default function App() {
   const [tecnicasSeleccionadas, setTecnicasSeleccionadas] = useState<Set<string>>(new Set());
   const [busqueda, setBusqueda] = useState<string>("");
   const [expandida, setExpandida] = useState<number | null>(null);
-  const [leccion, setLeccion] = useState<LeccionState | null>(null);
+  const [leccionModal, setLeccionModal] = useState<LeccionState | null>(null);
 
   useEffect(() => {
     async function cargar() {
@@ -160,7 +160,7 @@ export default function App() {
   }
 
   async function generarLeccionParaReceta(receta: Receta) {
-    setLeccion({
+    setLeccionModal({
       recetaId: receta.id,
       loading: true,
       contenido: null,
@@ -176,7 +176,7 @@ export default function App() {
       });
       const data = await res.json();
       if (!res.ok) throw new Error(data.error ?? data.detail ?? `HTTP ${res.status}`);
-      setLeccion({
+      setLeccionModal({
         recetaId: receta.id,
         loading: false,
         contenido: data.leccion.contenido,
@@ -187,7 +187,7 @@ export default function App() {
         fueCacheada: data.fueCacheada,
       });
     } catch (err) {
-      setLeccion({
+      setLeccionModal({
         recetaId: receta.id,
         loading: false,
         contenido: null,
@@ -671,64 +671,68 @@ function RecetasView({
                       </div>
                     </>
                   )}
-
-                  {leccion?.recetaId === r.id && (
-                    <div className="lesson-panel">
-                      <div className="lesson-header">
-                        <h3>
-                          Lección: {leccion.tecnica}
-                          {leccion.fueCacheada && (
-                            <span className="badge-cached" title="Lección cacheada">⚡</span>
-                          )}
-                        </h3>
-                        {leccion.loading && (
-                          <span className="loading-inline">Generando…</span>
-                        )}
-                      </div>
-                      {leccion.error && (
-                        <div className="lesson-error">{leccion.error}</div>
-                      )}
-                      {leccion.contenido && (
-                        <div
-                          className="lesson-content markdown-body"
-                          dangerouslySetInnerHTML={renderLeccionMarkdown(
-                            leccion.contenido,
-                          )}
-                        />
-                      )}
-                      
-                      {leccion.evaluacion && !leccion.loading && (
-                        <div className="quiz-section">
-                          <h4>📝 Ponete a prueba</h4>
-                          {leccion.evaluacion.preguntas.map((q, idx) => (
-                            <QuizQuestion key={idx} question={q} />
-                          ))}
-                        </div>
-                      )}
-                      
-                      {leccion.variaciones && !leccion.loading && (
-                        <div className="variations-section">
-                          <h4>🔀 Variaciones para practicar</h4>
-                          <div className="variations-grid">
-                            {leccion.variaciones.variaciones.map((v, idx) => (
-                              <div key={idx} className="variation-card">
-                                <div className="variation-name">{v.nombre}</div>
-                                <div className="variation-change">{v.cambio}</div>
-                                <div className="variation-challenge">{v.desafio}</div>
-                                <div className="variation-level">Nivel {v.nivel} {estrellas(v.nivel)}</div>
-                              </div>
-                            ))}
-                          </div>
-                        </div>
-                      )}
-                    </div>
-                  )}
                 </article>
               );
             })}
           </div>
         )}
       </section>
+
+      {/* Modal de Lección IA */}
+      {leccionModal && (
+        <div className="modal-overlay" onClick={() => setLeccionModal(null)}>
+          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+            <button className="modal-close" onClick={() => setLeccionModal(null)} aria-label="Cerrar modal">
+              ✕
+            </button>
+            <div className="modal-header">
+              <h2>
+                Lección: {leccionModal.tecnica}
+                {leccionModal.fueCacheada && (
+                  <span className="badge-cached" title="Lección cacheada">⚡</span>
+                )}
+              </h2>
+              {leccionModal.loading && (
+                <span className="loading-inline">Generando…</span>
+              )}
+            </div>
+            {leccionModal.error && (
+              <div className="lesson-error">{leccionModal.error}</div>
+            )}
+            {leccionModal.contenido && (
+              <div
+                className="lesson-content markdown-body"
+                dangerouslySetInnerHTML={renderLeccionMarkdown(leccionModal.contenido)}
+              />
+            )}
+            
+            {leccionModal.evaluacion && !leccionModal.loading && (
+              <div className="quiz-section">
+                <h4>📝 Ponete a prueba</h4>
+                {leccionModal.evaluacion.preguntas.map((q, idx) => (
+                  <QuizQuestion key={idx} question={q} />
+                ))}
+              </div>
+            )}
+            
+            {leccionModal.variaciones && !leccionModal.loading && (
+              <div className="variations-section">
+                <h4>🔀 Variaciones para practicar</h4>
+                <div className="variations-grid">
+                  {leccionModal.variaciones.variaciones.map((v, idx) => (
+                    <div key={idx} className="variation-card">
+                      <div className="variation-name">{v.nombre}</div>
+                      <div className="variation-change">{v.cambio}</div>
+                      <div className="variation-challenge">{v.desafio}</div>
+                      <div className="variation-level">Nivel {v.nivel} {estrellas(v.nivel)}</div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
+        </div>
+      )}
     </div>
   );
 }
