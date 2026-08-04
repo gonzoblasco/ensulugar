@@ -246,7 +246,7 @@ export default function App() {
   if (loading) return <div className="loading">Cargando recetas…</div>;
   if (error)
     return (
-      <div className="error">
+      <div className="error" role="alert">
         Error cargando recetas: {error}. Asegurate de tener el server corriendo{" "}
         <code>npm run dev:server</code> y de haber corrido{" "}
         <code>npm run build:content</code>.
@@ -269,7 +269,7 @@ export default function App() {
   const perfilActivo = perfil ?? defaultPerfil();
 
   return (
-    <>
+    <main id="main-content">
       <RecetasView
         recetasFiltradas={recetasFiltradas}
         tecnicasSeleccionadas={tecnicasSeleccionadas}
@@ -291,24 +291,50 @@ export default function App() {
 
       {/* Feedback Modal */}
       {feedbackModal && (
-        <div className="feedback-overlay" onClick={() => setFeedbackModal(null)}>
+        <div 
+          className="feedback-overlay" 
+          onClick={() => setFeedbackModal(null)}
+          onKeyDown={(e) => {
+            if (e.key === 'Escape') setFeedbackModal(null);
+          }}
+          role="dialog"
+          aria-modal="true"
+          aria-label="Feedback de receta"
+        >
           <div className="feedback-modal" onClick={(e) => e.stopPropagation()}>
-            <h3>¿Cómo te fue con esta receta?</h3>
-            <div className="feedback-options">
-              <button className="feedback-btn excelente" onClick={() => enviarFeedback("excelente")}>
-                <span className="feedback-icon">🤩</span>
+            <h3 id="feedback-title">¿Cómo te fue con esta receta?</h3>
+            <div className="feedback-options" role="group" aria-labelledby="feedback-title">
+              <button 
+                className="feedback-btn excelente" 
+                onClick={() => enviarFeedback("excelente")}
+                aria-label="Marcar como excelente"
+                ref={(el) => { if (el && feedbackModal) setTimeout(() => el.focus(), 50); }}
+              >
+                <span className="feedback-icon" role="img" aria-label="Excelente">🤩</span>
                 <span>Excelente</span>
               </button>
-              <button className="feedback-btn bien" onClick={() => enviarFeedback("bien")}>
-                <span className="feedback-icon">😊</span>
+              <button 
+                className="feedback-btn bien" 
+                onClick={() => enviarFeedback("bien")}
+                aria-label="Marcar como bien"
+              >
+                <span className="feedback-icon" role="img" aria-label="Bien">😊</span>
                 <span>Bien</span>
               </button>
-              <button className="feedback-btn regular" onClick={() => enviarFeedback("regular")}>
-                <span className="feedback-icon">😐</span>
+              <button 
+                className="feedback-btn regular" 
+                onClick={() => enviarFeedback("regular")}
+                aria-label="Marcar como regular"
+              >
+                <span className="feedback-icon" role="img" aria-label="Regular">😐</span>
                 <span>Regular</span>
               </button>
-              <button className="feedback-btn mal" onClick={() => enviarFeedback("mal")}>
-                <span className="feedback-icon">😣</span>
+              <button 
+                className="feedback-btn mal" 
+                onClick={() => enviarFeedback("mal")}
+                aria-label="Marcar como mal"
+              >
+                <span className="feedback-icon" role="img" aria-label="Mal">😣</span>
                 <span>Mal</span>
               </button>
             </div>
@@ -318,7 +344,7 @@ export default function App() {
           </div>
         </div>
       )}
-    </>
+    </main>
   );
 }
 
@@ -605,7 +631,7 @@ function LeccionPage({ leccion, onVolver, renderLeccionMarkdown }: LeccionPagePr
       )}
       
       {leccion.error && (
-        <div className="lesson-error">{leccion.error}</div>
+        <div className="lesson-error" role="alert">{leccion.error}</div>
       )}
       
       {leccion.contenido && (
