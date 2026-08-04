@@ -487,7 +487,7 @@ button {
   align-items: center;
   justify-content: center;
   z-index: 1000;
-  padding: 1.5rem;
+  padding: 3rem;
   overflow-y: auto;
   pointer-events: none;
 }
@@ -501,9 +501,9 @@ button {
   border-radius: 1rem;
   max-width: 800px;
   width: 100%;
-  max-height: 90vh;
+  max-height: calc(100vh - 6rem);
   overflow-y: auto;
-  padding: 2rem 3.5rem 2rem 2rem;
+  padding: 2.5rem 4rem 2.5rem 2.5rem;
   position: relative;
   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
   animation: modalSlideIn 0.3s ease-out;
@@ -567,13 +567,13 @@ button {
 }
 
 @media (max-width: 768px) {
-  .modal-content {
-    padding: 1.5rem 3rem 1.5rem 1.5rem;
-    max-height: 95vh;
+  .modal-overlay {
+    padding: 1.5rem;
   }
   
-  .modal-header h2 {
-    font-size: 1.25rem;
+  .modal-content {
+    padding: 1.5rem 3rem 1.5rem 1.5rem;
+    max-height: calc(100vh - 3rem);
   }
 }
 
