@@ -797,7 +797,7 @@ button {
   padding: 0;
   border: none;
   background: transparent;
-  color: #0d9488;
+  color: #115e59;
   font-size: 0.875rem;
   text-decoration: underline;
   font-weight: 600;
@@ -1006,8 +1006,8 @@ button {
 
 .btn-lesson {
   padding: 0.5rem 0.75rem;
-  background: #0d9488;
-  border: 2px solid #0f766e;
+  background: #115e59;
+  border: 2px solid #064e3b;
   border-radius: 0.5rem;
   color: #fff;
   font-weight: 600;
@@ -1016,8 +1016,8 @@ button {
 }
 
 .btn-lesson:hover:not(:disabled) {
-  background: #0f766e;
-  border-color: #115e59;
+  background: #064e3b;
+  border-color: #022c22;
   transform: translateY(-1px);
 }
 
