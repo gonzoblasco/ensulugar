@@ -12,17 +12,18 @@ body {
 }
 
 #root {
-  max-width: 900px;
+  max-width: 960px;
   margin: 0 auto;
-  padding: 1.5rem;
+  padding: 1.25rem;
 }
 
 button {
   font: inherit;
+  cursor: pointer;
 }
 
 .app-header {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.25rem;
 }
 
 .app-header h1 {
@@ -40,7 +41,7 @@ button {
   flex-wrap: wrap;
   gap: 1rem;
   align-items: end;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
   padding: 1rem;
   background: #fff;
   border: 1px solid #e7e5e4;
@@ -66,6 +67,137 @@ button {
   border-radius: 0.5rem;
   background: #fff;
   font: inherit;
+  min-width: 220px;
+}
+
+.filter-wide {
+  flex: 1;
+  min-width: 260px;
+}
+
+.filter-wide input {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.tecnica-filter {
+  background: #fff;
+  border: 1px solid #e7e5e4;
+  border-radius: 0.75rem;
+  padding: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.tecnica-filter-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+  color: #44403c;
+}
+
+.tecnica-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tecnica-chip {
+  padding: 0.4rem 0.75rem;
+  border: 1px solid #d6d3d1;
+  border-radius: 9999px;
+  background: #fff;
+  font-size: 0.875rem;
+  color: #44403c;
+}
+
+.tecnica-chip:hover {
+  background: #f5f5f4;
+}
+
+.tecnica-chip.selected {
+  background: #ecfdf5;
+  border-color: #10b981;
+  color: #065f46;
+  font-weight: 600;
+}
+
+.btn-link {
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: #0d9488;
+  font-size: 0.875rem;
+  text-decoration: underline;
+}
+
+.path-section {
+  background: #fff;
+  border: 1px solid #e7e5e4;
+  border-radius: 0.75rem;
+  padding: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.path-section h3 {
+  margin: 0 0 0.75rem;
+}
+
+.count {
+  font-weight: 400;
+  color: #78716c;
+  font-size: 0.9em;
+}
+
+.path-list-numbered {
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+  counter-reset: paso;
+}
+
+.path-item-numbered {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.5rem 0.75rem;
+  margin-bottom: 0.35rem;
+  background: #f5f5f4;
+  border: 1px solid #e7e5e4;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.path-item-numbered:hover {
+  background: #e7e5e4;
+}
+
+.path-item-numbered::before {
+  counter-increment: paso;
+  content: counter(paso);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  background: #0d9488;
+  color: #fff;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.path-name {
+  flex: 1;
+  font-weight: 500;
+}
+
+.path-level {
+  color: #78716c;
+  font-size: 0.875rem;
 }
 
 .recipe-card {
@@ -90,6 +222,11 @@ button {
   margin-bottom: 0.75rem;
 }
 
+.recipe-category {
+  font-weight: 600;
+  color: #0d9488;
+}
+
 .recipe-tags {
   display: flex;
   flex-wrap: wrap;
@@ -98,26 +235,31 @@ button {
 }
 
 .tag {
-  display: inline-block;
-  padding: 0.25rem 0.5rem;
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.6rem;
   border-radius: 9999px;
+  border: 1px solid #d6d3d1;
   background: #f5f5f4;
-  border: 1px solid #e7e5e4;
-  font-size: 0.75rem;
+  font-size: 0.8rem;
   font-weight: 500;
   color: #57534e;
 }
 
-.tag.technique {
+.tecnica-tag {
   background: #ecfdf5;
   border-color: #a7f3d0;
   color: #065f46;
 }
 
-.tag.category {
-  background: #eff6ff;
-  border-color: #bfdbfe;
-  color: #1e40af;
+.tecnica-tag:hover {
+  background: #d1fae5;
+}
+
+.tecnica-tag.selected {
+  background: #10b981;
+  border-color: #10b981;
+  color: #fff;
 }
 
 .recipe-description {
@@ -125,8 +267,21 @@ button {
   color: #44403c;
 }
 
-.ingredients {
-  margin: 0.75rem 0;
+.btn-toggle {
+  padding: 0.5rem 0.75rem;
+  background: #fff;
+  border: 1px solid #d6d3d1;
+  border-radius: 0.5rem;
+  color: #44403c;
+}
+
+.btn-toggle:hover {
+  background: #f5f5f4;
+}
+
+.ingredients,
+.steps {
+  margin-top: 1rem;
 }
 
 .ingredients h3,
@@ -157,39 +312,9 @@ button {
   font-style: italic;
 }
 
-.path-section {
-  background: #fff;
-  border: 1px solid #e7e5e4;
-  border-radius: 0.75rem;
-  padding: 1rem;
-  margin-bottom: 1.5rem;
-}
-
-.path-section h3 {
-  margin: 0 0 0.75rem;
-}
-
-.path-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.path-item {
-  padding: 0.5rem 0.75rem;
-  background: #f5f5f4;
-  border: 1px solid #e7e5e4;
-  border-radius: 0.5rem;
-  font-size: 0.875rem;
-}
-
 .empty {
   color: #78716c;
-  padding: 1rem;
-  text-align: center;
+  padding: 0.5rem 0;
 }
 
 .loading,
