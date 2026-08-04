@@ -207,37 +207,9 @@ export const TECNICAS: Tecnica[] = [
   {
     id: "hojaldre",
     nombre: "Hojaldre",
-    descripcion: "Laminado de manteca entre capas de masa. Cocción al vapor.",
+    descripcion: "Laminado de manteca entre capas de masa. Cocción al horno con capas separadas.",
     prerrequisitos: ["masa-quebrada", "control-fuego"],
     nivelBase: 4,
-  },
-  {
-    id: "masa-madre",
-    nombre: "Masa madre",
-    descripcion: "Fermentación natural sin levadura comercial. Alimentación y mantenimiento.",
-    prerrequisitos: ["fermentacion"],
-    nivelBase: 4,
-  },
-  {
-    id: "confit",
-    nombre: "Confit",
-    descripcion: "Cocción lenta en grasa a baja temperatura. Textura confitada.",
-    prerrequisitos: ["control-fuego"],
-    nivelBase: 4,
-  },
-  {
-    id: "sous-vide",
-    nombre: "Sous-vide",
-    descripcion: "Cocción al vacío en baño María a temperatura controlada.",
-    prerrequisitos: ["sellado", "control-fuego"],
-    nivelBase: 4,
-  },
-  {
-    id: "merengue",
-    nombre: "Merengue",
-    descripcion: "Claras de huevo + azúcar. Francés, italiano, suizo.",
-    prerrequisitos: ["control-fuego"],
-    nivelBase: 3,
   },
 ];
 

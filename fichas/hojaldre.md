@@ -41,6 +41,14 @@
 7. **Hornear** — Precalentá el horno a 200°C. Estirá el hojaldre al grosor deseado. Cortá con cuchillo filoso (no marquesina, sella los bordes). Horneá 20-25 minutos hasta que esté dorado y las capas se hayan separado.
    > El cuchillo filoso corta las capas sin aplastarlas. Si usás marquesina, los bordes se pegan y no suben.
 
+### Errores comunes del hojaldre
+
+1. **Hojaldre que no sube** — La manteca se absorbió en la masa (estaba muy blanda) o los pliegues fueron muy pocos. Manteca fría, 6 pliegues mínimo.
+2. **Hojaldre que se encoge al hornear** — Poco reposo entre pliegues o masa muy trabajada. 30 min de reposo entre cada pliegue, 1 hora antes de hornear.
+3. **Manteca se sale por los bordes** — No sellaste bien la manteca en el primer pliegue o estiraste muy fino. Sellar bien, no estirar a menos de 3 mm.
+4. **Capas pegadas / sin separación** — La manteca se derritió durante el laminado. Trabajá en superficie fría, reposá en heladera si la masa se calienta.
+5. **Hojaldre duro / seco** — Muy poca manteca o demasiados pliegues. Proporción 1:1 harina/manteca, 6 pliegues exactos.
+
 ---
 
 ## Palmitos de Hojaldre
@@ -66,13 +74,3 @@
 3. **Cortar y hornear** — Cortá en rodajas de 1 cm. Ponélas paradas sobre una placa con papel manteca, separadas 3 cm. Horneá a 200°C por 12-15 minutos hasta que estén doradas.
 
 4. **Enfriar** — Dejá enfriar sobre rejilla. El azúcar carameliza y las capas se separan.
-
----
-
-## Errores Comunes del Hojaldre
-
-1. **Hojaldre que no sube** — La manteca se absorbió en la masa (estaba muy blanda) o los pliegues fueron muy pocos. Manteca fría, 6 pliegues mínimo.
-2. **Hojaldre que se encoge al hornear** — Poco reposo entre pliegues o masa muy trabajada. 30 min de reposo entre cada pliegue, 1 hora antes de hornear.
-3. **Manteca se sale por los bordes** — No sellaste bien la manteca en el primer pliegue o estiraste muy fino. Sellar bien, no estirar a menos de 3 mm.
-4. **Capas pegadas / sin separación** — La manteca se derritió durante el laminado. Trabajá en superficie fría, reposá en heladera si la masa se calienta.
-5. **Hojaldre duro / seco** — Muy poca manteca o demasiados pliegues. Proporción 1:1 harina/manteca, 6 pliegues exactos.

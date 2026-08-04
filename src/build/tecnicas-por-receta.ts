@@ -64,6 +64,10 @@ export const TECNICAS_POR_RECETA: Record<string, string[]> = {
   "Caramelo Seco — Azúcar Sola": ["caramelo", "control-fuego"],
   "Caramelo Húmedo — Azúcar + Agua": ["caramelo", "control-fuego"],
   "Crema Pastelera Clásica": ["crema-pastelera", "control-fuego"],
+
+  // Prioridad 3
+  "Hojaldre Clásico — Laminado de Manteca": ["hojaldre", "masa-quebrada", "control-fuego"],
+  "Palmitos de Hojaldre": ["hojaldre"],
 };
 
 /** Asigna técnicas a una receta por su título (o título clave normalizado). */
