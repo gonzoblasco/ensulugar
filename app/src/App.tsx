@@ -682,20 +682,20 @@ function RecetasView({
       {leccionModal && (
         <div className="modal-overlay" onClick={() => setLeccionModal(null)}>
           <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-            <button className="modal-close" onClick={() => setLeccionModal(null)} aria-label="Cerrar modal">
+            <button 
+              className="modal-close" 
+              onClick={() => {
+                console.log('Cerrando modal...');
+                setLeccionModal(null);
+              }} 
+              aria-label="Cerrar modal"
+              type="button"
+            >
               ✕
             </button>
-            <div className="modal-header">
-              <h2>
-                Lección: {leccionModal.tecnica}
-                {leccionModal.fueCacheada && (
-                  <span className="badge-cached" title="Lección cacheada">⚡</span>
-                )}
-              </h2>
-              {leccionModal.loading && (
-                <span className="loading-inline">Generando…</span>
-              )}
-            </div>
+            {leccionModal.loading && (
+              <div className="loading-inline" style={{ marginBottom: '1rem' }}>Generando lección…</div>
+            )}
             {leccionModal.error && (
               <div className="lesson-error">{leccionModal.error}</div>
             )}
