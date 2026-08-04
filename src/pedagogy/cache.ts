@@ -57,6 +57,9 @@ function hashTecnicas(tecnicas: string[]): string {
   return createHash("sha256").update(sorted).digest("hex").slice(0, 16);
 }
 
+// Export para testing
+export { hashTecnicas };
+
 export function getLeccionFromCache(
   recetaId: number,
   perfilNivel: number,
