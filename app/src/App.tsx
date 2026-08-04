@@ -588,6 +588,61 @@ function LeccionPage({ leccion, onVolver, renderLeccionMarkdown }: LeccionPagePr
   );
 }
 
+interface QuizQuestionProps {
+  question: {
+    pregunta: string;
+    opciones: string[];
+    correcta: number;
+    explicacion: string;
+  };
+}
+
+function QuizQuestion({ question }: QuizQuestionProps) {
+  const [selected, setSelected] = useState<number | null>(null);
+
+  function handleClick(idx: number) {
+    if (selected !== null) return; // ya seleccionó
+    setSelected(idx);
+  }
+
+  return (
+    <div className="quiz-question">
+      <div className="question-text">{question.pregunta}</div>
+      <div className="options-grid">
+        {question.opciones.map((opcion, idx) => {
+          const isCorrect = idx === question.correcta;
+          const isSelected = selected === idx;
+          let clase = "option-btn";
+          if (selected !== null) {
+            if (isCorrect) clase += " correct";
+            else if (isSelected) clase += " incorrect";
+          }
+          return (
+            <button
+              key={idx}
+              className={clase}
+              onClick={() => handleClick(idx)}
+              disabled={selected !== null}
+            >
+              {opcion}
+            </button>
+          );
+        })}
+      </div>
+      {selected !== null && (
+        <div
+          className={
+            "explanation" +
+            (selected === question.correcta ? " correct" : " incorrect")
+          }
+        >
+          {question.explicacion}
+        </div>
+      )}
+    </div>
+  );
+}
+
 interface OnboardingProps {
   tecnicas: { id: string; nombre: string; descripcion: string; nivelBase: Dificultad }[];
   onGuardar: (p: PerfilUsuario) => void;
