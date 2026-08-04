@@ -683,7 +683,9 @@ function RecetasView({
         <div 
           className="modal-overlay" 
           onClick={(e) => {
+            console.log('OVERLAY CLICK:', e.target, e.currentTarget);
             if (e.target === e.currentTarget) {
+              console.log('Cerrando desde overlay');
               setLeccionModal(null);
             }
           }}
@@ -691,7 +693,12 @@ function RecetasView({
           <div className="modal-content" role="dialog" aria-modal="true">
             <button 
               className="modal-close" 
-              onClick={() => setLeccionModal(null)}
+              onClick={(e) => {
+                console.log('BOTON X CLICK!', e);
+                e.stopPropagation();
+                console.log('Cerrando desde X');
+                setLeccionModal(null);
+              }}
               aria-label="Cerrar modal"
               type="button"
             >
