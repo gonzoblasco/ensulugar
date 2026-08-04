@@ -543,28 +543,46 @@ button {
   display: inline-flex;
   align-items: center;
   gap: 0.35rem;
-  padding: 0.4rem 0.75rem;
-  border: 1px solid #d6d3d1;
+  padding: 0.5rem 0.875rem;
+  border: 2px solid #a8a29e;
   border-radius: 9999px;
-  background: #fff;
+  background: #fafaf9;
   font-size: 0.875rem;
-  color: #44403c;
+  color: #1c1917;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
 }
 
 .tecnica-chip:hover {
   background: #f5f5f4;
+  border-color: #78716c;
+  transform: translateY(-1px);
+}
+
+.tecnica-chip:focus-visible {
+  outline: 3px solid #2563eb;
+  outline-offset: 2px;
 }
 
 .tecnica-chip.selected {
-  background: #ecfdf5;
-  border-color: #10b981;
-  color: #065f46;
+  background: #10b981;
+  border-color: #059669;
+  color: #fff;
   font-weight: 600;
 }
 
 .tecnica-chip.mastered {
-  border-color: #34d399;
-  background: #f0fdfa;
+  border-color: #059669;
+  background: #d1fae5;
+  color: #065f46;
+  font-weight: 600;
+}
+
+.tecnica-chip.selected.mastered {
+  background: #10b981;
+  border-color: #047857;
+  color: #fff;
 }
 
 .mastered-badge {
