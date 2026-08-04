@@ -91,27 +91,28 @@ button {
 }
 
 .progress-bar {
-  height: 8px;
-  background: #e7e5e4;
+  height: 10px;
+  background: #78716c;
   border-radius: 4px;
   overflow: hidden;
+  border: 1px solid #57534e;
 }
 
 .progress-fill {
   height: 100%;
-  background: linear-gradient(90deg, #f59e0b, #d97706);
+  background: linear-gradient(90deg, #ea580c, #c2410c);
   border-radius: 4px;
   transition: width 0.3s ease;
 }
 
 .level-stars {
   font-size: 1.25rem;
-  color: #f59e0b;
+  color: #ca8a04;
 }
 
 .next-step-card {
   background: linear-gradient(135deg, #fef3c7, #fde68a);
-  border: 2px solid #f59e0b;
+  border: 3px solid #b45309;
   border-radius: 1rem;
   padding: 1.5rem;
 }
@@ -119,7 +120,8 @@ button {
 .next-step-card h2 {
   margin: 0 0 1rem;
   font-size: 1.25rem;
-  color: #92400e;
+  font-weight: 700;
+  color: #78350f;
 }
 
 .next-step-content {
@@ -146,7 +148,8 @@ button {
 
 .next-step-meta {
   font-size: 0.875rem;
-  color: #b45309;
+  color: #92400e;
+  font-weight: 500;
   margin-bottom: 1rem;
 }
 
@@ -732,8 +735,11 @@ button {
 }
 
 .recipe-category {
-  font-weight: 600;
-  color: #0d9488;
+  font-weight: 700;
+  color: #0f766e;
+  background: #ccfbf1;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.375rem;
 }
 
 .recipe-tags {
@@ -748,17 +754,18 @@ button {
   align-items: center;
   padding: 0.25rem 0.6rem;
   border-radius: 9999px;
-  border: 1px solid #d6d3d1;
-  background: #f5f5f4;
+  border: 2px solid #a8a29e;
+  background: #fafaf9;
   font-size: 0.8rem;
-  font-weight: 500;
-  color: #57534e;
+  font-weight: 600;
+  color: #1c1917;
 }
 
 .tecnica-tag {
   background: #ecfdf5;
-  border-color: #a7f3d0;
-  color: #065f46;
+  border-color: #059669;
+  color: #064e3b;
+  font-weight: 600;
 }
 
 .tecnica-tag:hover {
@@ -784,55 +791,89 @@ button {
 
 .btn-toggle {
   padding: 0.5rem 0.75rem;
-  background: #fff;
-  border: 1px solid #d6d3d1;
+  background: #fafaf9;
+  border: 2px solid #78716c;
   border-radius: 0.5rem;
-  color: #44403c;
+  color: #1c1917;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
 }
 
 .btn-toggle:hover {
   background: #f5f5f4;
+  border-color: #57534e;
+  transform: translateY(-1px);
+}
+
+.btn-toggle:focus-visible {
+  outline: 3px solid #2563eb;
+  outline-offset: 2px;
 }
 
 .btn-lesson {
   padding: 0.5rem 0.75rem;
   background: #0d9488;
-  border: 1px solid #0d9488;
+  border: 2px solid #0f766e;
   border-radius: 0.5rem;
   color: #fff;
-  font-weight: 500;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
 }
 
 .btn-lesson:hover:not(:disabled) {
   background: #0f766e;
+  border-color: #115e59;
+  transform: translateY(-1px);
+}
+
+.btn-lesson:focus-visible {
+  outline: 3px solid #fbbf24;
+  outline-offset: 2px;
 }
 
 .btn-lesson:disabled {
-  opacity: 0.7;
-  cursor: wait;
+  opacity: 0.8;
+  cursor: not-allowed;
 }
 
 .btn-complete {
   padding: 0.5rem 0.75rem;
   background: #fff;
-  border: 1px solid #10b981;
+  border: 2px solid #059669;
   border-radius: 0.5rem;
-  color: #065f46;
-  font-weight: 500;
+  color: #064e3b;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
 }
 
 .btn-complete:hover:not(:disabled) {
   background: #ecfdf5;
+  border-color: #047857;
+  transform: translateY(-1px);
+}
+
+.btn-complete:focus-visible {
+  outline: 3px solid #2563eb;
+  outline-offset: 2px;
 }
 
 .btn-complete.completed {
-  background: #10b981;
+  background: #059669;
   color: #fff;
   cursor: default;
 }
 
+.btn-complete.completed:hover {
+  background: #047857;
+  transform: none;
+}
+
 .btn-complete:disabled {
-  opacity: 0.9;
+  opacity: 0.8;
+  cursor: not-allowed;
 }
 
 .lesson-panel {
