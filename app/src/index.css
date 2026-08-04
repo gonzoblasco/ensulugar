@@ -624,6 +624,11 @@ button {
   height: 34px;
 }
 
+.search-select:focus-visible {
+  outline: 3px solid #2563eb;
+  outline-offset: 2px;
+}
+
 .search-texto {
   flex: 1 1 140px;
   min-width: 100px;
@@ -652,6 +657,11 @@ button {
   outline: none;
   border-color: #0d9488;
   box-shadow: 0 0 0 3px rgba(13, 148, 136, 0.15);
+}
+
+.search-input:focus-visible {
+  outline: 3px solid #2563eb;
+  outline-offset: 2px;
 }
 
 .search-input::placeholder {
@@ -714,6 +724,11 @@ button {
 .tecnica-suggestion.active {
   background: #e7e5e4;
   outline: 2px solid #2563eb;
+  outline-offset: -2px;
+}
+
+.tecnica-suggestion:focus-visible {
+  outline: 3px solid #2563eb;
   outline-offset: -2px;
 }
 

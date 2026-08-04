@@ -692,7 +692,7 @@ function LeccionPage({ leccion, onVolver, renderLeccionMarkdown }: LeccionPagePr
       
       {leccion.evaluacion && !leccion.loading && (
         <div className="quiz-section">
-          <h4>📝 Ponete a prueba</h4>
+          <h4><span role="img" aria-label="Examen">📝</span> Ponete a prueba</h4>
           {leccion.evaluacion.preguntas.map((q, idx) => (
             <QuizQuestion key={idx} question={q} />
           ))}
@@ -701,7 +701,7 @@ function LeccionPage({ leccion, onVolver, renderLeccionMarkdown }: LeccionPagePr
       
       {leccion.variaciones && !leccion.loading && (
         <div className="variations-section">
-          <h4>🔀 Variaciones para practicar</h4>
+          <h4><span role="img" aria-label="Variaciones">🔀</span> Variaciones para practicar</h4>
           <div className="variations-grid">
             {leccion.variaciones.variaciones.map((v, idx) => (
               <div key={idx} className="variation-card">
