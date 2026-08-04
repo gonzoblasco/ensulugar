@@ -235,12 +235,14 @@ export default function App() {
 
   if (mostrarOnboarding) {
     return (
-      <OnboardingScreen
+      <main id="main-content">
+        <OnboardingScreen
         tecnicas={TECNICAS}
         onGuardar={guardarOnboarding}
         onSaltar={() => guardarOnboarding(defaultPerfil())}
       />
-    );
+    </main>
+  );
   }
 
   if (loading) return <div className="loading">Cargando recetas…</div>;

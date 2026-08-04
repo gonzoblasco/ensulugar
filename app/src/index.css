@@ -800,6 +800,7 @@ button {
   color: #0d9488;
   font-size: 0.875rem;
   text-decoration: underline;
+  font-weight: 600;
 }
 
 .path-section {
