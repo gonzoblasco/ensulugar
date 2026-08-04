@@ -513,6 +513,8 @@ function RecetasView({
   tecnicasOrdenadas,
   renderLeccionMarkdown,
 }: RecetasViewProps) {
+  const [busquedaTecnica, setBusquedaTecnica] = useState('');
+  
   return (
     <div>
       <div className="filters">
@@ -547,35 +549,76 @@ function RecetasView({
 
       <section className="tecnica-filter">
         <div className="tecnica-filter-header">
-          <span>Filtrar por técnica</span>
+          <label htmlFor="tecnica-search">Filtrar por técnica</label>
           {tecnicasSeleccionadas.size > 0 && (
             <button className="btn-link" onClick={limpiarFiltros}>
-              Limpiar filtros
+              Limpiar filtros ({tecnicasSeleccionadas.size})
             </button>
           )}
         </div>
-        <div className="tecnica-chips">
-          {tecnicasOrdenadas.map((id) => {
-            const t = tecnicaPorId.get(id);
-            const seleccionada = tecnicasSeleccionadas.has(id);
-            const dominada = perfilActivo.tecnicasDominadas.includes(id);
-            return (
-              <button
-                key={id}
-                className={
-                  "tecnica-chip" +
-                  (seleccionada ? " selected" : "") +
-                  (dominada ? " mastered" : "")
-                }
-                onClick={() => toggleTecnica(id)}
-                title={t?.descripcion ?? id}
-              >
-                {t?.nombre ?? id}
-                {dominada && <span className="mastered-badge">✓</span>}
-              </button>
-            );
-          })}
+        <div className="tecnica-search-wrapper">
+          <input
+            id="tecnica-search"
+            type="text"
+            className="tecnica-search-input"
+            placeholder="Buscar técnica…"
+            value={busquedaTecnica}
+            onChange={(e) => setBusquedaTecnica(e.target.value)}
+          />
+          {busquedaTecnica && (
+            <div className="tecnica-suggestions">
+              {tecnicasOrdenadas
+                .filter(id => {
+                  const t = tecnicaPorId.get(id);
+                  const nombre = t?.nombre ?? id;
+                  return nombre.toLowerCase().includes(busquedaTecnica.toLowerCase());
+                })
+                .slice(0, 8)
+                .map(id => {
+                  const t = tecnicaPorId.get(id);
+                  const seleccionada = tecnicasSeleccionadas.has(id);
+                  const dominada = perfilActivo.tecnicasDominadas.includes(id);
+                  return (
+                    <button
+                      key={id}
+                      className={
+                        "tecnica-suggestion" +
+                        (seleccionada ? " selected" : "") +
+                        (dominada ? " mastered" : "")
+                      }
+                      onClick={() => {
+                        toggleTecnica(id);
+                        setBusquedaTecnica('');
+                      }}
+                    >
+                      <span>{t?.nombre ?? id}</span>
+                      {dominada && <span className="mastered-badge">✓</span>}
+                      {seleccionada && <span className="check-icon">✓</span>}
+                    </button>
+                  );
+                })}
+            </div>
+          )}
         </div>
+        {tecnicasSeleccionadas.size > 0 && (
+          <div className="tecnica-selected-tags">
+            {Array.from(tecnicasSeleccionadas).map(id => {
+              const t = tecnicaPorId.get(id);
+              return (
+                <span key={id} className="tecnica-tag-selected">
+                  {t?.nombre ?? id}
+                  <button
+                    className="tecnica-tag-remove"
+                    onClick={() => toggleTecnica(id)}
+                    aria-label={`Quitar ${t?.nombre ?? id}`}
+                  >
+                    ✕
+                  </button>
+                </span>
+              );
+            })}
+          </div>
+        )}
       </section>
 
       <section>
