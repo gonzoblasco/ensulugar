@@ -1297,3 +1297,98 @@ button {
   outline: 3px solid #2563eb;
   outline-offset: 2px;
 }
+
+/* Feedback Modal */
+.feedback-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 1.5rem;
+}
+
+.feedback-modal {
+  background: #fff;
+  border-radius: 1rem;
+  padding: 2rem;
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  animation: modalSlideIn 0.2s ease-out;
+}
+
+.feedback-modal h3 {
+  margin: 0 0 1.5rem;
+  font-size: 1.2rem;
+  color: #1c1917;
+}
+
+.feedback-options {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.feedback-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 1rem 0.75rem;
+  border: 2px solid #d6d3d1;
+  border-radius: 0.75rem;
+  background: #fafaf9;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font: inherit;
+}
+
+.feedback-btn:hover {
+  transform: translateY(-2px);
+  border-color: #a8a29e;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.feedback-btn:focus-visible {
+  outline: 3px solid #2563eb;
+  outline-offset: 2px;
+}
+
+.feedback-icon {
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.feedback-btn span:last-child {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #44403c;
+}
+
+.feedback-btn.excelente:hover {
+  border-color: #10b981;
+  background: #ecfdf5;
+}
+
+.feedback-btn.bien:hover {
+  border-color: #0d9488;
+  background: #f0fdfa;
+}
+
+.feedback-btn.regular:hover {
+  border-color: #f59e0b;
+  background: #fef3c7;
+}
+
+.feedback-btn.mal:hover {
+  border-color: #ef4444;
+  background: #fef2f2;
+}

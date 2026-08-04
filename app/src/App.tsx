@@ -56,6 +56,7 @@ export default function App() {
   const [nivelObjetivo, setNivelObjetivo] = useState<Dificultad>(0);
   const [expandida, setExpandida] = useState<number | null>(null);
   const [leccionPagina, setLeccionPagina] = useState<LeccionState | null>(null);
+  const [feedbackModal, setFeedbackModal] = useState<{receta: Receta} | null>(null);
 
   useEffect(() => {
     async function cargar() {
@@ -91,7 +92,7 @@ export default function App() {
     const recetasCompletadas = new Set(perfil.recetasCompletadas);
     
     if (recetasCompletadas.has(r.id)) {
-      // Desmarcar
+      // Desmarcar directamente
       recetasCompletadas.delete(r.id);
       const nuevo: PerfilUsuario = {
         ...perfil,
@@ -99,17 +100,40 @@ export default function App() {
       };
       actualizarPerfil(nuevo);
     } else {
-      // Marcar como completada
-      const tecnicasDominadas = new Set(perfil.tecnicasDominadas);
-      for (const t of r.tecnicas) tecnicasDominadas.add(t);
-      recetasCompletadas.add(r.id);
-      const nuevo: PerfilUsuario = {
-        ...perfil,
-        tecnicasDominadas: Array.from(tecnicasDominadas),
-        recetasCompletadas: Array.from(recetasCompletadas),
-      };
-      actualizarPerfil(nuevo);
+      // Mostrar feedback modal antes de marcar
+      setFeedbackModal({ receta: r });
     }
+  }
+
+  function enviarFeedback(resultado: string, problema?: string) {
+    if (!perfil || !feedbackModal) return;
+    
+    const r = feedbackModal.receta;
+    
+    // Enviar feedback al backend
+    fetch("/api/feedback", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        recetaId: r.id,
+        resultado,
+        problema,
+        perfil,
+      }),
+    }).catch(() => {}); // fire & forget
+    
+    // Marcar como completada
+    const recetasCompletadas = new Set(perfil.recetasCompletadas);
+    const tecnicasDominadas = new Set(perfil.tecnicasDominadas);
+    for (const t of r.tecnicas) tecnicasDominadas.add(t);
+    recetasCompletadas.add(r.id);
+    const nuevo: PerfilUsuario = {
+      ...perfil,
+      tecnicasDominadas: Array.from(tecnicasDominadas),
+      recetasCompletadas: Array.from(recetasCompletadas),
+    };
+    actualizarPerfil(nuevo);
+    setFeedbackModal(null);
   }
 
   function reiniciarProgreso() {
@@ -264,6 +288,36 @@ export default function App() {
         tecnicasOrdenadas={tecnicasOrdenadas}
         renderLeccionMarkdown={renderLeccionMarkdown}
       />
+
+      {/* Feedback Modal */}
+      {feedbackModal && (
+        <div className="feedback-overlay" onClick={() => setFeedbackModal(null)}>
+          <div className="feedback-modal" onClick={(e) => e.stopPropagation()}>
+            <h3>¿Cómo te fue con esta receta?</h3>
+            <div className="feedback-options">
+              <button className="feedback-btn excelente" onClick={() => enviarFeedback("excelente")}>
+                <span className="feedback-icon">🤩</span>
+                <span>Excelente</span>
+              </button>
+              <button className="feedback-btn bien" onClick={() => enviarFeedback("bien")}>
+                <span className="feedback-icon">😊</span>
+                <span>Bien</span>
+              </button>
+              <button className="feedback-btn regular" onClick={() => enviarFeedback("regular")}>
+                <span className="feedback-icon">😐</span>
+                <span>Regular</span>
+              </button>
+              <button className="feedback-btn mal" onClick={() => enviarFeedback("mal")}>
+                <span className="feedback-icon">😣</span>
+                <span>Mal</span>
+              </button>
+            </div>
+            <button className="btn-link" onClick={() => enviarFeedback("bien")}>
+              Saltar feedback
+            </button>
+          </div>
+        </div>
+      )}
     </>
   );
 }
