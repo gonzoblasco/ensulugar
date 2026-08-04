@@ -1,7 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import { marked } from "marked";
 import { TECNICAS, tecnicaPorId } from "@shared/engine/graph.js";
-import { armarRuta } from "@shared/engine/path.js";
 import type { Dificultad, PerfilUsuario, Receta } from "@shared/types.js";
 import {
   defaultPerfil,
@@ -52,10 +51,9 @@ export default function App() {
   const [error, setError] = useState<string | null>(null);
   const [perfil, setPerfil] = useState<PerfilUsuario | null>(null);
   const [mostrarOnboarding, setMostrarOnboarding] = useState(false);
-  const [vistaActual, setVistaActual] = useState<'dashboard' | 'ruta' | 'recetas'>('dashboard');
   const [tecnicasSeleccionadas, setTecnicasSeleccionadas] = useState<Set<string>>(new Set());
   const [busqueda, setBusqueda] = useState<string>("");
-  const [nivelObjetivo, setNivelObjetivo] = useState<Dificultad>(1);
+  const [nivelObjetivo, setNivelObjetivo] = useState<Dificultad>(0);
   const [expandida, setExpandida] = useState<number | null>(null);
   const [leccionPagina, setLeccionPagina] = useState<LeccionState | null>(null);
 
@@ -109,11 +107,6 @@ export default function App() {
     setPerfil(limpio);
     setMostrarOnboarding(true);
   }
-
-  const ruta = useMemo(() => {
-    if (!perfil) return [];
-    return armarRuta(perfil, recetas);
-  }, [recetas, perfil]);
 
   const tecnicasOrdenadas = useMemo(
     () => TECNICAS.map((t) => t.id).sort(),
@@ -238,52 +231,9 @@ export default function App() {
   }
 
   const perfilActivo = perfil ?? defaultPerfil();
-  const progresoTecnicas = perfilActivo.tecnicasDominadas.length;
-  const progresoRecetas = perfilActivo.recetasCompletadas.length;
-  const siguientePaso = ruta[0];
 
-  if (vistaActual === 'dashboard') {
-    return (
-      <DashboardView
-        perfil={perfilActivo}
-        ruta={ruta}
-        recetas={recetas}
-        siguientePaso={siguientePaso}
-        onContinuar={() => {
-          if (siguientePaso) {
-            setTecnicasSeleccionadas(new Set([siguientePaso.tecnicaId]));
-            setVistaActual('recetas');
-          }
-        }}
-        onVerRuta={() => setVistaActual('ruta')}
-        onVerRecetas={() => setVistaActual('recetas')}
-        onReiniciar={reiniciarProgreso}
-      />
-    );
-  }
-
-  if (vistaActual === 'ruta') {
-    return (
-      <>
-        <header className="app-header">
-          <h1>Tu Ruta de Aprendizaje</h1>
-          <button className="btn-link" onClick={() => setVistaActual('dashboard')}>← Volver al dashboard</button>
-        </header>
-        <RutaView ruta={ruta} perfil={perfilActivo} onSeleccionarTecnica={(id) => {
-          setTecnicasSeleccionadas(new Set([id]));
-          setVistaActual('recetas');
-        }} />
-      </>
-    );
-  }
-
-  // vistaActual === 'recetas'
   return (
     <>
-      <header className="app-header">
-        <h1>Recetas</h1>
-        <button className="btn-link" onClick={() => setVistaActual('dashboard')}>← Volver al dashboard</button>
-      </header>
       <RecetasView
         recetasFiltradas={recetasFiltradas}
         tecnicasSeleccionadas={tecnicasSeleccionadas}
@@ -303,184 +253,6 @@ export default function App() {
         renderLeccionMarkdown={renderLeccionMarkdown}
       />
     </>
-  );
-}
-
-interface DashboardProps {
-  perfil: PerfilUsuario;
-  ruta: PasoRuta[];
-  recetas: Receta[];
-  siguientePaso: PasoRuta | undefined;
-  onContinuar: () => void;
-  onVerRuta: () => void;
-  onVerRecetas: () => void;
-  onReiniciar: () => void;
-}
-
-function DashboardView({ perfil, ruta, recetas, siguientePaso, onContinuar, onVerRuta, onVerRecetas, onReiniciar }: DashboardProps) {
-  const progresoTecnicas = perfil.tecnicasDominadas.length;
-  const progresoRecetas = perfil.recetasCompletadas.length;
-  const porcentajeTecnicas = Math.round((progresoTecnicas / TECNICAS.length) * 100);
-  const porcentajeRecetas = Math.round((progresoRecetas / recetas.length) * 100);
-
-  return (
-    <div className="dashboard">
-      <header className="dashboard-header">
-        <h1>Bienvenido{perfil.objetivo ? `, ${perfil.objetivo.split(' ')[0]}` : ''} 👋</h1>
-        <p className="dashboard-subtitle">Tu progreso hacia el nivel {perfil.nivel}</p>
-      </header>
-
-      <section className="progress-cards">
-        <div className="progress-card">
-          <div className="progress-value">{progresoTecnicas}/{TECNICAS.length}</div>
-          <div className="progress-label">Técnicas dominadas</div>
-          <div className="progress-bar">
-            <div className="progress-fill" style={{ width: `${porcentajeTecnicas}%` }} />
-          </div>
-        </div>
-        <div className="progress-card">
-          <div className="progress-value">{progresoRecetas}/{recetas.length}</div>
-          <div className="progress-label">Recetas completadas</div>
-          <div className="progress-bar">
-            <div className="progress-fill" style={{ width: `${porcentajeRecetas}%` }} />
-          </div>
-        </div>
-        <div className="progress-card">
-          <div className="progress-value">Nivel {perfil.nivel}</div>
-          <div className="progress-label">Objetivo</div>
-          <div className="level-stars">{estrellas(perfil.nivel)}</div>
-        </div>
-      </section>
-
-      {siguientePaso && (
-        <section className="next-step-card">
-          <h2>¿Qué sigue?</h2>
-          <div className="next-step-content">
-            <div className="next-step-icon">🎯</div>
-            <div className="next-step-info">
-              <div className="next-step-title">{tecnicaPorId.get(siguientePaso.tecnicaId)?.nombre ?? siguientePaso.nombre}</div>
-              <div className="next-step-meta">Nivel {siguientePaso.nivel} {estrellas(siguientePaso.nivel)}</div>
-              <div className="next-step-actions">
-                <button className="btn-primary" onClick={onContinuar}>Continuar aprendiendo</button>
-                <button className="btn-secondary" onClick={onVerRuta}>Ver toda tu ruta ({ruta.length} técnicas)</button>
-              </div>
-            </div>
-          </div>
-        </section>
-      )}
-
-      <section className="quick-actions">
-        <h2>Accesos rápidos</h2>
-        <div className="action-grid">
-          <button className="action-card" onClick={onVerRecetas}>
-            <div className="action-icon">📖</div>
-            <div className="action-label">Explorar recetas</div>
-          </button>
-          <button className="action-card" onClick={onVerRuta}>
-            <div className="action-icon">🗺️</div>
-            <div className="action-label">Ver ruta completa</div>
-          </button>
-          <button className="action-card" onClick={onReiniciar}>
-            <div className="action-icon">🔄</div>
-            <div className="action-label">Reiniciar progreso</div>
-          </button>
-        </div>
-      </section>
-    </div>
-  );
-}
-
-interface RutaViewProps {
-  ruta: PasoRuta[];
-  perfil: PerfilUsuario;
-  onSeleccionarTecnica: (id: string) => void;
-}
-
-function RutaView({ ruta, perfil, onSeleccionarTecnica }: RutaViewProps) {
-  if (ruta.length === 0) {
-    return (
-      <div className="empty-state">
-        <div className="empty-icon">🎉</div>
-        <h2>¡Completaste todas las técnicas!</h2>
-        <p>No quedan técnicas por aprender a este nivel. Subí el nivel objetivo o agregá más contenido.</p>
-      </div>
-    );
-  }
-
-  return (
-    <section className="ruta-section">
-      <ol className="path-list-numbered">
-        {ruta.map((paso, i) => {
-          const t = tecnicaPorId.get(paso.tecnicaId);
-          return (
-            <li
-              key={paso.tecnicaId}
-              className="path-item-numbered"
-              onClick={() => onSeleccionarTecnica(paso.tecnicaId)}
-              title="Click para ver recetas de esta técnica"
-            >
-              <span className="path-number">{i + 1}</span>
-              <span className="path-name">{t?.nombre ?? paso.tecnicaId}</span>
-              <span className="path-level">{estrellas(paso.nivel)}</span>
-            </li>
-          );
-        })}
-      </ol>
-    </section>
-  );
-}
-
-interface QuizQuestionProps {
-  question: {
-    pregunta: string;
-    opciones: string[];
-    correcta: number;
-    explicacion: string;
-  };
-}
-
-function QuizQuestion({ question }: QuizQuestionProps) {
-  const [selected, setSelected] = useState<number | null>(null);
-  const [showExplanation, setShowExplanation] = useState(false);
-  
-  const isCorrect = selected !== null && selected === question.correcta;
-  
-  function handleSelect(idx: number) {
-    if (selected !== null) return; // ya seleccionó
-    setSelected(idx);
-    setShowExplanation(true);
-  }
-  
-  return (
-    <div className="quiz-question">
-      <div className="question-text">{question.pregunta}</div>
-      <div className="options-grid">
-        {question.opciones.map((opcion, idx) => {
-          let stateClass = "";
-          if (selected !== null) {
-            if (idx === question.correcta) stateClass = " correct";
-            else if (idx === selected) stateClass = " incorrect";
-          }
-          
-          return (
-            <button
-              key={idx}
-              className={`option-btn${stateClass}`}
-              onClick={() => handleSelect(idx)}
-              disabled={selected !== null}
-            >
-              {opcion}
-            </button>
-          );
-        })}
-      </div>
-      {showExplanation && (
-        <div className={`explanation ${isCorrect ? "correct" : "incorrect"}`}>
-          {isCorrect ? "✅ ¡Correcto! " : "❌ Incorrecto. "}
-          {question.explicacion}
-        </div>
-      )}
-    </div>
   );
 }
 
