@@ -1,0 +1,30 @@
+{
+  "name": "ensulugar",
+  "version": "0.1.0",
+  "description": "Tutor de cocina adaptativo con IA (BYOK). Cada receta es la semilla de una lección.",
+  "type": "module",
+  "license": "MIT",
+  "private": true,
+  "bin": {
+    "ensulugar": "./dist/cli.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx watch src/cli.ts",
+    "start": "node dist/cli.js",
+    "build:content": "tsx src/build/build.ts",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "better-sqlite3": "^11.3.0",
+    "gray-matter": "^4.0.3",
+    "marked": "^14.1.2"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.11",
+    "@types/node": "^22.5.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.5.0",
+    "vitest": "^2.0.0"
+  }
+}
