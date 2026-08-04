@@ -627,9 +627,9 @@ function RecetasView({
                     <button
                       className="btn-lesson"
                       onClick={() => generarLeccionParaReceta(r)}
-                      disabled={leccion?.recetaId === r.id && leccion?.loading}
+                      disabled={leccionModal?.recetaId === r.id && leccionModal?.loading}
                     >
-                      {leccion?.recetaId === r.id && leccion?.loading
+                      {leccionModal?.recetaId === r.id && leccionModal?.loading
                         ? "Generando lección…"
                         : "Generar lección con IA"}
                     </button>
