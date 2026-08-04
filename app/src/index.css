@@ -489,6 +489,11 @@ button {
   z-index: 1000;
   padding: 1.5rem;
   overflow-y: auto;
+  pointer-events: none;
+}
+
+.modal-overlay > * {
+  pointer-events: auto;
 }
 
 .modal-content {
