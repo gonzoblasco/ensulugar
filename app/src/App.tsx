@@ -280,7 +280,7 @@ export default function App() {
         completarReceta={completarReceta}
         expandida={expandida}
         setExpandida={setExpandida}
-        leccion={leccion}
+        leccionModal={leccionModal}
         generarLeccionParaReceta={generarLeccionParaReceta}
         tecnicasOrdenadas={tecnicasOrdenadas}
         renderLeccionMarkdown={renderLeccionMarkdown}
@@ -478,7 +478,7 @@ interface RecetasViewProps {
   completarReceta: (r: Receta) => void;
   expandida: number | null;
   setExpandida: (id: number | null) => void;
-  leccion: LeccionState | null;
+  leccionModal: LeccionState | null;
   generarLeccionParaReceta: (r: Receta) => void;
   tecnicasOrdenadas: string[];
   renderLeccionMarkdown: (texto: string) => { __html: string };
@@ -495,7 +495,7 @@ function RecetasView({
   completarReceta,
   expandida,
   setExpandida,
-  leccion,
+  leccionModal,
   generarLeccionParaReceta,
   tecnicasOrdenadas,
   renderLeccionMarkdown,
