@@ -16,6 +16,8 @@
     "dev:app": "vite",
     "build:app": "vite build",
     "preview:app": "vite preview",
+    "dev:server": "tsx watch src/server.ts",
+    "start:server": "node dist/server.js",
     "test": "vitest run"
   },
   "dependencies": {

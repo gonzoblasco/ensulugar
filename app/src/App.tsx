@@ -22,6 +22,14 @@ function normalizar(texto: string): string {
     .replace(/[\u0300-\u036f]/g, "");
 }
 
+interface LeccionState {
+  recetaId: number;
+  loading: boolean;
+  contenido: string | null;
+  error: string | null;
+  tecnica: string;
+}
+
 export default function App() {
   const [recetas, setRecetas] = useState<Receta[]>([]);
   const [loading, setLoading] = useState(true);
@@ -30,21 +38,26 @@ export default function App() {
   const [tecnicasSeleccionadas, setTecnicasSeleccionadas] = useState<Set<string>>(new Set());
   const [busqueda, setBusqueda] = useState<string>("");
   const [expandida, setExpandida] = useState<number | null>(null);
+  const [leccion, setLeccion] = useState<LeccionState | null>(null);
 
   useEffect(() => {
-    fetch("/ensulugar.json")
-      .then((res) => {
+    async function cargar() {
+      try {
+        let res = await fetch("/api/recetas");
+        if (!res.ok) {
+          // Fallback: leer JSON estático si el backend no está corriendo
+          res = await fetch("/ensulugar.json");
+        }
         if (!res.ok) throw new Error(`HTTP ${res.status}`);
-        return res.json();
-      })
-      .then((data: { recetas: Receta[] }) => {
+        const data: { recetas: Receta[] } = await res.json();
         setRecetas(data.recetas);
-        setLoading(false);
-      })
-      .catch((err) => {
+      } catch (err) {
         setError(err instanceof Error ? err.message : String(err));
+      } finally {
         setLoading(false);
-      });
+      }
+    }
+    cargar();
   }, []);
 
   const ruta = useMemo(
@@ -91,11 +104,46 @@ export default function App() {
     setBusqueda("");
   }
 
+  async function generarLeccionParaReceta(receta: Receta) {
+    setLeccion({
+      recetaId: receta.id,
+      loading: true,
+      contenido: null,
+      error: null,
+      tecnica: receta.tecnicas[0] ?? "Técnica",
+    });
+    try {
+      const res = await fetch("/api/leccion", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ recetaId: receta.id, perfilNombre: perfil }),
+      });
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.error ?? data.detail ?? `HTTP ${res.status}`);
+      setLeccion({
+        recetaId: receta.id,
+        loading: false,
+        contenido: data.leccion.contenido,
+        error: null,
+        tecnica: data.leccion.tecnica,
+      });
+    } catch (err) {
+      setLeccion({
+        recetaId: receta.id,
+        loading: false,
+        contenido: null,
+        error: err instanceof Error ? err.message : String(err),
+        tecnica: receta.tecnicas[0] ?? "Técnica",
+      });
+    }
+  }
+
   if (loading) return <div className="loading">Cargando recetas…</div>;
   if (error)
     return (
       <div className="error">
-        Error cargando recetas: {error}. Asegurate de haber corrido{" "}
+        Error cargando recetas: {error}. Asegurate de tener el server corriendo{" "}
+        <code>npm run dev:server</code> y de haber corrido{" "}
         <code>npm run build:content</code>.
       </div>
     );
@@ -232,14 +280,25 @@ export default function App() {
               </div>
               <p className="recipe-description">{r.descripcionCorta}</p>
 
-              <button
-                className="btn-toggle"
-                onClick={() =>
-                  setExpandida(expandida === r.id ? null : r.id)
-                }
-              >
-                {expandida === r.id ? "Ocultar detalles ▲" : "Ver detalles ▼"}
-              </button>
+              <div className="recipe-actions">
+                <button
+                  className="btn-toggle"
+                  onClick={() =>
+                    setExpandida(expandida === r.id ? null : r.id)
+                  }
+                >
+                  {expandida === r.id ? "Ocultar detalles ▲" : "Ver detalles ▼"}
+                </button>
+                <button
+                  className="btn-lesson"
+                  onClick={() => generarLeccionParaReceta(r)}
+                  disabled={leccion?.recetaId === r.id && leccion?.loading}
+                >
+                  {leccion?.recetaId === r.id && leccion?.loading
+                    ? "Generando lección…"
+                    : "Generar lección con IA"}
+                </button>
+              </div>
 
               {expandida === r.id && (
                 <>
@@ -267,6 +326,25 @@ export default function App() {
                     </ol>
                   </div>
                 </>
+              )}
+
+              {leccion?.recetaId === r.id && (
+                <div className="lesson-panel">
+                  <h3>
+                    Lección: {leccion.tecnica}{" "}
+                    {leccion.loading && <span className="loading-inline">Generando…</span>}
+                  </h3>
+                  {leccion.error && (
+                    <div className="lesson-error">{leccion.error}</div>
+                  )}
+                  {leccion.contenido && (
+                    <div className="lesson-content">
+                      {leccion.contenido.split("\n").map((parrafo, i) => (
+                        <p key={i}>{parrafo}</p>
+                      ))}
+                    </div>
+                  )}
+                </div>
               )}
             </article>
           ))
