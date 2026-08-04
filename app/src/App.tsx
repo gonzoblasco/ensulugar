@@ -154,6 +154,11 @@ export default function App() {
     return { __html: html };
   }
 
+  function renderLeccionMarkdown(texto: string) {
+    const html = marked.parse(texto, { async: false }) as string;
+    return { __html: html };
+  }
+
   async function generarLeccionParaReceta(receta: Receta) {
     setLeccion({
       recetaId: receta.id,
@@ -278,6 +283,7 @@ export default function App() {
         leccion={leccion}
         generarLeccionParaReceta={generarLeccionParaReceta}
         tecnicasOrdenadas={tecnicasOrdenadas}
+        renderLeccionMarkdown={renderLeccionMarkdown}
       />
     </>
   );
@@ -475,6 +481,7 @@ interface RecetasViewProps {
   leccion: LeccionState | null;
   generarLeccionParaReceta: (r: Receta) => void;
   tecnicasOrdenadas: string[];
+  renderLeccionMarkdown: (texto: string) => { __html: string };
 }
 
 function RecetasView({
@@ -491,6 +498,7 @@ function RecetasView({
   leccion,
   generarLeccionParaReceta,
   tecnicasOrdenadas,
+  renderLeccionMarkdown,
 }: RecetasViewProps) {
   return (
     <div>
