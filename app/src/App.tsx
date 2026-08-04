@@ -55,6 +55,7 @@ export default function App() {
   const [vistaActual, setVistaActual] = useState<'dashboard' | 'ruta' | 'recetas'>('dashboard');
   const [tecnicasSeleccionadas, setTecnicasSeleccionadas] = useState<Set<string>>(new Set());
   const [busqueda, setBusqueda] = useState<string>("");
+  const [nivelObjetivo, setNivelObjetivo] = useState<Dificultad>(1);
   const [expandida, setExpandida] = useState<number | null>(null);
   const [leccionPagina, setLeccionPagina] = useState<LeccionState | null>(null);
 
@@ -131,9 +132,10 @@ export default function App() {
         normalizar(r.titulo).includes(q) ||
         normalizar(r.categoria).includes(q) ||
         r.tecnicas.some((t) => normalizar(t).includes(q));
-      return matchTecnica && matchBusqueda;
+      const matchNivel = r.dificultad <= nivelObjetivo;
+      return matchTecnica && matchBusqueda && matchNivel;
     });
-  }, [recetas, tecnicasSeleccionadas, busqueda]);
+  }, [recetas, tecnicasSeleccionadas, busqueda, nivelObjetivo]);
 
   function toggleTecnica(id: string) {
     setTecnicasSeleccionadas((prev) => {
@@ -289,6 +291,8 @@ export default function App() {
         limpiarFiltros={limpiarFiltros}
         busqueda={busqueda}
         setBusqueda={setBusqueda}
+        nivelObjetivo={nivelObjetivo}
+        setNivelObjetivo={setNivelObjetivo}
         perfilActivo={perfilActivo}
         completarReceta={completarReceta}
         expandida={expandida}
@@ -487,6 +491,8 @@ interface RecetasViewProps {
   limpiarFiltros: () => void;
   busqueda: string;
   setBusqueda: (s: string) => void;
+  nivelObjetivo: Dificultad;
+  setNivelObjetivo: (n: Dificultad) => void;
   perfilActivo: PerfilUsuario;
   completarReceta: (r: Receta) => void;
   expandida: number | null;
@@ -504,6 +510,8 @@ function RecetasView({
   limpiarFiltros,
   busqueda,
   setBusqueda,
+  nivelObjetivo,
+  setNivelObjetivo,
   perfilActivo,
   completarReceta,
   expandida,
@@ -522,10 +530,8 @@ function RecetasView({
           <select
             id="nivel"
             className="search-select"
-            value={perfilActivo.nivel}
-            onChange={(e) => {
-              // actualizarPerfil se maneja en el padre
-            }}
+            value={nivelObjetivo}
+            onChange={(e) => setNivelObjetivo(Number(e.target.value) as Dificultad)}
           >
             {[1, 2, 3, 4, 5].map((n) => (
               <option key={n} value={n}>
