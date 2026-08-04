@@ -323,12 +323,71 @@ button {
   line-height: 1.6;
 }
 
-.lesson-content p {
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4 {
+  margin: 1.25rem 0 0.75rem;
+  color: #115e59;
+}
+
+.markdown-body h1 {
+  font-size: 1.35rem;
+  border-bottom: 1px solid #99f6e4;
+  padding-bottom: 0.35rem;
+}
+
+.markdown-body h2 {
+  font-size: 1.15rem;
+}
+
+.markdown-body h3 {
+  font-size: 1rem;
+}
+
+.markdown-body p {
   margin: 0 0 0.75rem;
 }
 
-.lesson-content p:last-child {
-  margin-bottom: 0;
+.markdown-body ul,
+.markdown-body ol {
+  margin: 0 0 0.75rem;
+  padding-left: 1.5rem;
+}
+
+.markdown-body li {
+  margin-bottom: 0.35rem;
+}
+
+.markdown-body strong {
+  font-weight: 700;
+}
+
+.markdown-body em {
+  font-style: italic;
+}
+
+.markdown-body code {
+  background: #ccfbf1;
+  padding: 0.15rem 0.35rem;
+  border-radius: 0.25rem;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.9em;
+}
+
+.markdown-body pre {
+  background: #0c4a6e;
+  color: #ecfeff;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  overflow-x: auto;
+  margin: 0 0 0.75rem;
+}
+
+.markdown-body pre code {
+  background: transparent;
+  padding: 0;
+  color: inherit;
 }
 
 .lesson-error {

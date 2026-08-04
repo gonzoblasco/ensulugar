@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
+import { marked } from "marked";
 import { TECNICAS, tecnicaPorId } from "@shared/engine/graph.js";
 import { armarRuta } from "@shared/engine/path.js";
 import type { Dificultad, Receta } from "@shared/types.js";
@@ -59,6 +60,11 @@ export default function App() {
     }
     cargar();
   }, []);
+
+  function renderLeccionMarkdown(texto: string) {
+    const html = marked.parse(texto, { async: false }) as string;
+    return { __html: html };
+  }
 
   const ruta = useMemo(
     () => armarRuta({ tecnicasDominadas: [], recetasCompletadas: [], nivel: perfilANivel[perfil] }, recetas),
@@ -338,11 +344,10 @@ export default function App() {
                     <div className="lesson-error">{leccion.error}</div>
                   )}
                   {leccion.contenido && (
-                    <div className="lesson-content">
-                      {leccion.contenido.split("\n").map((parrafo, i) => (
-                        <p key={i}>{parrafo}</p>
-                      ))}
-                    </div>
+                    <div
+                      className="lesson-content markdown-body"
+                      dangerouslySetInnerHTML={renderLeccionMarkdown(leccion.contenido)}
+                    />
                   )}
                 </div>
               )}
