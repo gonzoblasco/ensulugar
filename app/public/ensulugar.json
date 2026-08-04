@@ -1,0 +1,3141 @@
+{
+  "recetas": [
+    {
+      "id": 1,
+      "titulo": "Arroz Blanco Perfecto — Método de Absorción",
+      "tituloClave": "Arroz Blanco Perfecto — Método de Absorción",
+      "descripcionCorta": "El arroz blanco parece fácil, pero la mayoría lo hace mal: lo lavan de más, lo revuelven mientras se cocina, destapan antes de tiempo. La técnica de absorción es infalible: proporción exacta, fuego controlado, reposo tapado.",
+      "dificultad": 2,
+      "tiempoTotalMinutos": 25,
+      "porciones": 4,
+      "categoria": "arroz",
+      "tags": [
+        "arroz"
+      ],
+      "tecnicas": [
+        "arroz",
+        "control-fuego"
+      ],
+      "ingredientes": [
+        {
+          "nombre": "Arroz blanco de grano largo (o medio)",
+          "cantidad": "1 taza"
+        },
+        {
+          "nombre": "Agua (proporción 2:1)",
+          "cantidad": "2 tazas"
+        },
+        {
+          "nombre": "Aceite o manteca",
+          "cantidad": "1 cda"
+        },
+        {
+          "nombre": "Sal",
+          "cantidad": "1 cdita"
+        }
+      ],
+      "pasos": [
+        {
+          "orden": 1,
+          "instruccion": "Lavar el arroz: Poné el arroz en un colador fino. Enjuagá con agua fría hasta que el agua salga clara (no blanca). Esto saca el almidón superficial y evita que el arroz quede pegajoso.",
+          "nota": "⭐ El lavado es el paso más importante. Agua clara = arroz suelto. Agua blanca = arroz pegajoso."
+        },
+        {
+          "orden": 2,
+          "instruccion": "Tostar el arroz (opcional): En una olla con fondo grueso, calentá el aceite a fuego medio. Agregá el arroz escurrido y tostalo 1-2 minutos moviendo hasta que esté transparente y huela a nuez.",
+          "nota": "Tostar el arroz sella los granos y da un sabor más profundo. Para arroz blanco neutro, salteá este paso."
+        },
+        {
+          "orden": 3,
+          "instruccion": "Agregar el agua hirviendo: Agregá el agua hirviendo (no fría) y la sal. Revolvé una sola vez para distribuir. No vuelvas a revolver.",
+          "nota": "⭐ Revolver después de que el agua está caliente libera almidón y el arroz queda pegajoso. Una vez, y listo."
+        },
+        {
+          "orden": 4,
+          "instruccion": "Hervir y tapar: Llevá a hervor fuerte. Apenas hierva, tapá la olla herméticamente y bajá el fuego al MÍNIMO. No destapes por ningún motivo.",
+          "nota": "El vapor es el que cocina el arroz. Cada vez que destapás, perdés vapor y alargás la cocción."
+        },
+        {
+          "orden": 5,
+          "instruccion": "Cocción exacta: Cociná 15 minutos exactos (arroz blanco de grano largo). No más, no menos. Usá timer.",
+          "nota": "15 min para grano largo, 18 min para integral, 12 min para jazmín."
+        },
+        {
+          "orden": 6,
+          "instruccion": "Reposo tapado: Apagá el fuego. Dejá reposar tapado 5 minutos sin destapar. El calor residual termina la cocción y el vapor se redistribuye.",
+          "nota": "El reposo es tan importante como la cocción. Si destapás antes, el arroz queda húmedo en la base."
+        },
+        {
+          "orden": 7,
+          "instruccion": "Soltar con tenedor: Destapá. Pasá un tenedor suavemente para soltar los granos. Serví inmediatamente. ---",
+          "nota": "Usá tenedor, no cuchara. La cuchara aplasta los granos."
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "titulo": "Arroz Pilaf — Arroz Sofrito",
+      "tituloClave": "Arroz Pilaf — Arroz Sofrito",
+      "descripcionCorta": "El pilaf es arroz cocido en caldo con aromáticos, tostado primero. Más sabor que el arroz blanco, misma técnica de absorción. Base para arroz con pollo, arroz a la mexicana, arroz amarillo.",
+      "dificultad": 3,
+      "tiempoTotalMinutos": 30,
+      "porciones": 4,
+      "categoria": "arroz",
+      "tags": [
+        "arroz"
+      ],
+      "tecnicas": [
+        "arroz",
+        "control-fuego"
+      ],
+      "ingredientes": [
+        {
+          "nombre": "Arroz de grano largo",
+          "cantidad": "1 taza"
+        },
+        {
+          "nombre": "Caldo de pollo o verduras (caliente)",
+          "cantidad": "2 tazas"
+        },
+        {
+          "nombre": "Cebolla chica, en brunoise",
+          "cantidad": "1"
+        },
+        {
+          "nombre": "Ajo, en láminas",
+          "cantidad": "2 dientes"
+        },
+        {
+          "nombre": "Aceite o manteca",
+          "cantidad": "2 cdas"
+        },
+        {
+          "nombre": "Sal",
+          "cantidad": "1 cdita"
+        },
+        {
+          "nombre": "Azafrán, cúrcuma, pimentón, hierbas",
+          "cantidad": "Opcional:"
+        }
+      ],
+      "pasos": [
+        {
+          "orden": 1,
+          "instruccion": "Sofreír la cebolla: En una olla con fondo grueso, calentá el aceite a fuego medio. Agregá la cebolla en brunoise y cociná hasta que esté transparente (5-7 min). No la dore.",
+          "nota": "Cebolla transparente = dulce. Cebolla dorada = otro perfil de sabor."
+        },
+        {
+          "orden": 2,
+          "instruccion": "Agregar el arroz y tostar: Agregá el arroz lavado y escurrido. Tostá 2 minutos moviendo constantemente hasta que los bordes de los granos estén ligeramente translúcidos.",
+          "nota": "El tostado sella el grano y el arroz queda más suelto."
+        },
+        {
+          "orden": 3,
+          "instruccion": "Agregar el caldo caliente: Agregá el caldo hirviendo, la sal y las especias. Revolvé una vez. Llevá a hervor.",
+          "nota": "El caldo caliente evita que baje la temperatura de la olla y el arroz se cocine parejo."
+        },
+        {
+          "orden": 4,
+          "instruccion": "Tapar y cocer: Apenas hierva, tapá herméticamente, bajá el fuego al mínimo. Cociná 15-18 minutos. No destapes.",
+          "nota": "Misma regla que el arroz blanco: no destapar."
+        },
+        {
+          "orden": 5,
+          "instruccion": "Reposar y servir: Apagá el fuego. Reposá 5 minutos tapado. Destapá, soltá con tenedor. Serví. ---",
+          "nota": "El pilaf se sirve solo o como base de carnes y guisos."
+        },
+        {
+          "orden": 1,
+          "instruccion": "Arroz pegajoso / pasado: Demasiada agua o lo revolviste después de hervir. Proporción exacta 2:1, no revolver."
+        },
+        {
+          "orden": 2,
+          "instruccion": "Arroz duro / crudo: Poco agua, destapaste antes de tiempo, o el fuego no estaba al mínimo. Usá timer, no destapes."
+        },
+        {
+          "orden": 3,
+          "instruccion": "Arroz quemado en el fondo: Fuego muy alto o olla muy fina. Usá olla de fondo grueso, fuego al mínimo después del hervor."
+        },
+        {
+          "orden": 4,
+          "instruccion": "Arroz insípido: No lo salaste o usaste agua fría. Agua hirviendo + sal justa. Para más sabor, usá caldo."
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "titulo": "Osobuco Braseado — Cocción Lenta",
+      "tituloClave": "Osobuco Braseado — Cocción Lenta",
+      "descripcionCorta": "El braseado es la técnica para cortes duros y económicos: cocción larga, líquido, tapado, temperatura baja. El colágeno se convierte en gelatina y la carne se deshace. No es \"hervir la carne\" — es transformarla.",
+      "dificultad": 4,
+      "tiempoTotalMinutos": 0,
+      "porciones": 4,
+      "categoria": "braseado",
+      "tags": [
+        "braseado"
+      ],
+      "tecnicas": [
+        "braseado",
+        "sellado",
+        "deglaseado",
+        "control-fuego"
+      ],
+      "ingredientes": [
+        {
+          "nombre": "Osobucos de ternera (5 cm grosor)",
+          "cantidad": "4"
+        },
+        {
+          "nombre": "Zanahorias, en cubos grandes",
+          "cantidad": "2"
+        },
+        {
+          "nombre": "Ramas de apio, en cubos grandes",
+          "cantidad": "2"
+        },
+        {
+          "nombre": "Cebolla grande, en cubos grandes",
+          "cantidad": "1"
+        },
+        {
+          "nombre": "Ajo, chancados",
+          "cantidad": "3 dientes"
+        },
+        {
+          "nombre": "Vino tinto (malbec, cabernet)",
+          "cantidad": "1 taza"
+        },
+        {
+          "nombre": "Caldo de carne o verduras",
+          "cantidad": "2 tazas"
+        },
+        {
+          "nombre": "Puré de tomate",
+          "cantidad": "2 cdas"
+        },
+        {
+          "nombre": "Hojas de laurel",
+          "cantidad": "2"
+        },
+        {
+          "nombre": "Romero fresco",
+          "cantidad": "2 ramas"
+        },
+        {
+          "nombre": "para sellar",
+          "cantidad": "Harina"
+        },
+        {
+          "nombre": "3 cdas",
+          "cantidad": "Aceite de oliva"
+        },
+        {
+          "nombre": "a gusto",
+          "cantidad": "Sal y pimienta"
+        }
+      ],
+      "pasos": [
+        {
+          "orden": 1,
+          "instruccion": "Preparar la carne: Secá los osobucos con papel. Salpimentá. Pasalos por harina, sacudí el exceso. La harina ayuda a sellar y espesa el líquido de cocción.",
+          "nota": "La harina no es para empanizar, es para crear una costra fina que sella los jugos y espesa la salsa."
+        },
+        {
+          "orden": 2,
+          "instruccion": "Sellar la carne: En una olla de hierro o de fondo grueso (holandesa), calentá el aceite a fuego ALTO. Sellá los osobucos 3-4 minutos de cada lado hasta que estén dorados oscuros. No los muevas mientras se sellan. Retirá y reservá.",
+          "nota": "⭐ El sellado es el paso más importante del braseado. El color dorado oscuro es sabor concentrado que va a impregnar todo el líquido."
+        },
+        {
+          "orden": 3,
+          "instruccion": "Sofreír las verduras: En la misma olla (sin lavar), bajá el fuego a medio. Agregá la cebolla, zanahoria y apio. Cociná 8-10 minutos raspando el fondo hasta que las verduras estén doradas y el fondo de la olla se despegue.",
+          "nota": "Las verduras para braseado se cortan en cubos grandes porque se cocinan 3 horas. Si fueran chicas, se deshacen."
+        },
+        {
+          "orden": 4,
+          "instruccion": "Agregar el ajo y el puré de tomate: Agregá el ajo y el puré de tomate. Cociná 2 minutos hasta que el puré se oscurezca ligeramente.",
+          "nota": "El puré de tomate cocido aporta profundidad y acidez que balancea la grasa de la carne."
+        },
+        {
+          "orden": 5,
+          "instruccion": "Desglasar con vino: Agregá el vino tinto. Subí el fuego y raspá el fondo de la olla con cuchara de madera para despegar todos los restos dorados (deglaseado). Dejá reducir el vino a la mitad (3-4 minutos).",
+          "nota": "El deglaseado incorpora todo el sabor del sellado a la salsa. Si no raspás, ese sabor se pierde."
+        },
+        {
+          "orden": 6,
+          "instruccion": "Agregar el caldo y las hierbas: Volvé a poner la carne en la olla (con los jugos que haya soltado). Agregá el caldo hasta que cubra la carne 3/4 partes (no completamente). Agregá laurel y romero. Llevá a hervor.",
+          "nota": "La carne no debe estar completamente cubierta. La parte superior se cocina con el vapor, la inferior en líquido."
+        },
+        {
+          "orden": 7,
+          "instruccion": "Cocción lenta: Apenas hierva, tapá la olla y metéla al horno a 160°C (o dejá en la hornalla a fuego MÍNIMO). Cociná 2:30 a 3 horas. La carne debe estar tan tierna que se deshace con un tenedor.",
+          "nota": "⭐ 160°C es la temperatura ideal. Si hierve, la carne se seca. Si está muy baja, no se ablanda. El colágeno se convierte en gelatina a partir de 70°C."
+        },
+        {
+          "orden": 8,
+          "instruccion": "Reposar y servir: Dejá reposar 10 minutos tapado. Serví los osobucos con las verduras y la salsa colada o no (a gusto). Acompañá con puré, polenta o arroz. ---",
+          "nota": "La salsa del braseado es el tesoro. Si queda muy líquida, reducila a fuego alto 5 minutos antes de servir."
+        },
+        {
+          "orden": 1,
+          "instruccion": "Carne seca / fibrosa: No sellaste bien o la temperatura de cocción fue muy alta. Sellar a fuego alto, cocer a 160°C."
+        },
+        {
+          "orden": 2,
+          "instruccion": "Salsa aguada / sin sabor: No sellaste la carne o no deglasaste el fondo. Sellado oscuro + deglaseado = salsa con cuerpo."
+        },
+        {
+          "orden": 3,
+          "instruccion": "Carne deshecha / deshilachada: Te pasaste de cocción. 2:30-3 horas es suficiente. Probá con tenedor a las 2:30."
+        },
+        {
+          "orden": 4,
+          "instruccion": "Salsa grasosa: No enfriaste para sacar la grasa. Dejá enfriar y sacá la capa de grasa solidificada antes de recalentar."
+        },
+        {
+          "orden": 5,
+          "instruccion": "Olla que no es de hierro: Las ollas finas no mantienen temperatura pareja. Usá olla de hierro o fondo grueso."
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "titulo": "Caramelo Seco — Azúcar Sola",
+      "tituloClave": "Caramelo Seco — Azúcar Sola",
+      "descripcionCorta": "Caramelo seco es azúcar derretida sola, sin agua. Parece simple, pero es traicionero: un segundo de más y pasa de dorado a quemado. La técnica está en el control del fuego y en no moverlo.",
+      "dificultad": 3,
+      "tiempoTotalMinutos": 10,
+      "porciones": 4,
+      "categoria": "caramelo",
+      "tags": [
+        "caramelo"
+      ],
+      "tecnicas": [
+        "caramelo",
+        "control-fuego"
+      ],
+      "ingredientes": [
+        {
+          "nombre": "Azúcar blanca",
+          "cantidad": "1 taza"
+        },
+        {
+          "nombre": "Unas gotas de jugo de limón (ayuda a evitar que cristalice)",
+          "cantidad": "Opcional:"
+        }
+      ],
+      "pasos": [
+        {
+          "orden": 1,
+          "instruccion": "Azúcar en la sartén: Poné el azúcar en una sartén antiadherente o de fondo claro (para ver el color). Distribuila en una capa pareja. No agregues agua.",
+          "nota": "Sartén de fondo claro para ver el color del caramelo. Si es oscura, no vas a notar cuándo se quema."
+        },
+        {
+          "orden": 2,
+          "instruccion": "Fuego medio, no mover: Prendé el fuego a MEDIO. No muevas el azúcar. Dejala derretirse sola. Al principio se forman grumos — no los toques, se derriten solos.",
+          "nota": "⭐ No mover es la regla de oro del caramelo seco. Si movés, el azúcar cristaliza y se vuelve una masa sólida."
+        },
+        {
+          "orden": 3,
+          "instruccion": "Observar el color: Cuando el azúcar empiece a derretirse en los bordes, incliná suavemente la sartén para que el caramelo líquido cubra el azúcar sólido. Nunca uses cuchara.",
+          "nota": "El color es tu guía: dorado claro = caramelo suave. Dorado oscuro = caramelo intenso. Marrón = quemado."
+        },
+        {
+          "orden": 4,
+          "instruccion": "Punto justo: Cuando todo el azúcar esté derretido y tenga color ámbar (dorado oscuro), retirá del fuego INMEDIATAMENTE. El calor residual sigue cocinando.",
+          "nota": "⭐ Retirar antes del color deseado. El calor residual oscurece el caramelo un tono más."
+        },
+        {
+          "orden": 5,
+          "instruccion": "Detener la cocción: Si necesitás caramelo líquido, agregá crema de leche caliente (para salsa de caramelo) o agua caliente (para caramelo líquido claro). CUIDADO: el caramelo está a 170°C, va a burbujear violentamente.",
+          "nota": "⭐ El caramelo caliente quema como ácido. Usá guantes de cocina. Agregá líquido caliente, no frío (el frío hace explotar el caramelo)."
+        },
+        {
+          "orden": 6,
+          "instruccion": "Usar: Caramelo para flan, crema catalana, salsa de caramelo, decoración, praliné. Se conserva en frasco de vidrio a temperatura ambiente por semanas. ---",
+          "nota": "El caramelo seco se endurece al enfriar. Para mantenerlo líquido, agregá crema o manteca."
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "titulo": "Caramelo Húmedo — Azúcar + Agua",
+      "tituloClave": "Caramelo Húmedo — Azúcar + Agua",
+      "descripcionCorta": "Caramelo húmedo es más fácil de controlar que el seco: el agua evita que el azúcar se queme antes de derretirse. Ideal para principiantes.",
+      "dificultad": 2,
+      "tiempoTotalMinutos": 15,
+      "porciones": 4,
+      "categoria": "caramelo",
+      "tags": [
+        "caramelo"
+      ],
+      "tecnicas": [
+        "caramelo",
+        "control-fuego"
+      ],
+      "ingredientes": [
+        {
+          "nombre": "Azúcar",
+          "cantidad": "1 taza"
+        },
+        {
+          "nombre": "Agua",
+          "cantidad": "1/3 taza"
+        },
+        {
+          "nombre": "Jugo de limón",
+          "cantidad": "Opcional:"
+        }
+      ],
+      "pasos": [
+        {
+          "orden": 1,
+          "instruccion": "Azúcar + agua en la olla: Poné el azúcar y el agua en una olla chica de fondo claro. No revuelvas. Mové la olla en círculos para humedecer el azúcar.",
+          "nota": "No revolver con cuchara. El movimiento de la olla es suficiente."
+        },
+        {
+          "orden": 2,
+          "instruccion": "Hervir sin mover: Llevá a fuego medio-alto. Herví sin mover hasta que el agua se evapore y el azúcar empiece a tomar color (5-7 minutos). Podés cepillar los bordes de la olla con un pincel mojado para evitar cristales.",
+          "nota": "Los cristales en los bordes pueden arruinar el caramelo. Cepillá los bordes con agua para disolverlos."
+        },
+        {
+          "orden": 3,
+          "instruccion": "Punto justo: Cuando el caramelo tenga color ámbar, retirá del fuego. El color sigue oscureciendo fuera del fuego.",
+          "nota": "Misma regla que el caramelo seco: retirar antes del color deseado."
+        },
+        {
+          "orden": 4,
+          "instruccion": "Agregar crema o manteca: Para salsa de caramelo: agregá 1/2 taza de crema de leche caliente y 2 cdas de manteca. Mezclá con batidor. Volvé a fuego bajo 1 minuto si es necesario. ---",
+          "nota": "La crema fría hace que el caramelo se endurezca. Siempre caliente."
+        },
+        {
+          "orden": 1,
+          "instruccion": "Caramelo cristalizado (vuelve sólido): Moviste el azúcar mientras se derretía o entró agua. No mover, no meter cuchara."
+        },
+        {
+          "orden": 2,
+          "instruccion": "Caramelo quemado / amargo: Te distrajiste. El caramelo pasa de perfecto a quemado en 10 segundos. No te separes de la sartén."
+        },
+        {
+          "orden": 3,
+          "instruccion": "Caramelo que no se endurece: Poco cocido o mucha agua. Cociná hasta que el color sea ámbar."
+        },
+        {
+          "orden": 4,
+          "instruccion": "Salpicaduras peligrosas: Agregaste líquido frío al caramelo caliente. Siempre líquido caliente, con cuidado, usando guantes."
+        },
+        {
+          "orden": 5,
+          "instruccion": "Sabor a azúcar quemado: Usaste azúcar morena o impura. Azúcar blanca refinada da el caramelo más limpio."
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "titulo": "Bife a la Plancha — Punto Perfecto",
+      "tituloClave": "Bife a la Plancha — Punto Perfecto",
+      "descripcionCorta": "El 90% de la gente cocina la carne mal. Fuego muy bajo, la mueven, la pinchan. Un bife bien sellado por fuera y en el punto exacto por dentro es cuestión de técnica, no de suerte. Incluye cómo identificar el punto al tacto.",
+      "dificultad": 3,
+      "tiempoTotalMinutos": 10,
+      "porciones": 1,
+      "categoria": "carnes",
+      "tags": [
+        "carnes"
+      ],
+      "tecnicas": [
+        "sellado",
+        "reposo",
+        "control-fuego"
+      ],
+      "ingredientes": [
+        {
+          "nombre": "Bife de carne (nalga, cuadril, bife ancho)",
+          "cantidad": "1 unidad (2-3cm grosor)"
+        },
+        {
+          "nombre": "Sal gruesa",
+          "cantidad": "a gusto"
+        },
+        {
+          "nombre": "Pimienta negra",
+          "cantidad": "a gusto"
+        },
+        {
+          "nombre": "Aceite de girasol (o manteca)",
+          "cantidad": "1 cucharada"
+        }
+      ],
+      "pasos": [
+        {
+          "orden": 1,
+          "instruccion": "Sacá la carne de la heladera 20-30 minutos antes de cocinar: Debe estar a temperatura ambiente. Si está fría, el centro no se cocina parejo.",
+          "nota": "Temperatura ambiente es clave. Carne fría = exterior quemado, interior crudo."
+        },
+        {
+          "orden": 2,
+          "instruccion": "Secá el bife con papel absorbente: La carne húmeda no se dora, se hierve. Salá con sal gruesa de ambos lados justo antes de cocinar.",
+          "nota": "La sal gruesa no se disuelve inmediatamente, crea una costra al sellar. Si salás antes, la sal extrae jugos y la carne queda seca."
+        },
+        {
+          "orden": 3,
+          "instruccion": "Poné una sartén de hierro o plancha a fuego MUY ALTO: Tiene que estar humeante. Agregá el aceite — debe brillar pero no humear.",
+          "nota": "El sartén debe estar tan caliente que al poner la carne suene como un soplete. Si no suena, no está suficientemente caliente."
+        },
+        {
+          "orden": 4,
+          "instruccion": "Apoyá el bife en el sartén: NO LO MUEVAS. Dejalo sellar 3-4 minutos sin tocarlo. Cuando veas que los bordes se empiezan a dorar, está listo para dar vuelta.",
+          "nota": "Si lo movés, no se sella. Si lo movés y pega, es que no está listo. Se suelta solo cuando está sellado."
+        },
+        {
+          "orden": 5,
+          "instruccion": "Dalo vuelta: Cociná del otro lado 3-4 minutos para punto jugoso (término medio). Si querés más cocido, 1-2 minutos más de cada lado.",
+          "nota": "El tiempo exacto depende del grosor. 2-3cm: 3-4 min por lado = jugoso."
+        },
+        {
+          "orden": 6,
+          "instruccion": "Para verificar el punto sin termómetro: presioná el centro del bife con el dedo índice. Si se siente como la base del pulgar (mano relajada), está jugoso. Si se siente como la base del pulgar (mano abierta), está cocido.",
+          "nota": "⭐ La prueba del tacto: pulgar con índice = jugoso, pulgar con medio = punto medio, pulgar con meñique = bien cocido."
+        },
+        {
+          "orden": 7,
+          "instruccion": "Dejá reposar el bife 5 minutos antes de cortar: Tapalo suelto con papel aluminio. El reposo redistribuye los jugos — si cortás antes, los jugos se escapan y queda seco. ---",
+          "nota": "El reposo es tan importante como la cocción. 5 minutos mínimo."
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "titulo": "Sellado Perfecto + Salsa de Sartén",
+      "tituloClave": "Sellado Perfecto + Salsa de Sartén",
+      "descripcionCorta": "El color dorado en la carne es sabor, no decoración. Y después de cocinar, el fondo del sartén tiene todo el sabor concentrado. Deglaseado es la técnica para convertirlo en salsa en 2 minutos.",
+      "dificultad": 3,
+      "tiempoTotalMinutos": 15,
+      "porciones": 2,
+      "categoria": "carnes",
+      "tags": [
+        "carnes"
+      ],
+      "tecnicas": [
+        "sellado",
+        "deglaseado",
+        "basting",
+        "reposo"
+      ],
+      "ingredientes": [
+        {
+          "nombre": "Bife, pechuga de pollo o medallón de cerdo",
+          "cantidad": "2 unidades"
+        },
+        {
+          "nombre": "Aceite de girasol",
+          "cantidad": "1 cucharada"
+        },
+        {
+          "nombre": "Manteca",
+          "cantidad": "1 cucharada"
+        },
+        {
+          "nombre": "Vino blanco o caldo de carne",
+          "cantidad": "1/2 taza"
+        },
+        {
+          "nombre": "Ajo",
+          "cantidad": "2 dientes"
+        },
+        {
+          "nombre": "Tomillo o romero fresco",
+          "cantidad": "2-3 ramas"
+        },
+        {
+          "nombre": "Sal y pimienta",
+          "cantidad": "a gusto"
+        }
+      ],
+      "pasos": [
+        {
+          "orden": 1,
+          "instruccion": "Secá la carne, salá con sal gruesa: Sartén de hierro a fuego MUY ALTO. Aceite, esperá que humee ligeramente.",
+          "nota": "Misma preparación que el bife a la plancha."
+        },
+        {
+          "orden": 2,
+          "instruccion": "Sellá la carne 3-4 min por lado sin moverla: Debe quedar dorada oscura, no marrón claro. Ese color es sabor.",
+          "nota": "El color dorado oscuro es la reacción de Maillard. Eso es sabor concentrado."
+        },
+        {
+          "orden": 3,
+          "instruccion": "En el último minuto, agregá la manteca, los ajos chancados y las hierbas: Incliná el sartén y bañá la carne con la manteca derretida usando una cuchara (basting).",
+          "nota": "⭐ El basting (bañar con manteca) agrega sabor y mantiene la carne húmeda."
+        },
+        {
+          "orden": 4,
+          "instruccion": "Retirá la carne y dejala reposar tapada: No laves el sartén — el fondo dorado (fond) es la base de la salsa.",
+          "nota": "No lavar el sartén. Todo el sabor está pegado en el fondo."
+        },
+        {
+          "orden": 5,
+          "instruccion": "Sartén todavía caliente (fuego medio): Agregá el vino o caldo. Con una cuchara de madera, raspá el fondo del sartén para despegar todos los restos dorados.",
+          "nota": "⭐ Deglaseado: el líquido disuelve el fond y crea la base de la salsa."
+        },
+        {
+          "orden": 6,
+          "instruccion": "Dejá reducir a la mitad (unos 2-3 minutos): Si querés salsa más espesa, agregá un trocito de manteca fría y batí (montar la manteca).",
+          "nota": "Montar la manteca: manteca fría batida al final espesa y da brillo."
+        },
+        {
+          "orden": 7,
+          "instruccion": "Probá y ajustá sal/pimienta: Serví la salsa sobre la carne. La salsa de sartén es la diferencia entre \"carne cocinada\" y \"plato de restaurante\". ---",
+          "nota": "2 minutos de deglaseado convierten un sartén sucio en salsa."
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "titulo": "Pollo al Horno — Piel Crocante, Carne Jugosa",
+      "tituloClave": "Pollo al Horno — Piel Crocante, Carne Jugosa",
+      "descripcionCorta": "El pollo al horno seco es un clásico de la cocina aburrida. El secreto está en la temperatura inicial alta, el reposo y no abrir el horno. Piel crocante, carne que se desprende del hueso.",
+      "dificultad": 2,
+      "tiempoTotalMinutos": 60,
+      "porciones": 4,
+      "categoria": "carnes",
+      "tags": [
+        "carnes"
+      ],
+      "tecnicas": [
+        "pollo-horno",
+        "reposo",
+        "control-fuego"
+      ],
+      "ingredientes": [
+        {
+          "nombre": "Pollo entero (o piezas)",
+          "cantidad": "1 unidad (~2kg)"
+        },
+        {
+          "nombre": "Manteca",
+          "cantidad": "2 cucharadas"
+        },
+        {
+          "nombre": "Ajo",
+          "cantidad": "4 dientes"
+        },
+        {
+          "nombre": "Limón",
+          "cantidad": "1 unidad"
+        },
+        {
+          "nombre": "Tomillo o romero fresco",
+          "cantidad": "4-5 ramas"
+        },
+        {
+          "nombre": "Sal gruesa",
+          "cantidad": "a gusto"
+        },
+        {
+          "nombre": "Pimienta negra",
+          "cantidad": "a gusto"
+        },
+        {
+          "nombre": "Aceite de oliva",
+          "cantidad": "2 cucharadas"
+        }
+      ],
+      "pasos": [
+        {
+          "orden": 1,
+          "instruccion": "Sacá el pollo de la heladera 30 minutos antes: Secalo bien con papel absorbente por fuera y por dentro. La piel seca es piel crocante.",
+          "nota": "La humedad es enemiga de la piel crocante. Secá bien."
+        },
+        {
+          "orden": 2,
+          "instruccion": "Precalentá el horno a 220°C (máximo): Mientras, mezclá la manteca pomada con los ajos picados, sal, pimienta y las hierbas. Despegá la piel del pollo con los dedos y meté esta mezcla debajo de la piel.",
+          "nota": "⭐ La manteca con ajo debajo de la piel condimenta la carne directamente y ayuda a que la piel se dore."
+        },
+        {
+          "orden": 3,
+          "instruccion": "Frotá el pollo por fuera con aceite de oliva: Sal gruesa generosa por toda la superficie. Meté medio limón y las hierbas restantes dentro de la cavidad.",
+          "nota": "El limón dentro aromatiza desde adentro."
+        },
+        {
+          "orden": 4,
+          "instruccion": "Poné el pollo en una fuente para horno con la pechuga hacia arriba: Horneá a 220°C los primeros 20 minutos. Después bajá a 180°C y horneá 30-40 minutos más.",
+          "nota": "Los primeros 20 min a alta temperatura sellan la piel. Después el calor más bajo cocina parejo sin secar."
+        },
+        {
+          "orden": 5,
+          "instruccion": "No abras el horno durante la cocción: Cada vez que abrís, perdés temperatura y alargas el tiempo.",
+          "nota": "Resistí la tentación. Abrir el horno alarga la cocción y seca la carne."
+        },
+        {
+          "orden": 6,
+          "instruccion": "Verificá cocción: el jugo que sale al pinchar entre pata y pechuga debe ser transparente, no rosado. O termómetro: 74°C en la pata.",
+          "nota": "Jugo transparente = listo. Rosado = necesita más tiempo."
+        },
+        {
+          "orden": 7,
+          "instruccion": "Dejá reposar 10-15 minutos antes de cortar: Tapado suelto con papel aluminio. El reposo redistribuye los jugos. ---",
+          "nota": "El reposo es obligatorio. Si cortás apenas sale del horno, los jugos se escapan."
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "titulo": "Marinada vs Adobo Seco",
+      "tituloClave": "Marinada vs Adobo Seco",
+      "descripcionCorta": "No toda carne se marina. Las marinadas ácidas (limón, vinagre) ablandan pero pueden arruinar carnes tiernas. El adobo seco (especias + sal) es para cortes que ya son tiernos. Saber cuándo usar cada uno es la diferencia.",
+      "dificultad": 1,
+      "tiempoTotalMinutos": 10,
+      "porciones": 4,
+      "categoria": "carnes",
+      "tags": [
+        "carnes"
+      ],
+      "tecnicas": [
+        "marinada",
+        "sellado"
+      ],
+      "ingredientes": [
+        {
+          "nombre": "Carne (corte a elección)",
+          "cantidad": "500 g"
+        },
+        {
+          "nombre": "Aceite de oliva",
+          "cantidad": "3 cucharadas"
+        },
+        {
+          "nombre": "Ajo",
+          "cantidad": "3 dientes"
+        },
+        {
+          "nombre": "Hierbas (romero, tomillo, orégano)",
+          "cantidad": "a gusto"
+        },
+        {
+          "nombre": "Sal y pimienta",
+          "cantidad": "a gusto"
+        }
+      ],
+      "pasos": [
+        {
+          "orden": 1,
+          "instruccion": "Entendé la diferencia: marinada ácida (limón, vinagre, yogur) para cortes duros (falda, osobuco, roast beef). Adobo seco (sal + especias) para cortes tiernos (bife, lomo, pollo).",
+          "nota": "⭐ Regla de oro: marinada ácida para ablandar cortes duros. Adobo seco para potenciar cortes tiernos."
+        },
+        {
+          "orden": 2,
+          "instruccion": "Marinada ácida: mezclá aceite + ácido (limón/vinagre) + ajo + hierbas + sal. Meté la carne en un bowl o bolsa ziploc. Mínimo 2 horas, máximo 12 horas. No más de 24h o la carne se vuelve pastosa.",
+          "nota": "El ácido \"cocina\" la carne. Demasiado tiempo y la textura se arruina."
+        },
+        {
+          "orden": 3,
+          "instruccion": "Adobo seco: mezclá sal gruesa + pimienta + ajo en polvo + las especias que quieras (pimentón, comino, tomillo). Frotá sobre la carne y cociná inmediatamente o dejá hasta 1 hora.",
+          "nota": "El adobo seco no ablanda, potencia. Úsalo en cortes que ya son tiernos."
+        },
+        {
+          "orden": 4,
+          "instruccion": "Para pollo o cerdo: marinada ácida 2-4 horas es ideal. Para pescado: máximo 30 minutos (el ácido cocina el pescado muy rápido).",
+          "nota": "Pescado en marinada ácida = ceviche si lo dejás mucho."
+        },
+        {
+          "orden": 5,
+          "instruccion": "Siempre secá la carne con papel antes de cocinar, incluso si la marinaste: La marinada que queda en la superficie impide el sellado. ---",
+          "nota": "Marinar no es bañar. La carne marinada se seca antes de cocinar para que se dore bien."
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "titulo": "Crema Pastelera Clásica",
+      "tituloClave": "Crema Pastelera Clásica",
+      "descripcionCorta": "Crema pastelera es leche, huevos, azúcar y almidón. Parece simple, pero los grumos y el sabor a huevo son los enemigos. La técnica está en la temperatura de la leche y en no dejar de batir. Base de postres: profiteroles, tartas, churros, medialunas.",
+      "dificultad": 3,
+      "tiempoTotalMinutos": 20,
+      "porciones": 4,
+      "categoria": "crema-pastelera",
+      "tags": [
+        "crema-pastelera"
+      ],
+      "tecnicas": [
+        "crema-pastelera",
+        "control-fuego"
+      ],
+      "ingredientes": [
+        {
+          "nombre": "Leche entera",
+          "cantidad": "500 ml"
+        },
+        {
+          "nombre": "Yemas de huevo",
+          "cantidad": "4"
+        },
+        {
+          "nombre": "Azúcar",
+          "cantidad": "100 g"
+        },
+        {
+          "nombre": "Almidón de maíz (Maicena)",
+          "cantidad": "40 g"
+        },
+        {
+          "nombre": "Vaina de vainilla (o 1 cdita de esencia)",
+          "cantidad": "1"
+        },
+        {
+          "nombre": "Manteca (opcional, para más cremosidad)",
+          "cantidad": "30 g"
+        }
+      ],
+      "pasos": [
+        {
+          "orden": 1,
+          "instruccion": "Infusionar la leche: En una olla, poné la leche con la vainilla (si usás vaina, abrila y raspá las semillas dentro). Llevá a fuego medio hasta que esté a punto de hervir (burbujas en los bordes, no hervor fuerte). Apagá y dejá infusionar 10 minutos.",
+          "nota": "Infusionar la vainilla en leche caliente extrae todo el sabor. Si usás esencia, agregala al final."
+        },
+        {
+          "orden": 2,
+          "instruccion": "Batir yemas + azúcar + almidón: En un bowl, batí las yemas con el azúcar hasta que estén pálidas y espumosas (2-3 minutos). Agregá el almidón de maíz y batí hasta integrar. No debe quedar ningún grumo de almidón.",
+          "nota": "⭐ Batir bien las yemas con el azúcar evita el sabor a huevo. Si quedan grumos de almidón, la crema los va a tener."
+        },
+        {
+          "orden": 3,
+          "instruccion": "Templar las yemas: Agregá un cucharón de leche caliente a la mezcla de yemas, batiendo constantemente. Esto templa las yemas y evita que se corten al agregar el resto de la leche.",
+          "nota": "⭐ Templar es el paso que evita la crema revuelta (yemas cocidas en grumos). Leche caliente de a poco, batiendo siempre."
+        },
+        {
+          "orden": 4,
+          "instruccion": "Cocinar la crema: Volcá la mezcla de yemas en la olla con el resto de la leche. Volvé a fuego MEDIO, batiendo CONSTANTEMENTE con batidor de alambre. La crema va a espesar de golpe (2-3 minutos). Cuando veas las primeras burbujas, bajá el fuego y batí 1 minuto más.",
+          "nota": "⭐ No dejar de batir es la regla de oro. Si parás, se forman grumos. Las primeras burbujas indican que el almidón se activó."
+        },
+        {
+          "orden": 5,
+          "instruccion": "Agregar la manteca: Apagá el fuego. Agregá la manteca (si usás) y batí hasta que se derrita. La manteca aporta brillo y cremosidad.",
+          "nota": "La manteca no es obligatoria, pero la crema queda más brillante y suave."
+        },
+        {
+          "orden": 6,
+          "instruccion": "Enfriar rápido: Volcá la crema en una fuente plana o bowl. Cubrí con film en CONTACTO (que toque la superficie de la crema). Esto evita que se forme una piel. Dejá enfriar a temperatura ambiente, luego heladera.",
+          "nota": "⭐ El film en contacto es obligatorio. Si no lo ponés, se forma una piel gruesa que arruina la textura."
+        },
+        {
+          "orden": 7,
+          "instruccion": "Usar: La crema pastelera se usa fría. Batila suavemente antes de usar para recuperar la textura cremosa. Dura 3-4 días en heladera. No congela. --- ---",
+          "nota": "Al batirla fría, la crema recupera la cremosidad. Si está muy espesa, agregá un chorrito de leche."
+        },
+        {
+          "orden": 1,
+          "instruccion": "Crema con grumos: No batiste suficiente el almidón con las yemas, o dejaste de batir durante la cocción. Batí bien el almidón al inicio, no pares de batir en la cocción."
+        },
+        {
+          "orden": 2,
+          "instruccion": "Sabor a huevo: No batiste suficiente las yemas con el azúcar, o la cocción fue muy corta. Batí hasta que estén pálidas, cociná 1 minuto después de que espese."
+        },
+        {
+          "orden": 3,
+          "instruccion": "Crema muy espesa / pastosa: Mucho almidón o cocción muy larga. 40g de almidón por 500ml de leche es la proporción justa."
+        },
+        {
+          "orden": 4,
+          "instruccion": "Crema muy líquida: Poco almidón o cocción muy corta. Cociná hasta que veas las primeras burbujas y batí 1 minuto más."
+        },
+        {
+          "orden": 5,
+          "instruccion": "Piel en la superficie: No pusiste film en contacto. Siempre film tocando la crema."
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "titulo": "Corte Juliana — Bastones Finos",
+      "tituloClave": "Corte Juliana — Bastones Finos",
+      "descripcionCorta": "La juliana es el corte más versátil: bastones finos de 4-5 cm de largo y 2-3 mm de ancho. Se usa para salteados, ensaladas, guarniciones. Es la base de todos los cortes en bastón.",
+      "dificultad": 2,
+      "tiempoTotalMinutos": 5,
+      "porciones": 1,
+      "categoria": "cuchillo",
+      "tags": [
+        "cuchillo"
+      ],
+      "tecnicas": [
+        "cuchillo"
+      ],
+      "ingredientes": [
+        {
+          "nombre": "Zanahoria grande",
+          "cantidad": "1"
+        },
+        {
+          "nombre": "Morrón rojo",
+          "cantidad": "1"
+        },
+        {
+          "nombre": "Cebolla",
+          "cantidad": "1"
+        }
+      ],
+      "pasos": [
+        {
+          "orden": 1,
+          "instruccion": "Cuchillo bien afilado: Usá un cuchillo de chef (20 cm) bien afilado. Un cuchillo sin filo es más peligroso que uno afilado: resbala y corta lo que no querés.",
+          "nota": "Un cuchillo afilado corta con el peso de la hoja, no con fuerza."
+        },
+        {
+          "orden": 2,
+          "instruccion": "Técnica de garra: Con la mano que sostiene el alimento, curvás los dedos hacia adentro formando una garra. Los nudillos guían el cuchillo. La punta de los dedos queda protegida detrás de los nudillos.",
+          "nota": "⭐ La garra es la técnica de seguridad más importante. Los nudillos tocan la hoja, los dedos no."
+        },
+        {
+          "orden": 3,
+          "instruccion": "Cortar la zanahoria en láminas: Cortá la zanahoria en láminas de 2-3 mm de grosor, en sentido longitudinal. Mantené las láminas parejas.",
+          "nota": "El grosor parejo asegura cocción uniforme."
+        },
+        {
+          "orden": 4,
+          "instruccion": "Apilar y cortar en juliana: Apilá 3-4 láminas. Cortá en tiras de 2-3 mm de ancho. Mové el cuchillo con un balanceo suave, manteniendo la punta apoyada en la tabla.",
+          "nota": "La punta del cuchillo nunca se levanta de la tabla. El movimiento es de balanceo, no de serrucho."
+        },
+        {
+          "orden": 5,
+          "instruccion": "Cebolla en juliana: Cortá la cebolla por la mitad, pelala. Cortá en tiras siguiendo las vetas de la cebolla. Para brunoise, cortá las tiras en cubos de 2-3 mm.",
+          "nota": "Cortar siguiendo las vetas da tiras más firmes. Cortar contra las vetas da tiras más suaves (para cocción más rápida)."
+        },
+        {
+          "orden": 6,
+          "instruccion": "Morrón en juliana: Cortá el morrón en cuartos, sacá las semillas y las venas blancas. Apoyá cada cuarto sobre la tabla con la piel hacia abajo y cortá en tiras. ---",
+          "nota": "La piel hacia abajo da más estabilidad al cortar."
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "titulo": "Corte Brunoise — Cubos Pequeños",
+      "tituloClave": "Corte Brunoise — Cubos Pequeños",
+      "descripcionCorta": "Brunoise es juliana cortada en cubos de 2-3 mm. Es la base de salsas, rellenos y sopas. Requiere más precisión que la juliana.",
+      "dificultad": 3,
+      "tiempoTotalMinutos": 5,
+      "porciones": 1,
+      "categoria": "cuchillo",
+      "tags": [
+        "cuchillo"
+      ],
+      "tecnicas": [
+        "cuchillo"
+      ],
+      "ingredientes": [
+        {
+          "nombre": "Zanahoria",
+          "cantidad": "1"
+        },
+        {
+          "nombre": "Cebolla",
+          "cantidad": "1"
+        },
+        {
+          "nombre": "Diente de ajo",
+          "cantidad": "1"
+        }
+      ],
+      "pasos": [
+        {
+          "orden": 1,
+          "instruccion": "Preparar la juliana: Cortá la zanahoria en láminas de 2-3 mm, luego en juliana del mismo grosor. La precisión en la juliana determina la calidad del brunoise.",
+          "nota": "Si la juliana no es pareja, el brunoise tampoco."
+        },
+        {
+          "orden": 2,
+          "instruccion": "Cortar en cubos: Juntá las tiras de juliana en un paquete compacto. Cortá en cubos de 2-3 mm. Mové el cuchillo con ritmo constante.",
+          "nota": "El ritmo constante evita que los cubos se desarmen."
+        },
+        {
+          "orden": 3,
+          "instruccion": "Ajo en brunoise: Pelá el diente de ajo. Cortá en láminas finas, luego en tiras finas, luego en cubos. El ajo en brunoise se quema fácil — usalo al final de la cocción.",
+          "nota": "El ajo en cubos chicos se quema en segundos. Agregalo al final de la cocción de la base."
+        },
+        {
+          "orden": 4,
+          "instruccion": "Verificar uniformidad: Los cubos deben ser del mismo tamaño. Si hay diferencias grandes, algunos se cocinan antes que otros. ---",
+          "nota": "La uniformidad es la diferencia entre cocina casera y cocina profesional."
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "titulo": "Corte Chiffonade — Tiras Finas de Hojas",
+      "tituloClave": "Corte Chiffonade — Tiras Finas de Hojas",
+      "descripcionCorta": "Chiffonade es el corte para hojas verdes y hierbas: albahaca, lechuga, acelga, espinaca. Tiras finas que se integran sin dominar el plato.",
+      "dificultad": 2,
+      "tiempoTotalMinutos": 2,
+      "porciones": 1,
+      "categoria": "cuchillo",
+      "tags": [
+        "cuchillo"
+      ],
+      "tecnicas": [
+        "cuchillo"
+      ],
+      "ingredientes": [
+        {
+          "nombre": "Atado de albahaca fresca (o 4 hojas grandes)",
+          "cantidad": "1"
+        }
+      ],
+      "pasos": [
+        {
+          "orden": 1,
+          "instruccion": "Apilar las hojas: Apilá las hojas una sobre otra, todas en la misma dirección. Enrollalas firmemente como un cigarro, desde el extremo más ancho hacia la punta.",
+          "nota": "El rollo firme es clave: si está flojo, las tiras salen desparejas."
+        },
+        {
+          "orden": 2,
+          "instruccion": "Cortar en tiras finas: Con el cuchillo de chef, cortá el rollo en tiras de 1-2 mm de ancho. Mové el cuchillo con un balanceo suave.",
+          "nota": "Cuanto más fino el corte, más delicado el resultado. Para ensaladas, 2-3 mm. Para sopas, 1 mm."
+        },
+        {
+          "orden": 3,
+          "instruccion": "Soltar las tiras: Pasá los dedos por las tiras para separarlas. Usá inmediatamente o guardá en papel húmedo en heladera hasta 1 hora. ---",
+          "nota": "La albahaca cortada se oxida rápido. Usala en el momento."
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "titulo": "Cebolla Morada en Escabeche Rápido",
+      "tituloClave": "Cebolla Morada en Escabeche Rápido",
+      "descripcionCorta": "Encurtido rápido no es fermentación: es vegetales en vinagre, sal y azúcar. En 30 minutos tenés un acompañamiento ácido y crujiente que transforma cualquier plato. La cebolla morada en escabeche es la entrada al mundo de los pickles.",
+      "dificultad": 1,
+      "tiempoTotalMinutos": 15,
+      "porciones": 4,
+      "categoria": "encurtido",
+      "tags": [
+        "encurtido"
+      ],
+      "tecnicas": [
+        "encurtido",
+        "cuchillo"
+      ],
+      "ingredientes": [
+        {
+          "nombre": "Cebolla morada grande",
+          "cantidad": "1"
+        },
+        {
+          "nombre": "Vinagre de vino blanco o manzana",
+          "cantidad": "1/2 taza"
+        },
+        {
+          "nombre": "Agua",
+          "cantidad": "1/2 taza"
+        },
+        {
+          "nombre": "Azúcar",
+          "cantidad": "1 cda"
+        },
+        {
+          "nombre": "Sal",
+          "cantidad": "1 cdita"
+        },
+        {
+          "nombre": "Granos de pimienta, laurel, eneldo, ajo",
+          "cantidad": "Opcional:"
+        }
+      ],
+      "pasos": [
+        {
+          "orden": 1,
+          "instruccion": "Cortar la cebolla: Pelá la cebolla. Cortala por la mitad y luego en plumas finas (juliana de 2-3 mm). Mientras más fina, más rápido se encurte.",
+          "nota": "El corte fino permite que el vinagre penetre rápido. Cebolla gruesa = más tiempo de reposo."
+        },
+        {
+          "orden": 2,
+          "instruccion": "Preparar la salmuera: En una olla chica, poné el vinagre, el agua, el azúcar y la sal. Agregá los aromáticos (pimienta, laurel). Llevá a hervor, revolviendo hasta que el azúcar y la sal se disuelvan.",
+          "nota": "La proporción 1:1 vinagre/agua es la base. Más vinagre = más ácido. Más agua = más suave."
+        },
+        {
+          "orden": 3,
+          "instruccion": "Verter sobre la cebolla: Poné la cebolla en un bowl o frasco de vidrio. Verté la salmuera caliente por encima. La cebolla debe quedar completamente cubierta.",
+          "nota": "La salmuera caliente acelera el encurtido. Si usás salmuera fría, necesita horas."
+        },
+        {
+          "orden": 4,
+          "instruccion": "Reposar: Dejá enfriar a temperatura ambiente (30 min). Tapá y llevá a la heladera. En 30 minutos ya está lista. Mejor después de 2 horas. Dura hasta 2 semanas en heladera.",
+          "nota": "El encurtido rápido no es fermentación: no necesita tiempo para desarrollar sabor. El vinagre hace el trabajo al instante."
+        },
+        {
+          "orden": 5,
+          "instruccion": "Usar: Usá la cebolla en escabeche para tacos, ensaladas, sándwiches, hamburguesas, carnes, pizzas. El líquido sobrante sirve para aderezos. ---",
+          "nota": "La cebolla en escabeche es el acompañamiento más versátil que podés tener en la heladera."
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "titulo": "Pepinos en Pickle Rápido",
+      "tituloClave": "Pepinos en Pickle Rápido",
+      "descripcionCorta": "Pepinos crujientes, ácidos, ligeramente dulces. El pickle rápido perfecto para hamburguesas, sándwiches y ensaladas.",
+      "dificultad": 1,
+      "tiempoTotalMinutos": 15,
+      "porciones": 4,
+      "categoria": "encurtido",
+      "tags": [
+        "encurtido"
+      ],
+      "tecnicas": [
+        "encurtido",
+        "cuchillo"
+      ],
+      "ingredientes": [
+        {
+          "nombre": "Pepinos (preferiblemente persas o kirby)",
+          "cantidad": "2"
+        },
+        {
+          "nombre": "Vinagre de vino blanco",
+          "cantidad": "1/2 taza"
+        },
+        {
+          "nombre": "Agua",
+          "cantidad": "1/2 taza"
+        },
+        {
+          "nombre": "Azúcar",
+          "cantidad": "1 cda"
+        },
+        {
+          "nombre": "Sal",
+          "cantidad": "1 cdita"
+        },
+        {
+          "nombre": "Ajo, en láminas",
+          "cantidad": "2 dientes"
+        },
+        {
+          "nombre": "Eneldo fresco o seco",
+          "cantidad": "1 cdita"
+        },
+        {
+          "nombre": "Granos de pimienta",
+          "cantidad": "1/2 cdita"
+        }
+      ],
+      "pasos": [
+        {
+          "orden": 1,
+          "instruccion": "Cortar los pepinos: Lavalos bien. Cortalos en rodajas de 3-4 mm (con cáscara). Si usás pepinos comunes (con mucha agua), sacá las semillas con una cuchara antes de cortar.",
+          "nota": "Los pepinos persas o kirby tienen menos agua y quedan más crocantes. Los pepinos comunes necesitan que les saques las semillas."
+        },
+        {
+          "orden": 2,
+          "instruccion": "Preparar la salmuera: Herví vinagre + agua + azúcar + sal + ajo + eneldo + pimienta hasta disolver."
+        },
+        {
+          "orden": 3,
+          "instruccion": "Encurtir: Poné los pepinos en un frasco. Verté la salmuera caliente. Dejá enfriar. Llevá a heladera. Listos en 1 hora. Mejoran después de 24 horas.",
+          "nota": "Los pepinos encurtidos mejoran con el tiempo. Al otro día están en su punto óptimo."
+        },
+        {
+          "orden": 4,
+          "instruccion": "Conservar: Dura hasta 3 semanas en heladera. La salmuera se puede reusar una vez para otra tanda. ---",
+          "nota": "Reusar la salmuera da pickles más suaves (pierde acidez). Agregá un chorrito de vinagre fresco si reusás."
+        },
+        {
+          "orden": 1,
+          "instruccion": "Pickles blandos / sin crocancia: Pepinos viejos o con mucha agua. Usá pepinos frescos y firmes. Sacá las semillas si es necesario."
+        },
+        {
+          "orden": 2,
+          "instruccion": "Demasiado ácido: Mucho vinagre o poco azúcar. Proporción 1:1 vinagre/agua, ajustá el azúcar a tu gusto."
+        },
+        {
+          "orden": 3,
+          "instruccion": "Poco sabor: Salmuera sin aromáticos. Siempre agregá ajo, pimienta, laurel, eneldo o lo que tengas."
+        },
+        {
+          "orden": 4,
+          "instruccion": "No duran: Usaste un frasco sucio o no cubriste los vegetales completamente. Frasco limpio, vegetales siempre cubiertos por la salmuera."
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "titulo": "Milanesa de Carne — Empanizado y Fritura Perfecta",
+      "tituloClave": "Milanesa de Carne — Empanizado y Fritura Perfecta",
+      "descripcionCorta": "La milanesa parece fácil, pero la mayoría la hace mal: el empanizado se despega, el aceite no está a la temperatura justa, y queda aceitosa en vez de crocante. La técnica está en la temperatura del aceite y el empanizado en tres pasos.",
+      "dificultad": 3,
+      "tiempoTotalMinutos": 20,
+      "porciones": 2,
+      "categoria": "fritura",
+      "tags": [
+        "fritura"
+      ],
+      "tecnicas": [
+        "fritura",
+        "control-fuego"
+      ],
+      "ingredientes": [
+        {
+          "nombre": "Bife de nalga o cuadrada (1 cm grosor)",
+          "cantidad": "2"
+        },
+        {
+          "nombre": "Huevos",
+          "cantidad": "2"
+        },
+        {
+          "nombre": "Pan rallado (o panko para más crocante)",
+          "cantidad": "200 g"
+        },
+        {
+          "nombre": "Harina 0000",
+          "cantidad": "50 g"
+        },
+        {
+          "nombre": "Sal",
+          "cantidad": "1 cdita"
+        },
+        {
+          "nombre": "Pimienta",
+          "cantidad": "1 cdita"
+        },
+        {
+          "nombre": "Aceite de girasol (o mezcla con oliva) para freír",
+          "cantidad": "1 litro"
+        }
+      ],
+      "pasos": [
+        {
+          "orden": 1,
+          "instruccion": "Preparar la carne: Golpeá los bifes con un martillo de cocina o el dorso de un cuchillo pesado hasta que tengan 5-7 mm de grosor parejo. Salpimentá de ambos lados.",
+          "nota": "Golpear la carne ablanda las fibras y asegura cocción pareja. Si no golpeás, el centro queda crudo cuando el exterior está listo."
+        },
+        {
+          "orden": 2,
+          "instruccion": "Empanizado en tres pasos: Prepará tres bowls: harina, huevos batidos con un chorrito de agua y sal, y pan rallado. Pasá cada bife por harina (sacudí el exceso), luego por huevo (cubrí bien), luego por pan rallado (presioná suavemente para que adhiera).",
+          "nota": "⭐ La harina es el pegamento: sin harina, el huevo resbala y el pan rallado se despega al freír."
+        },
+        {
+          "orden": 3,
+          "instruccion": "Reposar el empanizado: Poné las milanesas empanizadas sobre una rejilla o plato. Dejalas reposar 10 minutos en heladera. Esto asienta el empanizado y no se despega al freír.",
+          "nota": "El reposo en frío es el secreto de un empanizado que no se despega. La harina absorbe la humedad del huevo y se fija."
+        },
+        {
+          "orden": 4,
+          "instruccion": "Calentar el aceite: En una olla honda o sartén profundo, calentá el aceite a 170-180°C. Sin termómetro: poné un cubo de pan; si burbujea activamente y se dora en 30 segundos, está listo.",
+          "nota": "⭐ La temperatura del aceite es todo. Muy frío: la milanesa absorbe aceite y queda grasosa. Muy caliente: se quema por fuera y queda cruda por dentro."
+        },
+        {
+          "orden": 5,
+          "instruccion": "Freír: Bajá cada milanesa suavemente al aceite (no la tires, salpica). Freí 2-3 minutos de cada lado hasta que esté dorada oscura. No pongas más de 2 milanesas a la vez — el aceite se enfría y quedan aceitosas.",
+          "nota": "No sobrecargar el aceite es clave. Si ponés muchas, la temperatura baja y las milanesas absorben aceite."
+        },
+        {
+          "orden": 6,
+          "instruccion": "Escurrir: Sacá con espumadera o pinzas. Apoyá sobre papel absorbente o rejilla. Salá apenas salen del aceite (la sal se adhiere mejor caliente).",
+          "nota": "Rejilla es mejor que papel: el aire circula y el empanizado se mantiene crocante. En papel, el vapor ablanda la base."
+        },
+        {
+          "orden": 7,
+          "instruccion": "Servir inmediatamente: La milanesa no espera. Acompañá con ensalada, puré o papas fritas. Si la tapás o la guardás, el empanizado se ablanda. ---",
+          "nota": "La milanesa es un plato de comer en el momento. Recalfentada pierde toda la crocancia."
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "titulo": "Papas Fritas — Doble Cocción",
+      "tituloClave": "Papas Fritas — Doble Cocción",
+      "descripcionCorta": "Las papas fritas perfectas no se fríen una vez, se fríen dos. La primera cocción a baja temperatura las cocina por dentro; la segunda a alta temperatura las dora y las deja crocantes. Sin trucos raros, solo técnica.",
+      "dificultad": 3,
+      "tiempoTotalMinutos": 30,
+      "porciones": 2,
+      "categoria": "fritura",
+      "tags": [
+        "fritura"
+      ],
+      "tecnicas": [
+        "fritura",
+        "control-fuego"
+      ],
+      "ingredientes": [
+        {
+          "nombre": "Papas grandes (tipo russet o para fritura)",
+          "cantidad": "2"
+        },
+        {
+          "nombre": "Aceite de girasol",
+          "cantidad": "1 litro"
+        },
+        {
+          "nombre": "a gusto",
+          "cantidad": "Sal gruesa"
+        }
+      ],
+      "pasos": [
+        {
+          "orden": 1,
+          "instruccion": "Cortar las papas: Pelá las papas. Cortá en bastones de 1 cm de grosor (no más finas, no más gruesas). Ponelas en un bowl con agua fría 30 minutos para sacar el almidón.",
+          "nota": "El remojo en agua fría saca el almidón superficial y las papas quedan más crocantes."
+        },
+        {
+          "orden": 2,
+          "instruccion": "Secar bien: Escurrí las papas y secalas COMPLETAMENTE con un repasador limpio o papel absorbente. El agua en el aceite es peligrosa (salpica) y arruina la fritura.",
+          "nota": "⭐ Secar bien es obligatorio. Agua + aceite caliente = explosión de salpicaduras."
+        },
+        {
+          "orden": 3,
+          "instruccion": "Primera fritura (cocción): Calentá el aceite a 130-140°C. Freí las papas en tandas 5-6 minutos. Deben estar cocidas por dentro pero sin color. Sacá con espumadera y dejá enfriar sobre rejilla 10 minutos.",
+          "nota": "La primera fritura cocina el interior. Las papas deben estar tiernas pero pálidas."
+        },
+        {
+          "orden": 4,
+          "instruccion": "Segunda fritura (dorado): Subí el aceite a 180-190°C. Freí las papas de nuevo 2-3 minutos hasta que estén doradas y crocantes. Sacá, escurrí sobre papel, salá con sal gruesa.",
+          "nota": "⭐ La doble fritura es el secreto de las papas fritas de restaurante. La primera cocina, la segunda dora."
+        },
+        {
+          "orden": 5,
+          "instruccion": "Servir inmediatamente: Las papas fritas se comen en el momento. Si se enfrían, pierden la crocancia. No las tapes ni las guardes. ---",
+          "nota": "Las papas fritas no se recalientan. Se hacen y se comen."
+        },
+        {
+          "orden": 1,
+          "instruccion": "Empanizado se despega: No usaste harina antes del huevo, o no reposaste en heladera. Harina + reposo = empanizado que se pega."
+        },
+        {
+          "orden": 2,
+          "instruccion": "Milanesa aceitosa: Aceite muy frío o sobrecargaste el sartén. 170-180°C, pocas piezas a la vez."
+        },
+        {
+          "orden": 3,
+          "instruccion": "Papas fritas blandas: Una sola fritura o no remojaste en agua fría. Doble fritura + remojo = crocantes."
+        },
+        {
+          "orden": 4,
+          "instruccion": "Aceite salpica: Las papas no estaban secas. Secar bien antes de freír."
+        },
+        {
+          "orden": 5,
+          "instruccion": "Sabor a aceite quemado: Aceite recalentado muchas veces o temperatura muy alta. Usá aceite fresco, no más de 2-3 usos."
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "titulo": "Hojaldre Clásico — Laminado de Manteca",
+      "tituloClave": "Hojaldre Clásico — Laminado de Manteca",
+      "descripcionCorta": "El hojaldre no es una masa, es una técnica: capas de masa y manteca que se multiplican al hornearse. Cada pliegue triplica las capas. 6 pliegues = 729 capas. La manteca fría, el reposo y la paciencia son todo.",
+      "dificultad": 5,
+      "tiempoTotalMinutos": 0,
+      "porciones": 6,
+      "categoria": "hojaldre",
+      "tags": [
+        "hojaldre"
+      ],
+      "tecnicas": [
+        "hojaldre",
+        "masa-quebrada",
+        "control-fuego"
+      ],
+      "ingredientes": [
+        {
+          "nombre": "Harina 0000",
+          "cantidad": "250 g"
+        },
+        {
+          "nombre": "Manteca (para el laminado)",
+          "cantidad": "250 g"
+        },
+        {
+          "nombre": "Agua fría",
+          "cantidad": "125 ml"
+        },
+        {
+          "nombre": "Sal",
+          "cantidad": "5 g"
+        },
+        {
+          "nombre": "Manteca derretida (para la masa base)",
+          "cantidad": "30 g"
+        }
+      ],
+      "pasos": [
+        {
+          "orden": 1,
+          "instruccion": "Masa base (détrempe): Mezclá la harina, la sal, la manteca derretida y el agua fría. Uní sin amasar. Formá un cuadrado, envolvé en film y llevá a heladera 30 minutos.",
+          "nota": "La masa base no se amasa. Si la trabajás de más, el gluten se desarrolla y el hojaldre no sube."
+        },
+        {
+          "orden": 2,
+          "instruccion": "Preparar la manteca para laminar: Poné la manteca fría entre dos papeles film. Golpeala con un palo de amasar hasta formar un cuadrado de 15×15 cm. Debe estar fría pero maleable (ni dura ni blanda).",
+          "nota": "⭐ La manteca debe estar a la misma temperatura que la masa. Si está más dura, se rompe. Si está más blanda, se absorbe."
+        },
+        {
+          "orden": 3,
+          "instruccion": "Encerrar la manteca: Estirá la masa base en un cuadrado de 30×30 cm. Poné la manteca en el centro en forma de rombo (girada 45°). Doblá las puntas de la masa sobre la manteca, como un sobre. Presioná los bordes para sellar.",
+          "nota": "La manteca debe quedar completamente sellada dentro de la masa. Si queda expuesta, se sale al laminar."
+        },
+        {
+          "orden": 4,
+          "instruccion": "Primer pliegue (vuelta simple): Estirá la masa en un rectángulo de 60×20 cm. Doblá en tres, como una carta (un tercio sobre el centro, el otro tercio encima). Girá 90° (como un libro). Envolvé en film y heladera 30 minutos.",
+          "nota": "⭐ Cada pliegue triplica las capas. Girar 90° entre pliegues asegura que las capas se multipliquen en todas direcciones."
+        },
+        {
+          "orden": 5,
+          "instruccion": "Segundo a sexto pliegue: Repetí el proceso 5 veces más: estirar, doblar en tres, girar 90°, reposar 30 minutos en heladera. Después de 6 pliegues, tenés 729 capas teóricas.",
+          "nota": "6 pliegues es el número mágico. Menos pliegues = menos capas. Más pliegues = la manteca se integra a la masa."
+        },
+        {
+          "orden": 6,
+          "instruccion": "Reposo final: Después del último pliegue, envolvé en film y heladera mínimo 1 hora (ideal 12 horas). El reposo relaja el gluten y la masa se encoge menos al hornear.",
+          "nota": "El reposo final es clave. Si horneás sin reposar, el hojaldre se encoge y las capas no se separan."
+        },
+        {
+          "orden": 7,
+          "instruccion": "Hornear: Precalentá el horno a 200°C. Estirá el hojaldre al grosor deseado. Cortá con cuchillo filoso (no marquesina, sella los bordes). Horneá 20-25 minutos hasta que esté dorado y las capas se hayan separado.",
+          "nota": "El cuchillo filoso corta las capas sin aplastarlas. Si usás marquesina, los bordes se pegan y no suben."
+        },
+        {
+          "orden": 1,
+          "instruccion": "Hojaldre que no sube: La manteca se absorbió en la masa (estaba muy blanda) o los pliegues fueron muy pocos. Manteca fría, 6 pliegues mínimo."
+        },
+        {
+          "orden": 2,
+          "instruccion": "Hojaldre que se encoge al hornear: Poco reposo entre pliegues o masa muy trabajada. 30 min de reposo entre cada pliegue, 1 hora antes de hornear."
+        },
+        {
+          "orden": 3,
+          "instruccion": "Manteca se sale por los bordes: No sellaste bien la manteca en el primer pliegue o estiraste muy fino. Sellar bien, no estirar a menos de 3 mm."
+        },
+        {
+          "orden": 4,
+          "instruccion": "Capas pegadas / sin separación: La manteca se derritió durante el laminado. Trabajá en superficie fría, reposá en heladera si la masa se calienta."
+        },
+        {
+          "orden": 5,
+          "instruccion": "Hojaldre duro / seco: Muy poca manteca o demasiados pliegues. Proporción 1:1 harina/manteca, 6 pliegues exactos. ---"
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "titulo": "Palmitos de Hojaldre",
+      "tituloClave": "Palmitos de Hojaldre",
+      "descripcionCorta": "La aplicación más simple del hojaldre: azúcar + canela + horneado. Ideal para practicar el laminado sin presión.",
+      "dificultad": 4,
+      "tiempoTotalMinutos": 30,
+      "porciones": 4,
+      "categoria": "hojaldre",
+      "tags": [
+        "hojaldre"
+      ],
+      "tecnicas": [
+        "hojaldre"
+      ],
+      "ingredientes": [
+        {
+          "nombre": "Disco de hojaldre (6 pliegues, reposado)",
+          "cantidad": "1"
+        },
+        {
+          "nombre": "Azúcar",
+          "cantidad": "1/2 taza"
+        },
+        {
+          "nombre": "Canela en polvo",
+          "cantidad": "1 cdita"
+        }
+      ],
+      "pasos": [
+        {
+          "orden": 1,
+          "instruccion": "Estirar y espolvorear: Estirá el hojaldre en un rectángulo de 30×20 cm, 3 mm de grosor. Espolvoreá con azúcar y canela."
+        },
+        {
+          "orden": 2,
+          "instruccion": "Doblar: Doblá los dos extremos largos hacia el centro, dejando un espacio de 1 cm entre ellos. Doblá de nuevo por la mitad, como un libro. Presioná suavemente."
+        },
+        {
+          "orden": 3,
+          "instruccion": "Cortar y hornear: Cortá en rodajas de 1 cm. Ponélas paradas sobre una placa con papel manteca, separadas 3 cm. Horneá a 200°C por 12-15 minutos hasta que estén doradas."
+        },
+        {
+          "orden": 4,
+          "instruccion": "Enfriar: Dejá enfriar sobre rejilla. El azúcar carameliza y las capas se separan."
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "titulo": "Huevo Duro — Tiempos Exactos",
+      "tituloClave": "Huevo Duro — Tiempos Exactos",
+      "descripcionCorta": "El huevo duro parece lo más simple del mundo, pero la mayoría lo cocina de más y la yema se pone verde y pastosa. La técnica está en los tiempos exactos y el choque térmico. Con esto, la yema queda amarilla y cremosa, no verde y seca.",
+      "dificultad": 2,
+      "tiempoTotalMinutos": 15,
+      "porciones": 4,
+      "categoria": "huevo-duro",
+      "tags": [
+        "huevo-duro"
+      ],
+      "tecnicas": [
+        "huevo-duro",
+        "coccion-huevo"
+      ],
+      "ingredientes": [
+        {
+          "nombre": "Huevos (de preferencia no tan frescos — se pelan mejor)",
+          "cantidad": "4"
+        },
+        {
+          "nombre": "suficiente para cubrir los huevos",
+          "cantidad": "Agua"
+        },
+        {
+          "nombre": "suficiente para el choque térmico",
+          "cantidad": "Hielo"
+        }
+      ],
+      "pasos": [
+        {
+          "orden": 1,
+          "instruccion": "Huevos a temperatura ambiente: Sacá los huevos de la heladera 10 minutos antes. Si están muy fríos, el choque térmico al ponerlos en agua caliente puede rajarlos.",
+          "nota": "Huevo frío + agua caliente = cáscara rajada y clara que se escapa."
+        },
+        {
+          "orden": 2,
+          "instruccion": "Agua hirviendo, no fría: Poné una olla con agua a hervir. Cuando hierva fuerte, bajá los huevos suavemente con una cuchara (no los tires). El agua debe cubrirlos por 2 cm.",
+          "nota": "⭐ Poner los huevos en agua ya hirviendo (no en agua fría) permite controlar el tiempo exacto de cocción desde cero."
+        },
+        {
+          "orden": 3,
+          "instruccion": "Tiempo exacto según el punto: Cociná a fuego medio (burbujeo suave, no violento): - 6 min: yema líquida, clara firme (huevo mollet / pasado por agua) - 7 min: yema cremosa, clara firme - 8 min: yema apenas húmeda en el centro - 10 min: yema cocida pero todavía amarilla (huevo duro perfecto) - 12 min: yema cocida, empieza a ponerse verde por fuera - 15 min: yema verde y pastosa (el error más común)",
+          "nota": "⭐ Usá timer. 10 minutos exactos para huevo duro perfecto. Cada minuto extra es un paso hacia la yema verde."
+        },
+        {
+          "orden": 4,
+          "instruccion": "Choque térmico: Apenas termine el tiempo, pasá los huevos a un bowl con agua y hielo. Dejalos 5 minutos. El choque térmico detiene la cocción al instante y facilita el pelado.",
+          "nota": "⭐ El choque térmico es doble beneficio: detiene la cocción (yema no se pone verde) y la cáscara se despega sola."
+        },
+        {
+          "orden": 5,
+          "instruccion": "Pelar bajo agua: Pelá los huevos bajo un chorro de agua fría. El agua se mete entre la cáscara y la clara y la despega fácil. Empezá por el lado más ancho (donde está la cámara de aire).",
+          "nota": "Pelar bajo agua corriente es el truco para que la cáscara no se lleve pedazos de clara."
+        },
+        {
+          "orden": 6,
+          "instruccion": "Conservación: Los huevos duros pelados se conservan en agua fría en heladera hasta 3 días. Sin pelar, hasta 7 días. No los congeles. --- ---",
+          "nota": "En agua fría, los huevos pelados no se secan ni absorben olores de la heladera."
+        },
+        {
+          "orden": 1,
+          "instruccion": "Yema verde / pastosa: Lo cocinaste 15+ minutos o no hiciste choque térmico. 10 min exactos + agua con hielo = yema amarilla."
+        },
+        {
+          "orden": 2,
+          "instruccion": "Cáscara que no se despega: Huevos muy frescos o no hiciste choque térmico. Usá huevos de 3-4 días y siempre choque térmico."
+        },
+        {
+          "orden": 3,
+          "instruccion": "Huevo rajado con clara escapada: Pusiste huevos fríos en agua hirviendo. Temperatura ambiente antes de cocinar."
+        },
+        {
+          "orden": 4,
+          "instruccion": "Huevo duro con clara gomosa: Lo cocinaste a hervor violento. Burbujeo suave, no violento."
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "titulo": "Huevo Frito Perfecto",
+      "tituloClave": "Huevo Frito Perfecto",
+      "descripcionCorta": "La técnica definitiva para un huevo frito con clara cocida, yema líquida y bordes crocantes. Sin trucos raros, solo precisión.",
+      "dificultad": 1,
+      "tiempoTotalMinutos": 5,
+      "porciones": 1,
+      "categoria": "huevos",
+      "tags": [
+        "huevos"
+      ],
+      "tecnicas": [
+        "coccion-huevo",
+        "control-fuego"
+      ],
+      "ingredientes": [
+        {
+          "nombre": "Huevo fresco",
+          "cantidad": "1 unidad"
+        },
+        {
+          "nombre": "Aceite o manteca",
+          "cantidad": "2 cucharadas"
+        },
+        {
+          "nombre": "Sal",
+          "cantidad": "a gusto"
+        },
+        {
+          "nombre": "Pimienta",
+          "cantidad": "a gusto"
+        }
+      ],
+      "pasos": [
+        {
+          "orden": 1,
+          "instruccion": "Golpeá el huevo seco contra una superficie plana (la mesada, no el borde del sartén): Abrí con los pulgares sobre un bowl chico.",
+          "nota": "El golpe contra superficie plana evita astillas que cortan la yema."
+        },
+        {
+          "orden": 2,
+          "instruccion": "Verificá que no haya caído cáscara ni se haya roto la yema: Si cayó cáscara, sacala con el mismo pedazo de cáscara (se atraen).",
+          "nota": "Cascar primero en un bowl salva el plato si algo sale mal."
+        },
+        {
+          "orden": 3,
+          "instruccion": "Poné el sartén antiadherente a fuego medio-bajo: Agregá aceite o manteca generoso cubriendo toda la base.",
+          "nota": "Si el sartén está muy caliente, el huevo pega como cemento."
+        },
+        {
+          "orden": 4,
+          "instruccion": "Volcá el huevo suavemente al sartén: No lo muevas. Si querés evitar que pegue, mové el sartén en círculos suaves para que circule el aceite.",
+          "nota": "Paciencia. No lo toques."
+        },
+        {
+          "orden": 5,
+          "instruccion": "Cuando el borde empiece a: dorarse, tapá el sartén los últimos 30 segundos para que la clara se cocine arriba sin dar vuelta el huevo.",
+          "nota": "Este es el truco clave: tapa para cocinar arriba sin romper la yema."
+        },
+        {
+          "orden": 6,
+          "instruccion": "Despegá con espátula fina (metal o silicona): Deslizá por abajo con paciencia. Si pega, esperá 10 segundos más.",
+          "nota": "El huevo se suelta solo cuando está listo."
+        },
+        {
+          "orden": 7,
+          "instruccion": "Serví inmediatamente: Sal y pimienta a gusto. ---",
+          "nota": "El huevo frito no espera."
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "titulo": "Huevo Poché",
+      "tituloClave": "Huevo Poché",
+      "descripcionCorta": "El huevo cocido en agua con la yema líquida y la clara envuelta. Parece de restaurante, pero con los trucos correctos es más fácil de lo que parece.",
+      "dificultad": 3,
+      "tiempoTotalMinutos": 8,
+      "porciones": 1,
+      "categoria": "huevos",
+      "tags": [
+        "huevos"
+      ],
+      "tecnicas": [
+        "coccion-huevo",
+        "control-fuego"
+      ],
+      "ingredientes": [
+        {
+          "nombre": "Huevo fresco",
+          "cantidad": "1 unidad"
+        },
+        {
+          "nombre": "Vinagre blanco",
+          "cantidad": "1 cucharada"
+        },
+        {
+          "nombre": "Agua",
+          "cantidad": "suficiente"
+        },
+        {
+          "nombre": "Sal",
+          "cantidad": "a gusto"
+        }
+      ],
+      "pasos": [
+        {
+          "orden": 1,
+          "instruccion": "Usá un huevo bien fresco: La clara de un huevo fresco es más densa y se envuelve mejor alrededor de la yema en vez de dispersarse en el agua.",
+          "nota": "La frescura es clave: si la clara se dispersa como nube, el huevo no es fresco."
+        },
+        {
+          "orden": 2,
+          "instruccion": "Llená una olla chica con agua hasta unos 10cm de profundidad: Llevá a hervor y luego bajá el fuego a mínimo — el agua debe tener burbujas muy pequeñas, no un hervor violento.",
+          "nota": "El agua no debe hervir fuerte. 80-85°C es la temperatura ideal."
+        },
+        {
+          "orden": 3,
+          "instruccion": "Agregá 1 cucharada de vinagre blanco al agua: El vinagre ayuda a que la clara se coagule más rápido y se envuelva prolijamente.",
+          "nota": "No uses vinagre de más — va a darle sabor. Una cucharada justa."
+        },
+        {
+          "orden": 4,
+          "instruccion": "Cascá el huevo en un bowl chico (como con el frito): No lo tires directo al agua.",
+          "nota": "Siempre cascar en bowl primero."
+        },
+        {
+          "orden": 5,
+          "instruccion": "Con una cuchara, creá un remolino suave en el agua: Volcá el huevo con cuidado en el centro del remolino.",
+          "nota": "El remolino ayuda a que la clara se envuelva alrededor de la yema."
+        },
+        {
+          "orden": 6,
+          "instruccion": "Cociná 3-4 minutos exactos: La clara debe estar firme pero la yema líquida. No toques el huevo mientras se cocina.",
+          "nota": "3 min = yema muy líquida. 4 min = yema más cremosa."
+        },
+        {
+          "orden": 7,
+          "instruccion": "Sacá con espumadera: Dejá escurrir sobre un papel absorbente unos segundos. Recortá los bordes irregulares si querés presentación de restaurante.",
+          "nota": "Podés recortar con un cuchillo o tijera los flecos de clara."
+        },
+        {
+          "orden": 8,
+          "instruccion": "Serví inmediatamente sobre una tostada, ensalada o lo que sea: Sal y pimienta. El huevo poché no espera. ---",
+          "nota": "Si lo dejás reposar, la yema se endurece."
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "titulo": "Revuelto Cremoso",
+      "tituloClave": "Revuelto Cremoso",
+      "descripcionCorta": "Huevos revueltos suaves, cremosos, casi como una natilla. Nada que ver con el revuelto seco y marrón del desayuno de hotel. Técnica francesa, resultado celestial.",
+      "dificultad": 2,
+      "tiempoTotalMinutos": 6,
+      "porciones": 1,
+      "categoria": "huevos",
+      "tags": [
+        "huevos"
+      ],
+      "tecnicas": [
+        "coccion-huevo",
+        "control-fuego"
+      ],
+      "ingredientes": [
+        {
+          "nombre": "Huevos",
+          "cantidad": "2-3 unidades"
+        },
+        {
+          "nombre": "Manteca",
+          "cantidad": "1 cucharada"
+        },
+        {
+          "nombre": "Crema de leche (opcional)",
+          "cantidad": "1 cucharada"
+        },
+        {
+          "nombre": "Sal",
+          "cantidad": "a gusto"
+        },
+        {
+          "nombre": "Pimienta blanca o negra",
+          "cantidad": "a gusto"
+        },
+        {
+          "nombre": "Ciboulette picado (opcional)",
+          "cantidad": "a gusto"
+        }
+      ],
+      "pasos": [
+        {
+          "orden": 1,
+          "instruccion": "Batí los huevos en un bowl con un tenedor o batidor: No los batas en exceso — solo hasta que clara y yema estén integradas. Salpimentá.",
+          "nota": "Batir demasiado incorpora aire y hace el revuelto esponjoso, no cremoso."
+        },
+        {
+          "orden": 2,
+          "instruccion": "Poné un sartén antiadherente a fuego BAJO: Agregá la manteca y dejala derretir lentamente — no debe dorarse ni chisporrotear.",
+          "nota": "Fuego bajo es la regla de oro. Si la manteca se dora, el fuego está muy alto."
+        },
+        {
+          "orden": 3,
+          "instruccion": "Volcá los huevos batidos al sartén: No los toques por 30 segundos — dejalos que empiecen a cuajar en la base.",
+          "nota": "Paciencia al inicio."
+        },
+        {
+          "orden": 4,
+          "instruccion": "Con una espátula de silicona, mové los huevos desde los bordes hacia el centro, como \"barriendo\" el sartén: No revuelvas como si fueran a punto de fritura — mové lento y constante.",
+          "nota": "El movimiento lento y constante es lo que crea la textura cremosa."
+        },
+        {
+          "orden": 5,
+          "instruccion": "Cuando veas que empiezan a formarse pequeños grumos pero todavía hay bastante líquido, retirá el sartén del fuego: Seguí moviendo fuera del fuego — el calor residual termina la cocción.",
+          "nota": "Este es el truco clave: sacar antes de que esté listo. El calor residual termina el trabajo."
+        },
+        {
+          "orden": 6,
+          "instruccion": "Si usás crema de leche, agregala en este momento y mezclá: Esto baja la temperatura y detiene la cocción, asegurando la cremosidad.",
+          "nota": "La crema no es necesaria pero es un seguro contra la sobrecocción."
+        },
+        {
+          "orden": 7,
+          "instruccion": "Serví inmediatamente: Los huevos revueltos cremosos se terminan de cocinar en el plato, no en el sartén. Ciboulette picado por encima. ---",
+          "nota": "Si en el plato siguen soltando líquido, están perfectos. Si están firmes, te pasaste."
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "titulo": "Tortilla Francesa",
+      "tituloClave": "Tortilla Francesa",
+      "descripcionCorta": "La tortilla que se dobla, no la de papas. Fina, dorada por fuera, cremosa por dentro. Un pliegue perfecto y listo. La prueba de que menos es más.",
+      "dificultad": 3,
+      "tiempoTotalMinutos": 4,
+      "porciones": 1,
+      "categoria": "huevos",
+      "tags": [
+        "huevos"
+      ],
+      "tecnicas": [
+        "coccion-huevo",
+        "control-fuego"
+      ],
+      "ingredientes": [
+        {
+          "nombre": "Huevos",
+          "cantidad": "2-3 unidades"
+        },
+        {
+          "nombre": "Manteca",
+          "cantidad": "1 cucharada"
+        },
+        {
+          "nombre": "Sal",
+          "cantidad": "a gusto"
+        },
+        {
+          "nombre": "Pimienta",
+          "cantidad": "a gusto"
+        }
+      ],
+      "pasos": [
+        {
+          "orden": 1,
+          "instruccion": "Batí los huevos en un bowl hasta que clara y yema estén completamente integradas: Salpimentá. No agregues leche, agua ni nada — solo huevos.",
+          "nota": "La tortilla francesa es huevos y manteca. Nada más."
+        },
+        {
+          "orden": 2,
+          "instruccion": "Poné un sartén antiadherente de unos 20cm a fuego medio-alto: Agregá la manteca y movela para cubrir toda la base y los bordes.",
+          "nota": "El sartén debe estar caliente pero no humeante."
+        },
+        {
+          "orden": 3,
+          "instruccion": "Volcá los huevos: Inmediatamente empezá a mover el sartén en círculos y al mismo tiempo revolvé los huevos con un tenedor o palito de madera, como si estuvieras haciendo revuelto.",
+          "nota": "Este movimiento simultáneo es la técnica: agitás el sartén mientras revolvés."
+        },
+        {
+          "orden": 4,
+          "instruccion": "A los 15-20 segundos, cuando: los huevos empiecen a cuajar pero todavía estén cremosos arriba, detené el movimiento y alisá la superficie con la espátula.",
+          "nota": "El tiempo es crítico — si esperás demasiado, se cocina de más y no se dobla."
+        },
+        {
+          "orden": 5,
+          "instruccion": "Con la espátula, doblá un tercio de la tortilla hacia el centro: Después doblá el otro tercio hacia el centro, formando un cilindro alargado.",
+          "nota": "El pliegue debe ser firme pero suave."
+        },
+        {
+          "orden": 6,
+          "instruccion": "Deslizá la tortilla al borde del sartén y volcala sobre un plato con la costura hacia abajo: Si querés, dale forma de \"canoa\" con los dedos (con cuidado, está caliente).",
+          "nota": "La costura abajo la sella y mantiene la forma."
+        },
+        {
+          "orden": 7,
+          "instruccion": "Serví inmediatamente: La tortilla francesa debe estar dorada por fuera y ligeramente cremosa por dentro. Acompañá con una ensalada simple. ---",
+          "nota": "Si la cortás y ves que está completamente cocida por dentro, la próxima sacala antes."
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "titulo": "Omelette",
+      "tituloClave": "Omelette",
+      "descripcionCorta": "La prueba de fuego de cualquier cocinero. Un omelette perfecto es dorado por fuera, cremoso por dentro, y el relleno va adentro — no encima. Dominalo y dominás el sartén.",
+      "dificultad": 4,
+      "tiempoTotalMinutos": 8,
+      "porciones": 1,
+      "categoria": "huevos",
+      "tags": [
+        "huevos"
+      ],
+      "tecnicas": [
+        "coccion-huevo",
+        "control-fuego"
+      ],
+      "ingredientes": [
+        {
+          "nombre": "Huevos",
+          "cantidad": "3 unidades"
+        },
+        {
+          "nombre": "Manteca",
+          "cantidad": "1 1/2 cucharadas"
+        },
+        {
+          "nombre": "Sal",
+          "cantidad": "a gusto"
+        },
+        {
+          "nombre": "Pimienta",
+          "cantidad": "a gusto"
+        },
+        {
+          "nombre": "Relleno (queso, jamón, champiñones, etc.)",
+          "cantidad": "a gusto"
+        }
+      ],
+      "pasos": [
+        {
+          "orden": 1,
+          "instruccion": "Batí los huevos como para tortilla francesa — integrados pero no aireados: Salpimentá.",
+          "nota": "Misma base que la tortilla francesa, pero con más huevos y relleno."
+        },
+        {
+          "orden": 2,
+          "instruccion": "Prepará el relleno: si usás champiñones, cebolla, etc., saltealos aparte primero. El queso debe estar rallado o en láminas finas. Todo debe estar listo antes de empezar.",
+          "nota": "El omelette no espera. Tené todo listo antes de cascar los huevos."
+        },
+        {
+          "orden": 3,
+          "instruccion": "Poné el sartén a fuego medio-alto: Agregá la manteca y movela para cubrir toda la base. Cuando la manteca deje de espumar, está en el punto.",
+          "nota": "La manteca espumando = agua evaporándose. Cuando para de espumar, está lista."
+        },
+        {
+          "orden": 4,
+          "instruccion": "Volcá los huevos: Mové el sartén en círculos mientras agitás con un tenedor (igual que la tortilla francesa). Unos 20 segundos.",
+          "nota": "Mismo movimiento que la tortilla francesa."
+        },
+        {
+          "orden": 5,
+          "instruccion": "Cuando los huevos empiecen a: cuajar pero todavía estén cremosos arriba, distribí el relleno en una línea en el centro de la tortilla.",
+          "nota": "El relleno va en el centro, en línea recta, no desparramado."
+        },
+        {
+          "orden": 6,
+          "instruccion": "Con la espátula, doblá un lado sobre el relleno: Después deslizá el omelette doblado al borde del sartén y volcalo al plato con la costura abajo.",
+          "nota": "El pliegue debe cubrir el relleno completamente."
+        },
+        {
+          "orden": 7,
+          "instruccion": "Serví inmediatamente: El omelette debe deslizarse suavemente del sartén al plato — si pega, es que el fuego estaba muy alto o faltó manteca. ---",
+          "nota": "Un omelette que se desliza solo es un omelette bien hecho."
+        }
+      ]
+    },
+    {
+      "id": 26,
+      "titulo": "Cacio e Pepe",
+      "tituloClave": "Cacio e Pepe",
+      "descripcionCorta": "Tres ingredientes: pasta, queso pecorino, pimienta. Parece imposible que salga algo tan cremoso sin crema. La salsa se hace con el agua de la pasta y movimiento. Si usás crema, no es Cacio e Pepe.",
+      "dificultad": 4,
+      "tiempoTotalMinutos": 15,
+      "porciones": 2,
+      "categoria": "pasta",
+      "tags": [
+        "pasta"
+      ],
+      "tecnicas": [
+        "emulsion"
+      ],
+      "ingredientes": [
+        {
+          "nombre": "Spaghetti o tonnarelli",
+          "cantidad": "200 g"
+        },
+        {
+          "nombre": "Pecorino romano",
+          "cantidad": "100 g"
+        },
+        {
+          "nombre": "Pimienta negra en grano",
+          "cantidad": "2 cucharaditas"
+        },
+        {
+          "nombre": "Sal",
+          "cantidad": "a gusto"
+        }
+      ],
+      "pasos": [
+        {
+          "orden": 1,
+          "instruccion": "Rallá el pecorino bien fino (como polvo): Si lo rallás grueso, no se va a derretir bien y la salsa queda grumosa.",
+          "nota": "El queso rallado fino es la clave de la cremosidad."
+        },
+        {
+          "orden": 2,
+          "instruccion": "Tostá la pimienta en grano en un sartén seco a fuego medio hasta que empiece a saltar y largue aroma: Molé grueso con mortero o molinillo.",
+          "nota": "Tostar la pimienta cambia completamente el perfil de sabor."
+        },
+        {
+          "orden": 3,
+          "instruccion": "Poné una olla grande con agua a hervir: Salá el agua SOLO cuando hierva. La pasta se sala en el agua, no antes.",
+          "nota": "El agua de la pasta debe saber a mar."
+        },
+        {
+          "orden": 4,
+          "instruccion": "Cociná la pasta 1 minuto menos del tiempo que indica el paquete: Guardá 1 taza de agua de cocción ANTES de escurrir.",
+          "nota": "El agua de cocción con almidón es el ingrediente secreto."
+        },
+        {
+          "orden": 5,
+          "instruccion": "En un sartén grande a fuego apagado, poné la pasta escurrida con un chorro de agua de cocción: Agregá la pimienta tostada.",
+          "nota": "Fuego apagado — el calor residual hace el trabajo."
+        },
+        {
+          "orden": 6,
+          "instruccion": "Agregá el pecorino rallado de a poco mientras movés la pasta enérgicamente con pinzas o cuchara de madera: Si ves que se seca, agregá más agua de cocción. El movimiento y el almidón crean la emulsión.",
+          "nota": "Este es el momento crítico: mové constante, agregá agua de a poco, hasta que veas una salsa cremosa que envuelve la pasta."
+        },
+        {
+          "orden": 7,
+          "instruccion": "Serví inmediatamente en plato caliente (pasalo por agua caliente primero): Más pecorino rallado por encima y pimienta recién molida. ---",
+          "nota": "El plato caliente evita que la salsa se enfríe y se corte."
+        }
+      ]
+    },
+    {
+      "id": 27,
+      "titulo": "Spaghetti Aglio e Olio",
+      "tituloClave": "Spaghetti Aglio e Olio",
+      "descripcionCorta": "Ajo, aceite de oliva, guindilla y perejil. Parece tan simple que cualquiera lo hace. Pero el 90% quema el ajo y amarga todo el plato. La técnica está en la temperatura del aceite.",
+      "dificultad": 3,
+      "tiempoTotalMinutos": 15,
+      "porciones": 2,
+      "categoria": "pasta",
+      "tags": [
+        "pasta"
+      ],
+      "tecnicas": [
+        "emulsion",
+        "control-fuego"
+      ],
+      "ingredientes": [
+        {
+          "nombre": "Spaghetti",
+          "cantidad": "200 g"
+        },
+        {
+          "nombre": "Ajo",
+          "cantidad": "4 dientes"
+        },
+        {
+          "nombre": "Aceite de oliva extra virgen",
+          "cantidad": "4 cucharadas"
+        },
+        {
+          "nombre": "Guindilla o chili seco",
+          "cantidad": "1 unidad"
+        },
+        {
+          "nombre": "Perejil fresco",
+          "cantidad": "un puñado"
+        },
+        {
+          "nombre": "Sal",
+          "cantidad": "a gusto"
+        }
+      ],
+      "pasos": [
+        {
+          "orden": 1,
+          "instruccion": "Poné el agua a hervir: Salá cuando hierva. Cociná la pasta 1 minuto menos del paquete. Guardá agua de cocción.",
+          "nota": "Siempre guardar agua de cocción."
+        },
+        {
+          "orden": 2,
+          "instruccion": "Mientras la pasta se cocina: pelá los ajos y cortalos en láminas finas (no los machaques ni los piques chico — las láminas se doran parejo y no se queman fácil).",
+          "nota": "Láminas finas y parejas. Si son de distinto grosor, algunas se queman antes de que otras estén listas."
+        },
+        {
+          "orden": 3,
+          "instruccion": "En un sartén grande, poné el aceite de oliva y los ajos en láminas: Prendé el fuego al MÍNIMO. Los ajos deben CONFITARSE en el aceite, no freírse. Deben quedar dorados, no marrones.",
+          "nota": "Este es el paso que todos se saltan: el ajo se cocina lento en aceite frío que va subiendo de temperatura. Si tirás el ajo al aceite caliente, se quema."
+        },
+        {
+          "orden": 4,
+          "instruccion": "Cuando los ajos empiecen a dorarse (unos 3-4 minutos), agregá la guindilla desmenuzada: Apagá el fuego.",
+          "nota": "La guindilla se quema fácil. Apagá el fuego antes de agregarla."
+        },
+        {
+          "orden": 5,
+          "instruccion": "Pasá la pasta escurrida al sartén con el aceite de ajo: Agregá un chorro de agua de cocción. Mové enérgicamente para emulsionar.",
+          "nota": "El agua con almidón + aceite + movimiento = salsa que se pega a la pasta."
+        },
+        {
+          "orden": 6,
+          "instruccion": "Agregá el perejil fresco picado: Serví inmediatamente. Si querés, más guindilla por encima. ---",
+          "nota": "El perejil se agrega al final, fuera del fuego, para que mantenga el color y el frescor."
+        }
+      ]
+    },
+    {
+      "id": 28,
+      "titulo": "Carbonara",
+      "tituloClave": "Carbonara",
+      "descripcionCorta": "Huevo, pecorino, guanciale (o panceta), pimienta. Sin crema, sin cebolla, sin ajo. La salsa se hace con el calor de la pasta y el movimiento, no con fuego. El huevo no se debe cortar.",
+      "dificultad": 4,
+      "tiempoTotalMinutos": 20,
+      "porciones": 2,
+      "categoria": "pasta",
+      "tags": [
+        "pasta"
+      ],
+      "tecnicas": [
+        "emulsion"
+      ],
+      "ingredientes": [
+        {
+          "nombre": "Spaghetti o rigatoni",
+          "cantidad": "200 g"
+        },
+        {
+          "nombre": "Guanciale (o panceta)",
+          "cantidad": "150 g"
+        },
+        {
+          "nombre": "Yemas de huevo",
+          "cantidad": "3 unidades"
+        },
+        {
+          "nombre": "Huevo entero",
+          "cantidad": "1 unidad"
+        },
+        {
+          "nombre": "Pecorino romano",
+          "cantidad": "80 g"
+        },
+        {
+          "nombre": "Pimienta negra",
+          "cantidad": "a gusto"
+        },
+        {
+          "nombre": "Sal",
+          "cantidad": "a gusto"
+        }
+      ],
+      "pasos": [
+        {
+          "orden": 1,
+          "instruccion": "Cortá el guanciale en tiras de 1cm de ancho: Ponelo en un sartén frío y prendé el fuego a medio-bajo. Cociná hasta que esté crocante por fuera pero todavía suave por dentro. La grasa se va a derretir sola — no agregues aceite.",
+          "nota": "El guanciale se cocina en su propia grasa. Si usás panceta, es similar pero menos grasa."
+        },
+        {
+          "orden": 2,
+          "instruccion": "Mientras, batí las yemas + el huevo entero en un bowl: Agregá el pecorino rallado fino y mezclá hasta formar una pasta espesa. Mucha pimienta negra.",
+          "nota": "Esta mezcla es la base de la salsa. No la prepares con mucha anticipación — el huevo se oxida."
+        },
+        {
+          "orden": 3,
+          "instruccion": "Poné el agua a hervir: Salá cuando hierva. Cociná la pasta 1 minuto menos del paquete. Guardá 1 taza de agua de cocción.",
+          "nota": "El agua de cocción con almidón es clave para la emulsión."
+        },
+        {
+          "orden": 4,
+          "instruccion": "Cuando la pasta esté lista, pasala al sartén con el guanciale (fuego apagado): Mové para que la grasa del guanciale cubra la pasta. Dejá enfriar 1 minuto — el sartén no debe estar hirviendo.",
+          "nota": "Este enfriado de 1 minuto es crítico: si el sartén está muy caliente, el huevo se cocina y se corta."
+        },
+        {
+          "orden": 5,
+          "instruccion": "Volcá la mezcla de huevo y queso sobre la pasta: Mové enérgicamente con pinzas o cuchara de madera. Si ves que está muy espesa, agregá agua de cocción de a poco. El calor de la pasta cocina el huevo hasta crear una salsa cremosa.",
+          "nota": "El movimiento constante y el agua de cocción evitan que el huevo se corte. Si ves que se forman grumos de huevo cocido, agregá más agua de cocción y mové más rápido."
+        },
+        {
+          "orden": 6,
+          "instruccion": "Serví inmediatamente en plato caliente: Más pecorino rallado y pimienta por encima. La carbonara no espera ni un segundo. ---",
+          "nota": "Si la salsa se enfría, el huevo se solidifica y se pierde la cremosidad."
+        }
+      ]
+    },
+    {
+      "id": 29,
+      "titulo": "Salsa de Tomate Base",
+      "tituloClave": "Salsa de Tomate Base",
+      "descripcionCorta": "No es abrir un tarro. Cebolla, ajo, tomate, tiempo. Parece simple, pero la diferencia entre una salsa de tarro y una casera es abismal. Esta es la base para pastas, pizzas, guisos.",
+      "dificultad": 2,
+      "tiempoTotalMinutos": 45,
+      "porciones": 6,
+      "categoria": "pasta",
+      "tags": [
+        "pasta"
+      ],
+      "tecnicas": [
+        "salsa-tomate",
+        "control-fuego"
+      ],
+      "ingredientes": [
+        {
+          "nombre": "Tomates perita en lata (enteros)",
+          "cantidad": "800 g"
+        },
+        {
+          "nombre": "Cebolla",
+          "cantidad": "1 unidad grande"
+        },
+        {
+          "nombre": "Ajo",
+          "cantidad": "3 dientes"
+        },
+        {
+          "nombre": "Aceite de oliva",
+          "cantidad": "3 cucharadas"
+        },
+        {
+          "nombre": "Albahaca fresca",
+          "cantidad": "4-5 hojas"
+        },
+        {
+          "nombre": "Sal",
+          "cantidad": "a gusto"
+        },
+        {
+          "nombre": "Azúcar",
+          "cantidad": "1 cucharadita"
+        },
+        {
+          "nombre": "Pimienta negra",
+          "cantidad": "a gusto"
+        }
+      ],
+      "pasos": [
+        {
+          "orden": 1,
+          "instruccion": "Picá la cebolla en cubos chicos (brunoise): Picá los ajos finos.",
+          "nota": "El corte chico y parejo asegura cocción uniforme."
+        },
+        {
+          "orden": 2,
+          "instruccion": "En una olla grande, calentá el aceite de oliva a fuego medio: Agregá la cebolla y cociná hasta que esté transparente (unos 8 minutos). No debe dorarse.",
+          "nota": "Cebolla transparente = dulce. Cebolla dorada = otro sabor. Para salsa de tomate base, querés transparente."
+        },
+        {
+          "orden": 3,
+          "instruccion": "Agregá el ajo y cociná: 1 minuto más hasta que largue aroma.",
+          "nota": "El ajo se quema rápido. Un minuto es suficiente."
+        },
+        {
+          "orden": 4,
+          "instruccion": "Agregá los tomates con su jugo: Si usás tomates enteros, aplastalos con la cuchara de madera contra la olla. Agregá sal, pimienta y el azúcar (para cortar la acidez).",
+          "nota": "El azúcar no es para endulzar, es para balancear la acidez del tomate."
+        },
+        {
+          "orden": 5,
+          "instruccion": "Llevá a hervor, luego bajá el fuego al mínimo: Cociná tapado 30-40 minutos, revolviendo de vez en cuando. La salsa debe reducir y espesar ligeramente.",
+          "nota": "El tiempo es el ingrediente secreto. 30 min es el mínimo. 45 min es mejor."
+        },
+        {
+          "orden": 6,
+          "instruccion": "Apagá el fuego: Agregá las hojas de albahaca fresca y dejá reposar 5 minutos tapado. Si querés salsa lisa, pasá por procesadora o minipimmer. Si querés rústica, dejala así.",
+          "nota": "La albahaca se agrega al final, fuera del fuego, para que mantenga el color y el aroma."
+        },
+        {
+          "orden": 7,
+          "instruccion": "Probá y ajustá sal/pimienta/azúcar: Usá inmediatamente o guardá en frasco en heladera hasta 5 días. También congela perfecto. ---",
+          "nota": "Hacé cantidad y congelá en porciones. Siempre tener salsa casera a mano."
+        }
+      ]
+    },
+    {
+      "id": 30,
+      "titulo": "Masa de Pizza",
+      "tituloClave": "Masa de Pizza",
+      "descripcionCorta": "Hidratación alta, reposo en frío, estirado a mano. La masa de pizza no se estira con palo — se estira con las manos, de adentro hacia afuera, dejando el borde más grueso. 24 horas de reposo en heladera = sabor de pizzeria.",
+      "dificultad": 3,
+      "tiempoTotalMinutos": 1440,
+      "porciones": 4,
+      "categoria": "pasta",
+      "tags": [
+        "pasta"
+      ],
+      "tecnicas": [
+        "pizza",
+        "fermentacion",
+        "masa-quebrada"
+      ],
+      "ingredientes": [
+        {
+          "nombre": "Harina 0000 (o de fuerza)",
+          "cantidad": "500 g"
+        },
+        {
+          "nombre": "Agua tibia",
+          "cantidad": "350 ml"
+        },
+        {
+          "nombre": "Levadura fresca (o 3g seca)",
+          "cantidad": "5 g"
+        },
+        {
+          "nombre": "Sal",
+          "cantidad": "10 g"
+        },
+        {
+          "nombre": "Aceite de oliva",
+          "cantidad": "2 cucharadas"
+        }
+      ],
+      "pasos": [
+        {
+          "orden": 1,
+          "instruccion": "Disolvé la levadura en el agua tibia: Dejá 5 min hasta que espume. Mezclá harina + sal en un bowl grande. Agregá el agua con levadura y el aceite de oliva.",
+          "nota": "Menos levadura que el pan = fermentación más lenta = más sabor."
+        },
+        {
+          "orden": 2,
+          "instruccion": "Mezclá hasta formar una masa: Amasá 10 minutos hasta que esté suave y elástica. La masa de pizza tiene más hidratación (70%) que el pan — va a estar más pegajosa.",
+          "nota": "No agregues harina de más. La masa pegajosa es correcta. El aceite ayuda a manejarla."
+        },
+        {
+          "orden": 3,
+          "instruccion": "Dividí la masa en 4 bollos iguales: Poné cada bollo en un bowl individual aceitado. Tapá con film. Llevá a la heladera por 24 horas.",
+          "nota": "⭐ El reposo en frío es el secreto. 24h desarrolla sabor y textura. Mínimo 12h, ideal 24-48h."
+        },
+        {
+          "orden": 4,
+          "instruccion": "Sacá los bollos de la heladera 1 hora antes de usar (temperatura ambiente): Estirá cada bollo con las manos: presioná desde el centro hacia afuera, dejando el borde más grueso. No uses palo de amasar.",
+          "nota": "El borde más grueso es el cornicione — la parte más buscada de la pizza."
+        },
+        {
+          "orden": 5,
+          "instruccion": "Poné la masa estirada sobre una bandeja enharinada o papel manteca: Agregá la salsa de tomate (poca, no empapes) y los ingredientes. No pongas demasiado — menos es más.",
+          "nota": "La pizza no es una tostada con cosas arriba. Poco topping, buena masa."
+        },
+        {
+          "orden": 6,
+          "instruccion": "Horneá al MÁXIMO de tu horno (250°C o más) durante 8-12 minutos: Si tenés piedra para pizza, mejor. Si no, bandeja caliente. ---",
+          "nota": "Cuanto más caliente el horno, mejor. La pizza se cocina en minutos, no en horas."
+        }
+      ]
+    },
+    {
+      "id": 31,
+      "titulo": "Risotto Clásico — Mantecatura Perfecta",
+      "tituloClave": "Risotto Clásico — Mantecatura Perfecta",
+      "descripcionCorta": "El risotto no es arroz con cosas. Es una técnica: el almidón del arroz se libera con el movimiento constante y el caldo caliente, creando una crema natural sin crema de leche. La mantecatura final (manteca + queso fuera del fuego) es lo que lo eleva de \"arroz caldoso\" a \"risotto\".",
+      "dificultad": 4,
+      "tiempoTotalMinutos": 35,
+      "porciones": 2,
+      "categoria": "risotto",
+      "tags": [
+        "risotto"
+      ],
+      "tecnicas": [
+        "risotto",
+        "arroz",
+        "control-fuego"
+      ],
+      "ingredientes": [
+        {
+          "nombre": "Arroz carnaroli o arborio (no uses otro)",
+          "cantidad": "1 taza"
+        },
+        {
+          "nombre": "Caldo de pollo o verduras (caliente)",
+          "cantidad": "3-4 tazas"
+        },
+        {
+          "nombre": "Cebolla chica, en brunoise fino",
+          "cantidad": "1/2"
+        },
+        {
+          "nombre": "Vino blanco seco",
+          "cantidad": "1/2 taza"
+        },
+        {
+          "nombre": "Manteca",
+          "cantidad": "2 cdas"
+        },
+        {
+          "nombre": "Parmesano reggiano rallado",
+          "cantidad": "1/2 taza"
+        },
+        {
+          "nombre": "Aceite de oliva",
+          "cantidad": "2 cdas"
+        },
+        {
+          "nombre": "a gusto",
+          "cantidad": "Sal"
+        }
+      ],
+      "pasos": [
+        {
+          "orden": 1,
+          "instruccion": "Caldo caliente siempre: Poné el caldo a calentar en una olla aparte. Debe estar hirviendo suavemente durante toda la cocción. El caldo frío corta la cocción del arroz y arruina la textura.",
+          "nota": "⭐ Caldo caliente siempre. Cada vez que agregás caldo frío, el arroz deja de soltar almidón."
+        },
+        {
+          "orden": 2,
+          "instruccion": "Sofreír la cebolla: En una olla ancha (no alta), calentá el aceite a fuego medio. Agregá la cebolla en brunoise y cociná 5-7 minutos hasta que esté transparente. No debe dorarse.",
+          "nota": "Cebolla transparente, no dorada. El color del risotto viene del arroz y el queso, no de la cebolla."
+        },
+        {
+          "orden": 3,
+          "instruccion": "Tostar el arroz: Agregá el arroz. Tostá 2 minutos moviendo constantemente hasta que los bordes de los granos estén translúcidos y el arroz huela a nuez.",
+          "nota": "El tostado sella el grano y el risotto queda más firme, no pasado."
+        },
+        {
+          "orden": 4,
+          "instruccion": "Desglasar con vino: Agregá el vino. Mové hasta que se evapore casi por completo (30 segundos). El alcohol se va, el sabor queda.",
+          "nota": "El vino desglasa el fondo y aporta acidez que balancea la cremosidad."
+        },
+        {
+          "orden": 5,
+          "instruccion": "Agregar caldo de a poco: Agregá un cucharón de caldo caliente. Mové constantemente con cuchara de madera. Cuando el arroz absorba casi todo el caldo, agregá otro cucharón. Repetí durante 16-18 minutos.",
+          "nota": "⭐ El movimiento constante y el caldo caliente son la técnica del risotto. El arroz libera almidón al moverse, y el caldo caliente lo cocina parejo."
+        },
+        {
+          "orden": 6,
+          "instruccion": "Probar el punto: A los 16 minutos, probá un grano. Debe estar cocido pero con un punto de resistencia al centro (al dente). Si está duro, seguí agregando caldo 2-3 minutos más.",
+          "nota": "El risotto se sirve al dente, no pasado. El grano debe tener un punto de resistencia."
+        },
+        {
+          "orden": 7,
+          "instruccion": "Mantecatura (fuera del fuego): Apagá el fuego. Agregá la manteca y el parmesano. Mové enérgicamente 1 minuto hasta que esté cremoso y brillante. Tapá y dejá reposar 2 minutos.",
+          "nota": "⭐ La mantecatura fuera del fuego es el secreto del risotto cremoso. El calor residual derrite la manteca y el queso sin cocinarlos de más."
+        },
+        {
+          "orden": 8,
+          "instruccion": "Servir inmediatamente: El risotto no espera. Serví en plato hondo. Si se enfría, se apelmaza. Acompañá con lo que quieras (hongos, espárragos, pollo). ---",
+          "nota": "El risotto se sirve en el momento. Recalfentado pierde toda la cremosidad."
+        }
+      ]
+    },
+    {
+      "id": 32,
+      "titulo": "Risotto de Hongos",
+      "tituloClave": "Risotto de Hongos",
+      "descripcionCorta": "La misma técnica, con hongos salteados incorporados al final. El umami de los hongos potencia la cremosidad del risotto.",
+      "dificultad": 4,
+      "tiempoTotalMinutos": 40,
+      "porciones": 2,
+      "categoria": "risotto",
+      "tags": [
+        "risotto"
+      ],
+      "tecnicas": [
+        "risotto",
+        "arroz",
+        "control-fuego"
+      ],
+      "ingredientes": [
+        {
+          "nombre": "Arroz carnaroli",
+          "cantidad": "1 taza"
+        },
+        {
+          "nombre": "Caldo de verduras (caliente)",
+          "cantidad": "3-4 tazas"
+        },
+        {
+          "nombre": "Hongos variados (portobello, shiitake, gírgolas)",
+          "cantidad": "200 g"
+        },
+        {
+          "nombre": "Cebolla",
+          "cantidad": "1/2"
+        },
+        {
+          "nombre": "Vino blanco",
+          "cantidad": "1/2 taza"
+        },
+        {
+          "nombre": "Manteca",
+          "cantidad": "2 cdas"
+        },
+        {
+          "nombre": "Parmesano",
+          "cantidad": "1/2 taza"
+        },
+        {
+          "nombre": "Aceite de oliva",
+          "cantidad": "2 cdas"
+        },
+        {
+          "nombre": "Tomillo fresco",
+          "cantidad": "2 ramas"
+        },
+        {
+          "nombre": "a gusto",
+          "cantidad": "Sal y pimienta"
+        }
+      ],
+      "pasos": [
+        {
+          "orden": 1,
+          "instruccion": "Preparar los hongos: Limpiá los hongos con un pincel o papel (no los laves). Cortalos en láminas. Saltealos en una sartén con aceite a fuego alto hasta que estén dorados. Reservá.",
+          "nota": "Los hongos no se lavan: absorben agua como esponja y quedan gomosos. Se limpian en seco."
+        },
+        {
+          "orden": 2,
+          "instruccion": "Sofreír y tostar: Misma técnica que el risotto clásico: cebolla transparente, arroz tostado 2 min, vino, evaporar."
+        },
+        {
+          "orden": 3,
+          "instruccion": "Cocción con caldo: Agregá caldo de a poco, moviendo constantemente, 16-18 minutos."
+        },
+        {
+          "orden": 4,
+          "instruccion": "Incorporar los hongos: Cuando el arroz esté al dente, agregá los hongos salteados. Mezclá. Apagá el fuego."
+        },
+        {
+          "orden": 5,
+          "instruccion": "Mantecatura: Agregá manteca y parmesano. Mové enérgicamente. Reposá 2 minutos tapado. Serví con tomillo fresco por encima. ---"
+        },
+        {
+          "orden": 1,
+          "instruccion": "Risotto pasado / apelmazado: Demasiado caldo o lo cocinaste de más. 16-18 min, al dente. Serví inmediatamente."
+        },
+        {
+          "orden": 2,
+          "instruccion": "Risotto duro / seco: Poco caldo o caldo frío. Caldo caliente siempre, agregá de a poco hasta el punto justo."
+        },
+        {
+          "orden": 3,
+          "instruccion": "Risotto sin cremosidad: No hiciste mantecatura o usaste poco queso. Manteca + parmesano fuera del fuego, mové enérgicamente."
+        },
+        {
+          "orden": 4,
+          "instruccion": "Risotto insípido: Caldo sin sabor o no tostaste el arroz. Caldo casero, tostado del arroz, vino, queso de calidad."
+        },
+        {
+          "orden": 5,
+          "instruccion": "Usar arroz de grano largo: No es risotto. Usá carnaroli o arborio. El almidón de estos arroces es lo que crea la crema."
+        }
+      ]
+    },
+    {
+      "id": 33,
+      "titulo": "Bechamel",
+      "tituloClave": "Bechamel",
+      "descripcionCorta": "Leche, manteca, harina. Parece fácil, pero los grumos son el enemigo. La técnica está en el roux y en agregar la leche en el momento justo. Base de laslasa, croquetas, gratinados.",
+      "dificultad": 3,
+      "tiempoTotalMinutos": 15,
+      "porciones": 4,
+      "categoria": "salsas",
+      "tags": [
+        "salsas"
+      ],
+      "tecnicas": [
+        "roux"
+      ],
+      "ingredientes": [
+        {
+          "nombre": "Manteca",
+          "cantidad": "50 g"
+        },
+        {
+          "nombre": "Harina 0000",
+          "cantidad": "50 g"
+        },
+        {
+          "nombre": "Leche entera",
+          "cantidad": "500 ml"
+        },
+        {
+          "nombre": "Nuez moscada",
+          "cantidad": "1/4 cucharadita"
+        },
+        {
+          "nombre": "Sal",
+          "cantidad": "a gusto"
+        },
+        {
+          "nombre": "Pimienta blanca",
+          "cantidad": "a gusto"
+        }
+      ],
+      "pasos": [
+        {
+          "orden": 1,
+          "instruccion": "Derretí la manteca en una olla a fuego medio: No debe dorarse.",
+          "nota": "La manteca dorada cambia el sabor de la bechamel. Para blanca, manteca apenas derretida."
+        },
+        {
+          "orden": 2,
+          "instruccion": "Agregá la harina de golpe y batí con batidor de alambre: Cociná 2-3 minutos moviendo constantemente. El roux debe burbujear pero no tomar color. Si se dora, es un roux rubio (otro sabor).",
+          "nota": "Cocinar la harina elimina el sabor a harina cruda. 2-3 min es el punto justo."
+        },
+        {
+          "orden": 3,
+          "instruccion": "Retirá del fuego: Agregá la leche fría de a poco, batiendo constantemente para integrar sin grumos. Cuando hayas incorporado toda la leche, volvé al fuego medio.",
+          "nota": "Leche fría + roux caliente + batido constante = cero grumos. Si la leche está caliente, se forman grumos."
+        },
+        {
+          "orden": 4,
+          "instruccion": "Cociná a fuego medio batiendo constantemente hasta que espese (unos 5 minutos): Debe hervir un par de minutos para que espese bien y pierda el sabor a harina.",
+          "nota": "Si no hierve, no espesa. Pero si hierve mucho, se reduce demasiado."
+        },
+        {
+          "orden": 5,
+          "instruccion": "Salpimentá y agregá nuez moscada rallada: Si quedaron grumos, pasá por colador o licuá con minipimmer.",
+          "nota": "La nuez moscada es el sabor característico de la bechamel. No la saltees."
+        },
+        {
+          "orden": 6,
+          "instruccion": "Usá inmediatamente o cubrí con film en contacto (que toque la superficie) para que no se forme piel: Enfría y guardá en heladera hasta 3 días. ---",
+          "nota": "El film en contacto evita la piel. Para reutilizar, calentá a fuego bajo y batí hasta que recupere textura."
+        }
+      ]
+    },
+    {
+      "id": 34,
+      "titulo": "Vinagreta Clásica Emulsionada",
+      "tituloClave": "Vinagreta Clásica Emulsionada",
+      "descripcionCorta": "La proporción 3:1 aceite/vinagre y por qué a veces se corta. Una vinagreta bien emulsionada es la diferencia entre una ensalada triste y una ensalada que querés repetir.",
+      "dificultad": 2,
+      "tiempoTotalMinutos": 5,
+      "porciones": 4,
+      "categoria": "salsas",
+      "tags": [
+        "salsas"
+      ],
+      "tecnicas": [
+        "emulsion"
+      ],
+      "ingredientes": [
+        {
+          "nombre": "Aceite de oliva extra virgen",
+          "cantidad": "6 cucharadas"
+        },
+        {
+          "nombre": "Vinagre de vino tinto (o limón)",
+          "cantidad": "2 cucharadas"
+        },
+        {
+          "nombre": "Mostaza de Dijon",
+          "cantidad": "1 cucharadita"
+        },
+        {
+          "nombre": "Sal",
+          "cantidad": "a gusto"
+        },
+        {
+          "nombre": "Pimienta negra",
+          "cantidad": "a gusto"
+        }
+      ],
+      "pasos": [
+        {
+          "orden": 1,
+          "instruccion": "En un bowl chico, poné la mostaza, el vinagre, la sal y la pimienta: Batí con batidor de alambre hasta que la sal se disuelva.",
+          "nota": "La mostaza actúa como emulsionante natural. Ayuda a que el aceite y el vinagre se mezclen."
+        },
+        {
+          "orden": 2,
+          "instruccion": "Sin dejar de batir, agregá el aceite en un hilo MUY fino al principio: Cuando veas que empieza a emulsionar (se espesa y se vuelve opaca), podés agregar más rápido.",
+          "nota": "El hilo fino al principio es clave. Si tirás todo el aceite de golpe, se corta."
+        },
+        {
+          "orden": 3,
+          "instruccion": "Probá y ajustá sal/pimienta/acidez: Si quedó muy ácida, agregá más aceite. Si muy aceitosa, más vinagre o unas gotas de limón.",
+          "nota": "Siempre se puede ajustar. La proporción 3:1 es la base, pero variá a gusto."
+        },
+        {
+          "orden": 4,
+          "instruccion": "Usá inmediatamente o guardá en heladera hasta 1 semana: Si se separa al guardar, batí de nuevo antes de usar. ---",
+          "nota": "La vinagreta emulsionada se separa en frío. Unos segundos de batido y vuelve."
+        }
+      ]
+    },
+    {
+      "id": 35,
+      "titulo": "Mayonesa Casera",
+      "tituloClave": "Mayonesa Casera",
+      "descripcionCorta": "Huevo + aceite + emulsión. Parece magia pero es física. Cuando se corta, cómo salvarla. Una vez que hacés mayonesa casera, no volvés a comprar.",
+      "dificultad": 3,
+      "tiempoTotalMinutos": 10,
+      "porciones": 6,
+      "categoria": "salsas",
+      "tags": [
+        "salsas"
+      ],
+      "tecnicas": [
+        "emulsion"
+      ],
+      "ingredientes": [
+        {
+          "nombre": "Huevo",
+          "cantidad": "1 unidad"
+        },
+        {
+          "nombre": "Aceite de girasol (o mezcla con oliva)",
+          "cantidad": "250 ml"
+        },
+        {
+          "nombre": "Jugo de limón",
+          "cantidad": "1 cucharada"
+        },
+        {
+          "nombre": "Mostaza de Dijon",
+          "cantidad": "1 cucharadita"
+        },
+        {
+          "nombre": "Sal",
+          "cantidad": "a gusto"
+        }
+      ],
+      "pasos": [
+        {
+          "orden": 1,
+          "instruccion": "Todos los ingredientes a temperatura ambiente: Si el huevo está frío, la emulsión no se forma bien. Dejalo 10 minutos fuera de la heladera.",
+          "nota": "Temperatura ambiente es clave. Huevo frío = mayonesa cortada."
+        },
+        {
+          "orden": 2,
+          "instruccion": "En un bowl, poné el huevo entero, la mostaza, el jugo de limón y la sal: Batí con batidor de alambre hasta integrar.",
+          "nota": "La mostaza ayuda a emulsionar y da sabor."
+        },
+        {
+          "orden": 3,
+          "instruccion": "Sin dejar de batir, agregá el aceite en un hilo MUY fino al principio: Cuando veas que la mezcla empieza a espesar y se vuelve opaca (está emulsionando), podés agregar el aceite en un hilo más grueso.",
+          "nota": "El hilo fino al principio es el paso más importante. Si tirás aceite rápido, se corta."
+        },
+        {
+          "orden": 4,
+          "instruccion": "Seguí batiendo hasta incorporar todo el aceite: La mayonesa debe estar firme y cremosa. Probá y ajustá sal/limón.",
+          "nota": "Si está muy espesa, agregá una cucharadita de agua tibia y batí."
+        },
+        {
+          "orden": 5,
+          "instruccion": "Si se cortó (se separó en líquido y grasa): poné una yema nueva en otro bowl y agregá la mayonesa cortada de a poco batiendo constantemente. Se recupera.",
+          "nota": "⚠️ Salvataje: una yema nueva + la mayonesa cortada agregada de a poco = mayonesa recuperada."
+        },
+        {
+          "orden": 6,
+          "instruccion": "Guardá en heladera hasta 3-4 días: Siempre tapada. No congela. ---",
+          "nota": "La mayonesa casera tiene huevo crudo. No más de 4 días en heladera."
+        }
+      ]
+    },
+    {
+      "id": 36,
+      "titulo": "Salsa Holandesa",
+      "tituloClave": "Salsa Holandesa",
+      "descripcionCorta": "La reina de las salsas emulsionadas. Manteca, yema, limón. Se corta fácil, pero cuando la dominás, es la salsa más versátil para huevos, vegetales y pescados. La prueba de fuego de la emulsión.",
+      "dificultad": 5,
+      "tiempoTotalMinutos": 15,
+      "porciones": 4,
+      "categoria": "salsas",
+      "tags": [
+        "salsas"
+      ],
+      "tecnicas": [
+        "emulsion"
+      ],
+      "ingredientes": [
+        {
+          "nombre": "Manteca",
+          "cantidad": "150 g"
+        },
+        {
+          "nombre": "Yemas de huevo",
+          "cantidad": "3 unidades"
+        },
+        {
+          "nombre": "Jugo de limón",
+          "cantidad": "1 cucharada"
+        },
+        {
+          "nombre": "Agua",
+          "cantidad": "1 cucharada"
+        },
+        {
+          "nombre": "Sal",
+          "cantidad": "a gusto"
+        },
+        {
+          "nombre": "Pimienta blanca o cayena",
+          "cantidad": "a gusto"
+        }
+      ],
+      "pasos": [
+        {
+          "orden": 1,
+          "instruccion": "Derretí la manteca a fuego bajo: Dejala tibia, no caliente. Reservá.",
+          "nota": "La manteca no debe estar hirviendo. Tibia."
+        },
+        {
+          "orden": 2,
+          "instruccion": "En un bowl de metal (que pueda ir a baño María), poné las yemas, el agua y el jugo de limón: Batí hasta que estén espumosas.",
+          "nota": "El agua ayuda a que las yemas no se cocinen tan rápido."
+        },
+        {
+          "orden": 3,
+          "instruccion": "Poné el bowl sobre una olla con agua hirviendo a fuego BAJO (baño María): El bowl no debe tocar el agua. Batí constantemente hasta que las yemas empiecen a espesar (unos 3-4 minutos).",
+          "nota": "⚠️ Si el bowl toca el agua, las yemas se cocinan y se cortan. El vapor hace el trabajo."
+        },
+        {
+          "orden": 4,
+          "instruccion": "Retirá el bowl del baño María: Agregá la manteca derretida de a poco, batiendo constantemente. Al principio gota a gota, después en hilo fino.",
+          "nota": "Igual que la mayonesa: el hilo fino al principio es clave."
+        },
+        {
+          "orden": 5,
+          "instruccion": "Cuando toda la manteca esté incorporada, la salsa debe estar espesa y cremosa: Salpimentá. Si está muy espesa, agregá una cucharadita de agua tibia.",
+          "nota": "La textura debe ser como crema espesa."
+        },
+        {
+          "orden": 6,
+          "instruccion": "Si se cortó: poné una yema nueva en otro bowl y agregá la salsa cortada de a poco batiendo. Igual que la mayonesa.",
+          "nota": "Mismo salvataje que la mayonesa."
+        },
+        {
+          "orden": 7,
+          "instruccion": "Serví inmediatamente sobre huevos poché, espárragos, brócoli o pescado: La holandesa no se guarda — se hace y se sirve. ---",
+          "nota": "No se recalienta. No se guarda. Se hace en el momento."
+        }
+      ]
+    },
+    {
+      "id": 37,
+      "titulo": "Salteado Wok — Vegetales",
+      "tituloClave": "Salteado Wok — Vegetales",
+      "descripcionCorta": "El wok hay que quemarlo primero. El \"sabor wok\" no es mito — es la reacción química del metal caliente con el aceite. Vegetales crocantes, no hervidos. La técnica del salteado chino aplicada a casa.",
+      "dificultad": 3,
+      "tiempoTotalMinutos": 10,
+      "porciones": 2,
+      "categoria": "vegetales",
+      "tags": [
+        "vegetales"
+      ],
+      "tecnicas": [
+        "salteado-wok",
+        "control-fuego"
+      ],
+      "ingredientes": [
+        {
+          "nombre": "Mix de vegetales (brócoli, morrón, zanahoria, cebolla, etc.)",
+          "cantidad": "400 g"
+        },
+        {
+          "nombre": "Aceite de girasol (o maní)",
+          "cantidad": "2 cucharadas"
+        },
+        {
+          "nombre": "Ajo",
+          "cantidad": "3 dientes"
+        },
+        {
+          "nombre": "Jengibre fresco",
+          "cantidad": "1 trozo (2cm)"
+        },
+        {
+          "nombre": "Salsa de soja",
+          "cantidad": "2 cucharadas"
+        },
+        {
+          "nombre": "Aceite de sésamo",
+          "cantidad": "1 cucharadita"
+        }
+      ],
+      "pasos": [
+        {
+          "orden": 1,
+          "instruccion": "Preparación: cortá todos los vegetales en trozos del mismo tamaño para que se cocinen parejo. El ajo y jengibre en láminas finas. Tené todo listo antes de prender el fuego.",
+          "nota": "Mise en place obligatorio. El salteado wok no da tiempo a picar mientras se cocina."
+        },
+        {
+          "orden": 2,
+          "instruccion": "Poné el wok (o sartén grande) a fuego MÁXIMO: Tiene que estar humeante. Agregá el aceite de girasol y movelo para cubrir toda la superficie.",
+          "nota": "El wok debe estar tan caliente que el aceite chisporrotee al contacto."
+        },
+        {
+          "orden": 3,
+          "instruccion": "Agregá los vegetales más duros primero (zanahoria, brócoli): Salteá 1-2 minutos moviendo constantemente con espátula o pinzas. Deben estar brillantes pero no cocidos.",
+          "nota": "Los vegetales deben mantener el color vibrante. Si se ponen opacos, te pasaste."
+        },
+        {
+          "orden": 4,
+          "instruccion": "Agregá los vegetales más tiernos (morrón, cebolla): Salteá 1 minuto más. Todo debe estar en movimiento constante — nada se queda quieto en el wok.",
+          "nota": "El movimiento constante es la técnica del wok. Nada se quema porque nada se queda quieto."
+        },
+        {
+          "orden": 5,
+          "instruccion": "Corré los vegetales a un costado del wok: En el espacio vacío, agregá un chorrito de aceite y salteá el ajo y jengibre 30 segundos hasta que larguen aroma. Después integrá con el resto.",
+          "nota": "Saltear el ajo aparte en el centro caliente evita que se queme."
+        },
+        {
+          "orden": 6,
+          "instruccion": "Agregá la salsa de soja por los bordes del wok (no directo a los vegetales): Salteá 30 segundos más para que se evapore el líquido y los vegetales se glaseen.",
+          "nota": "La salsa de soja por el borde se carameliza al instante con el calor del wok."
+        },
+        {
+          "orden": 7,
+          "instruccion": "Apagá el fuego: Agregá el aceite de sésamo y mezclá. Serví inmediatamente. Los vegetales deben estar crocantes, no blandos. ---",
+          "nota": "El aceite de sésamo se agrega al final, fuera del fuego, para que mantenga su aroma."
+        }
+      ]
+    },
+    {
+      "id": 38,
+      "titulo": "Vegetales Asados al Horno",
+      "tituloClave": "Vegetales Asados al Horno",
+      "descripcionCorta": "La mayoría pone los vegetales muy juntos y los hierve en vez de dorarlos. La regla de oro: espacio entre ellos, temperatura alta, y no moverlos hasta que estén caramelizados.",
+      "dificultad": 1,
+      "tiempoTotalMinutos": 30,
+      "porciones": 4,
+      "categoria": "vegetales",
+      "tags": [
+        "vegetales"
+      ],
+      "tecnicas": [
+        "asado-horno",
+        "control-fuego"
+      ],
+      "ingredientes": [
+        {
+          "nombre": "Vegetales (zapallo, batata, cebolla, zanahoria, brócoli, etc.)",
+          "cantidad": "500 g"
+        },
+        {
+          "nombre": "Aceite de oliva",
+          "cantidad": "3 cucharadas"
+        },
+        {
+          "nombre": "Sal",
+          "cantidad": "a gusto"
+        },
+        {
+          "nombre": "Pimienta",
+          "cantidad": "a gusto"
+        },
+        {
+          "nombre": "Hierbas (romero, tomillo)",
+          "cantidad": "a gusto"
+        }
+      ],
+      "pasos": [
+        {
+          "orden": 1,
+          "instruccion": "Precalentá el horno a 220°C (máximo): Cortá los vegetales en trozos del mismo tamaño (2-3cm). Si son de distinto tamaño, algunos se queman y otros quedan crudos.",
+          "nota": "El corte parejo es clave."
+        },
+        {
+          "orden": 2,
+          "instruccion": "En una fuente grande, mezclá los vegetales con aceite de oliva, sal, pimienta y hierbas: Los vegetales deben estar apenas cubiertos de aceite, no empapados.",
+          "nota": "Si usás demasiado aceite, los vegetales se fríen en vez de asarse."
+        },
+        {
+          "orden": 3,
+          "instruccion": "Distribuí los vegetales en UNA SOLA CAPA: Si están amontonados, se cocinan al vapor en vez de asarse. Usá dos fuentes si es necesario.",
+          "nota": "⭐ Esta es la regla de oro: una sola capa, con espacio entre los trozos. Si se tocan, no se doran."
+        },
+        {
+          "orden": 4,
+          "instruccion": "Horneá 20-30 minutos sin moverlos: Deben estar dorados en la base antes de dar vuelta. Si los movés antes, nunca se caramelizan.",
+          "nota": "No los muevas. Dejalos quietos hasta que la base esté dorada."
+        },
+        {
+          "orden": 5,
+          "instruccion": "Dales vuelta con espátula: Horneá 10-15 minutos más hasta que estén dorados de ambos lados y tiernos por dentro.",
+          "nota": "El punto justo: dorados por fuera, tiernos por dentro."
+        },
+        {
+          "orden": 6,
+          "instruccion": "Serví inmediatamente: Si querés un toque extra, agregá un chorrito de vinagre balsámico o miel en los últimos 5 minutos. ---",
+          "nota": "El balsámico o miel carameliza y da un toque agridulce."
+        }
+      ]
+    },
+    {
+      "id": 39,
+      "titulo": "Blanqueado y Choque Térmico",
+      "tituloClave": "Blanqueado y Choque Térmico",
+      "descripcionCorta": "La técnica que usan los chefs para que los vegetales verdes mantengan su color vibrante y textura firme. Hervir + agua con hielo. Parece simple, el timing es todo.",
+      "dificultad": 1,
+      "tiempoTotalMinutos": 5,
+      "porciones": 4,
+      "categoria": "vegetales",
+      "tags": [
+        "vegetales"
+      ],
+      "tecnicas": [
+        "blanqueado"
+      ],
+      "ingredientes": [
+        {
+          "nombre": "Vegetales verdes (brócoli, espárragos, chauchas, arvejas)",
+          "cantidad": "300 g"
+        },
+        {
+          "nombre": "Sal",
+          "cantidad": "1 cucharada"
+        },
+        {
+          "nombre": "Hielo",
+          "cantidad": "suficiente"
+        },
+        {
+          "nombre": "Agua",
+          "cantidad": "suficiente"
+        }
+      ],
+      "pasos": [
+        {
+          "orden": 1,
+          "instruccion": "Poné una olla grande con agua a hervir: Agregá sal generosa (el agua debe saber a mar). Prepará un bowl con agua y hielo al lado.",
+          "nota": "La sal ayuda a mantener el color verde."
+        },
+        {
+          "orden": 2,
+          "instruccion": "Cuando el agua hierva fuerte, agregá los vegetales: El tiempo depende del vegetal: brócoli 2-3 min, espárragos 1-2 min, chauchas 2-3 min, arvejas 1 min.",
+          "nota": "El tiempo exacto es crítico. Usá timer."
+        },
+        {
+          "orden": 3,
+          "instruccion": "Apenas termine el tiempo, sacá: los vegetales con espumadera y sumergilos inmediatamente en el bowl de agua con hielo (choque térmico).",
+          "nota": "⭐ El choque térmico detiene la cocción al instante y fija el color verde brillante."
+        },
+        {
+          "orden": 4,
+          "instruccion": "Dejalos en el agua helada el mismo tiempo que estuvieron en el agua caliente: Después escurrí y secá con papel.",
+          "nota": "Secar bien antes de usar. Si están húmedos, saltearlos no los va a dorar."
+        },
+        {
+          "orden": 5,
+          "instruccion": "Usá los vegetales blanqueados para saltear, ensaladas tibias, o como guarnición: Se calientan en 1 minuto en un sartén caliente. ---",
+          "nota": "El blanqueado es preparación, no plato final. Después se terminan en sartén o se usan fríos."
+        }
+      ]
+    },
+    {
+      "id": 40,
+      "titulo": "Masa de Tarta Quebrada (Pâte Brisée)",
+      "tituloClave": "Masa de Tarta Quebrada",
+      "descripcionCorta": "Manteca fría, no trabajar de más, reposo. Tres reglas que la mayoría rompe. Una masa quebrada bien hecha es la base de tartas saladas y dulces. Crocante, mantecosa, se deshace en la boca.",
+      "dificultad": 3,
+      "tiempoTotalMinutos": 40,
+      "porciones": 6,
+      "categoria": "vegetales",
+      "tags": [
+        "vegetales"
+      ],
+      "tecnicas": [
+        "masa-quebrada",
+        "control-fuego"
+      ],
+      "ingredientes": [
+        {
+          "nombre": "Harina 0000",
+          "cantidad": "250 g"
+        },
+        {
+          "nombre": "Manteca fría",
+          "cantidad": "125 g"
+        },
+        {
+          "nombre": "Agua helada",
+          "cantidad": "4-5 cucharadas"
+        },
+        {
+          "nombre": "Sal",
+          "cantidad": "1/2 cucharadita"
+        },
+        {
+          "nombre": "Huevo (opcional, para pintar)",
+          "cantidad": "1 unidad"
+        }
+      ],
+      "pasos": [
+        {
+          "orden": 1,
+          "instruccion": "Poné la harina y la sal en un bowl: Agregá la manteca fría cortada en cubos chicos. Con las puntas de los dedos, deshacé la manteca contra la harina hasta formar migas gruesas (como arena húmeda). No uses las palmas — el calor de las manos derrite la manteca.",
+          "nota": "La manteca debe estar fría. Si se derrite antes de hornear, la masa no queda quebrada."
+        },
+        {
+          "orden": 2,
+          "instruccion": "Agregá el agua helada de a una cucharada, mezclando con un tenedor o espátula: Pará cuando la masa se una pero todavía esté un poco seca. No agregues toda el agua si no hace falta.",
+          "nota": "La masa no debe estar húmeda. Apenas unida."
+        },
+        {
+          "orden": 3,
+          "instruccion": "Volcá la masa sobre la mesada: Uní con las manos lo justo para formar un disco. NO AMASES. Si amasás, desarrollás el gluten y la masa queda elástica como pan, no quebrada.",
+          "nota": "⭐ No amasar. Unir apenas. El gluten es el enemigo de la masa quebrada."
+        },
+        {
+          "orden": 4,
+          "instruccion": "Envolvé el disco en film y llevá a la heladera mínimo 30 minutos: El reposo relaja el gluten y enfría la manteca.",
+          "nota": "El reposo en heladera no es opcional. 30 min mínimo, 1 hora es mejor."
+        },
+        {
+          "orden": 5,
+          "instruccion": "Estirá la masa entre dos papeles film o en mesada enharinada: Debe quedar de unos 3-4mm de grosor. Forrá un molde de tarta. Pinchá la base con tenedor.",
+          "nota": "Pinchar la base evita que se infle al hornear."
+        },
+        {
+          "orden": 6,
+          "instruccion": "Horneá en blanco (sin relleno): 180°C por 15 minutos. Si querés, poné papel manteca con peso (porotos o arroz) encima para que no se infle. Después rellená y horneá según la receta. ---",
+          "nota": "Hornear en blanco primero asegura una base crocante. Si la llenás cruda, la masa queda húmeda."
+        }
+      ]
+    },
+    {
+      "id": 41,
+      "titulo": "Pan Casero — 4 Ingredientes",
+      "tituloClave": "Pan Casero — 4 Ingredientes",
+      "descripcionCorta": "Harina, agua, levadura, sal. Parece simple, pero el pan es pura técnica: hidratación, amasado, tiempos de reposo. Con 3 días de práctica ya sale rico. Con una semana, sale pan de panadería.",
+      "dificultad": 3,
+      "tiempoTotalMinutos": 180,
+      "porciones": 1,
+      "categoria": "vegetales",
+      "tags": [
+        "vegetales"
+      ],
+      "tecnicas": [
+        "pan-casero",
+        "fermentacion",
+        "masa-quebrada"
+      ],
+      "ingredientes": [
+        {
+          "nombre": "Harina 0000 (o de fuerza)",
+          "cantidad": "500 g"
+        },
+        {
+          "nombre": "Agua tibia",
+          "cantidad": "325 ml"
+        },
+        {
+          "nombre": "Levadura fresca (o 7g seca)",
+          "cantidad": "15 g"
+        },
+        {
+          "nombre": "Sal",
+          "cantidad": "10 g"
+        }
+      ],
+      "pasos": [
+        {
+          "orden": 1,
+          "instruccion": "Disolvé la levadura en el agua tibia (no más de 35°C — si quema el dedo, mata la levadura): Dejá reposar 5 minutos hasta que espume.",
+          "nota": "Si la levadura no espuma después de 5 min, está muerta. Empezá de nuevo."
+        },
+        {
+          "orden": 2,
+          "instruccion": "En un bowl grande, mezclá la harina con la sal: Hacé un hueco en el centro y volcá el agua con levadura. Mezclá con cuchara de madera hasta formar una masa peluda.",
+          "nota": "No te preocupes si parece seca o desprolija. El amasado la va a unificar."
+        },
+        {
+          "orden": 3,
+          "instruccion": "Volcá la masa sobre la mesada (sin harina): Amasá 10-12 minutos: estirá la masa con la base de la palma, doblala sobre sí misma, girala 90° y repetí. La masa debe pasar de pegajosa a suave y elástica.",
+          "nota": "⭐ La prueba de la membrana: estirá un pedazo de masa. Si podés ver luz a través sin que se rompa, está lista."
+        },
+        {
+          "orden": 4,
+          "instruccion": "Formá un bollo: Ponelo en un bowl ligeramente aceitado. Tapá con film o repasador húmedo. Dejá levar 1-2 horas hasta que duplique su tamaño.",
+          "nota": "El tiempo de levado depende de la temperatura. Más calor = más rápido. Más frío = más lento pero mejor sabor."
+        },
+        {
+          "orden": 5,
+          "instruccion": "Desgasificá la masa: apretala suavemente para sacar el aire. Doblala sobre sí misma un par de veces. Formá un bollo o colocá en molde de pan. Tapá y dejá levar 45-60 minutos más.",
+          "nota": "El segundo levado es más corto. La masa debe estar suave y esponjosa."
+        },
+        {
+          "orden": 6,
+          "instruccion": "Precalentá el horno a 220°C: Si tenés, poné una bandeja con agua en la base del horno para generar vapor (ayuda a la corteza).",
+          "nota": "El vapor en el horno crea una corteza más crocante."
+        },
+        {
+          "orden": 7,
+          "instruccion": "Horneá 30-35 minutos hasta que esté dorado y suene a hueco al golpear la base: Dejá enfriar COMPLETAMENTE sobre una rejilla antes de cortar (mínimo 1 hora). ---",
+          "nota": "Si cortás el pan caliente, la miga queda pegajosa. Esperá a que se enfríe."
+        }
+      ]
+    }
+  ]
+}

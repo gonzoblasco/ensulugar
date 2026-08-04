@@ -45,6 +45,224 @@ button {
   color: #57534e;
 }
 
+/* Dashboard styles */
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.dashboard-header h1 {
+  margin: 0 0 0.25rem;
+  font-size: 2rem;
+}
+
+.dashboard-subtitle {
+  margin: 0;
+  color: #57534e;
+  font-size: 1rem;
+}
+
+.progress-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.progress-card {
+  background: #fff;
+  border: 1px solid #e7e5e4;
+  border-radius: 0.75rem;
+  padding: 1.25rem;
+  text-align: center;
+}
+
+.progress-value {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #1c1917;
+  margin-bottom: 0.25rem;
+}
+
+.progress-label {
+  font-size: 0.875rem;
+  color: #57534e;
+  margin-bottom: 0.75rem;
+}
+
+.progress-bar {
+  height: 8px;
+  background: #e7e5e4;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #f59e0b, #d97706);
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}
+
+.level-stars {
+  font-size: 1.25rem;
+  color: #f59e0b;
+}
+
+.next-step-card {
+  background: linear-gradient(135deg, #fef3c7, #fde68a);
+  border: 2px solid #f59e0b;
+  border-radius: 1rem;
+  padding: 1.5rem;
+}
+
+.next-step-card h2 {
+  margin: 0 0 1rem;
+  font-size: 1.25rem;
+  color: #92400e;
+}
+
+.next-step-content {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.next-step-icon {
+  font-size: 3rem;
+  line-height: 1;
+}
+
+.next-step-info {
+  flex: 1;
+}
+
+.next-step-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #92400e;
+  margin-bottom: 0.25rem;
+}
+
+.next-step-meta {
+  font-size: 0.875rem;
+  color: #b45309;
+  margin-bottom: 1rem;
+}
+
+.next-step-actions {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.quick-actions {
+  background: #fff;
+  border: 1px solid #e7e5e4;
+  border-radius: 0.75rem;
+  padding: 1.25rem;
+}
+
+.quick-actions h2 {
+  margin: 0 0 1rem;
+  font-size: 1.125rem;
+}
+
+.action-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1rem;
+}
+
+.action-card {
+  background: #fafaf9;
+  border: 1px solid #e7e5e4;
+  border-radius: 0.75rem;
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  transition: all 0.2s ease;
+}
+
+.action-card:hover {
+  background: #f5f5f4;
+  border-color: #d6d3d1;
+  transform: translateY(-2px);
+}
+
+.action-icon {
+  font-size: 2.5rem;
+  line-height: 1;
+}
+
+.action-label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #44403c;
+  text-align: center;
+}
+
+.ruta-section {
+  background: #fff;
+  border: 1px solid #e7e5e4;
+  border-radius: 0.75rem;
+  padding: 1.25rem;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 3rem 1.5rem;
+  background: #fff;
+  border: 1px solid #e7e5e4;
+  border-radius: 0.75rem;
+}
+
+.empty-icon {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.empty-state h2 {
+  margin: 0 0 0.5rem;
+  font-size: 1.5rem;
+}
+
+.empty-state p {
+  margin: 0;
+  color: #57534e;
+}
+
+/* Button variants */
+.btn-primary {
+  background: #f59e0b;
+  color: #fff;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.625rem 1.25rem;
+  font-weight: 600;
+  transition: background 0.2s ease;
+}
+
+.btn-primary:hover {
+  background: #d97706;
+}
+
+.btn-secondary {
+  background: transparent;
+  color: #92400e;
+  border: 2px solid #f59e0b;
+  border-radius: 0.5rem;
+  padding: 0.625rem 1.25rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.btn-secondary:hover {
+  background: #fef3c7;
+}
+
 .filters {
   display: flex;
   flex-wrap: wrap;

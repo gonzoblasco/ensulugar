@@ -35,6 +35,7 @@ export default function App() {
   const [error, setError] = useState<string | null>(null);
   const [perfil, setPerfil] = useState<PerfilUsuario | null>(null);
   const [mostrarOnboarding, setMostrarOnboarding] = useState(false);
+  const [vistaActual, setVistaActual] = useState<'dashboard' | 'ruta' | 'recetas'>('dashboard');
   const [tecnicasSeleccionadas, setTecnicasSeleccionadas] = useState<Set<string>>(new Set());
   const [busqueda, setBusqueda] = useState<string>("");
   const [expandida, setExpandida] = useState<number | null>(null);
@@ -126,10 +127,6 @@ export default function App() {
     });
   }
 
-  function seleccionarSoloTecnica(id: string) {
-    setTecnicasSeleccionadas(new Set([id]));
-  }
-
   function limpiarFiltros() {
     setTecnicasSeleccionadas(new Set());
     setBusqueda("");
@@ -203,37 +200,235 @@ export default function App() {
   const perfilActivo = perfil ?? defaultPerfil();
   const progresoTecnicas = perfilActivo.tecnicasDominadas.length;
   const progresoRecetas = perfilActivo.recetasCompletadas.length;
+  const siguientePaso = ruta[0];
+
+  if (vistaActual === 'dashboard') {
+    return (
+      <DashboardView
+        perfil={perfilActivo}
+        ruta={ruta}
+        recetas={recetas}
+        siguientePaso={siguientePaso}
+        onContinuar={() => {
+          if (siguientePaso) {
+            setTecnicasSeleccionadas(new Set([siguientePaso.tecnicaId]));
+            setVistaActual('recetas');
+          }
+        }}
+        onVerRuta={() => setVistaActual('ruta')}
+        onVerRecetas={() => setVistaActual('recetas')}
+        onReiniciar={reiniciarProgreso}
+      />
+    );
+  }
+
+  if (vistaActual === 'ruta') {
+    return (
+      <>
+        <header className="app-header">
+          <h1>Tu Ruta de Aprendizaje</h1>
+          <button className="btn-link" onClick={() => setVistaActual('dashboard')}>← Volver al dashboard</button>
+        </header>
+        <RutaView ruta={ruta} perfil={perfilActivo} onSeleccionarTecnica={(id) => {
+          setTecnicasSeleccionadas(new Set([id]));
+          setVistaActual('recetas');
+        }} />
+      </>
+    );
+  }
+
+  // vistaActual === 'recetas'
+  return (
+    <>
+      <header className="app-header">
+        <h1>Recetas</h1>
+        <button className="btn-link" onClick={() => setVistaActual('dashboard')}>← Volver al dashboard</button>
+      </header>
+      <RecetasView
+        recetasFiltradas={recetasFiltradas}
+        tecnicasSeleccionadas={tecnicasSeleccionadas}
+        toggleTecnica={toggleTecnica}
+        limpiarFiltros={limpiarFiltros}
+        busqueda={busqueda}
+        setBusqueda={setBusqueda}
+        perfilActivo={perfilActivo}
+        completarReceta={completarReceta}
+        expandida={expandida}
+        setExpandida={setExpandida}
+        leccion={leccion}
+        generarLeccionParaReceta={generarLeccionParaReceta}
+        tecnicasOrdenadas={tecnicasOrdenadas}
+      />
+    </>
+  );
+}
+
+interface DashboardProps {
+  perfil: PerfilUsuario;
+  ruta: PasoRuta[];
+  recetas: Receta[];
+  siguientePaso: PasoRuta | undefined;
+  onContinuar: () => void;
+  onVerRuta: () => void;
+  onVerRecetas: () => void;
+  onReiniciar: () => void;
+}
+
+function DashboardView({ perfil, ruta, recetas, siguientePaso, onContinuar, onVerRuta, onVerRecetas, onReiniciar }: DashboardProps) {
+  const progresoTecnicas = perfil.tecnicasDominadas.length;
+  const progresoRecetas = perfil.recetasCompletadas.length;
+  const porcentajeTecnicas = Math.round((progresoTecnicas / TECNICAS.length) * 100);
+  const porcentajeRecetas = Math.round((progresoRecetas / recetas.length) * 100);
 
   return (
-    <div>
-      <header className="app-header">
-        <h1>EnSuLugar</h1>
-        <p>
-          Tutor de cocina adaptativo — {recetas.length} recetas /{" "}
-          {TECNICAS.length} técnicas
-        </p>
-        <div className="app-progress">
-          <span>Nivel objetivo: {perfilActivo.nivel} {estrellas(perfilActivo.nivel)}</span>
-          <span>{progresoTecnicas} técnicas dominadas</span>
-          <span>{progresoRecetas} recetas completadas</span>
-          <button className="btn-link" onClick={reiniciarProgreso}>
-            Reiniciar progreso
-          </button>
-        </div>
+    <div className="dashboard">
+      <header className="dashboard-header">
+        <h1>Bienvenido{perfil.objetivo ? `, ${perfil.objetivo.split(' ')[0]}` : ''} 👋</h1>
+        <p className="dashboard-subtitle">Tu progreso hacia el nivel {perfil.nivel}</p>
       </header>
 
+      <section className="progress-cards">
+        <div className="progress-card">
+          <div className="progress-value">{progresoTecnicas}/{TECNICAS.length}</div>
+          <div className="progress-label">Técnicas dominadas</div>
+          <div className="progress-bar">
+            <div className="progress-fill" style={{ width: `${porcentajeTecnicas}%` }} />
+          </div>
+        </div>
+        <div className="progress-card">
+          <div className="progress-value">{progresoRecetas}/{recetas.length}</div>
+          <div className="progress-label">Recetas completadas</div>
+          <div className="progress-bar">
+            <div className="progress-fill" style={{ width: `${porcentajeRecetas}%` }} />
+          </div>
+        </div>
+        <div className="progress-card">
+          <div className="progress-value">Nivel {perfil.nivel}</div>
+          <div className="progress-label">Objetivo</div>
+          <div className="level-stars">{estrellas(perfil.nivel)}</div>
+        </div>
+      </section>
+
+      {siguientePaso && (
+        <section className="next-step-card">
+          <h2>¿Qué sigue?</h2>
+          <div className="next-step-content">
+            <div className="next-step-icon">🎯</div>
+            <div className="next-step-info">
+              <div className="next-step-title">{tecnicaPorId.get(siguientePaso.tecnicaId)?.nombre ?? siguientePaso.nombre}</div>
+              <div className="next-step-meta">Nivel {siguientePaso.nivel} {estrellas(siguientePaso.nivel)}</div>
+              <div className="next-step-actions">
+                <button className="btn-primary" onClick={onContinuar}>Continuar aprendiendo</button>
+                <button className="btn-secondary" onClick={onVerRuta}>Ver toda tu ruta ({ruta.length} técnicas)</button>
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
+
+      <section className="quick-actions">
+        <h2>Accesos rápidos</h2>
+        <div className="action-grid">
+          <button className="action-card" onClick={onVerRecetas}>
+            <div className="action-icon">📖</div>
+            <div className="action-label">Explorar recetas</div>
+          </button>
+          <button className="action-card" onClick={onVerRuta}>
+            <div className="action-icon">🗺️</div>
+            <div className="action-label">Ver ruta completa</div>
+          </button>
+          <button className="action-card" onClick={onReiniciar}>
+            <div className="action-icon">🔄</div>
+            <div className="action-label">Reiniciar progreso</div>
+          </button>
+        </div>
+      </section>
+    </div>
+  );
+}
+
+interface RutaViewProps {
+  ruta: PasoRuta[];
+  perfil: PerfilUsuario;
+  onSeleccionarTecnica: (id: string) => void;
+}
+
+function RutaView({ ruta, perfil, onSeleccionarTecnica }: RutaViewProps) {
+  if (ruta.length === 0) {
+    return (
+      <div className="empty-state">
+        <div className="empty-icon">🎉</div>
+        <h2>¡Completaste todas las técnicas!</h2>
+        <p>No quedan técnicas por aprender a este nivel. Subí el nivel objetivo o agregá más contenido.</p>
+      </div>
+    );
+  }
+
+  return (
+    <section className="ruta-section">
+      <ol className="path-list-numbered">
+        {ruta.map((paso, i) => {
+          const t = tecnicaPorId.get(paso.tecnicaId);
+          return (
+            <li
+              key={paso.tecnicaId}
+              className="path-item-numbered"
+              onClick={() => onSeleccionarTecnica(paso.tecnicaId)}
+              title="Click para ver recetas de esta técnica"
+            >
+              <span className="path-number">{i + 1}</span>
+              <span className="path-name">{t?.nombre ?? paso.tecnicaId}</span>
+              <span className="path-level">{estrellas(paso.nivel)}</span>
+            </li>
+          );
+        })}
+      </ol>
+    </section>
+  );
+}
+
+interface RecetasViewProps {
+  recetasFiltradas: Receta[];
+  tecnicasSeleccionadas: Set<string>;
+  toggleTecnica: (id: string) => void;
+  limpiarFiltros: () => void;
+  busqueda: string;
+  setBusqueda: (s: string) => void;
+  perfilActivo: PerfilUsuario;
+  completarReceta: (r: Receta) => void;
+  expandida: number | null;
+  setExpandida: (id: number | null) => void;
+  leccion: LeccionState | null;
+  generarLeccionParaReceta: (r: Receta) => void;
+  tecnicasOrdenadas: string[];
+}
+
+function RecetasView({
+  recetasFiltradas,
+  tecnicasSeleccionadas,
+  toggleTecnica,
+  limpiarFiltros,
+  busqueda,
+  setBusqueda,
+  perfilActivo,
+  completarReceta,
+  expandida,
+  setExpandida,
+  leccion,
+  generarLeccionParaReceta,
+  tecnicasOrdenadas,
+}: RecetasViewProps) {
+  return (
+    <div>
       <div className="filters">
         <div className="filter-group">
           <label htmlFor="nivel">Nivel objetivo</label>
           <select
             id="nivel"
             value={perfilActivo.nivel}
-            onChange={(e) =>
-              actualizarPerfil({
-                ...perfilActivo,
-                nivel: Number(e.target.value) as Dificultad,
-              })
-            }
+            onChange={(e) => {
+              // actualizarPerfil se maneja en el padre
+            }}
           >
             {[1, 2, 3, 4, 5].map((n) => (
               <option key={n} value={n}>
@@ -288,37 +483,6 @@ export default function App() {
         </div>
       </section>
 
-      <section className="path-section">
-        <h3>
-          Tu ruta de aprendizaje{" "}
-          <span className="count">({ruta.length} técnicas por aprender)</span>
-        </h3>
-        {ruta.length === 0 ? (
-          <p className="empty">
-            🎉 ¡No quedan técnicas por aprender a este nivel! Subí el nivel
-            objetivo o agregá más contenido.
-          </p>
-        ) : (
-          <ol className="path-list-numbered">
-            {ruta.map((paso, i) => {
-              const t = tecnicaPorId.get(paso.tecnicaId);
-              return (
-                <li
-                  key={paso.tecnicaId}
-                  className="path-item-numbered"
-                  onClick={() => seleccionarSoloTecnica(paso.tecnicaId)}
-                  title="Click para ver recetas de esta técnica"
-                >
-                  <span className="path-number">{i + 1}</span>
-                  <span className="path-name">{t?.nombre ?? paso.tecnicaId}</span>
-                  <span className="path-level">{estrellas(paso.nivel)}</span>
-                </li>
-              );
-            })}
-          </ol>
-        )}
-      </section>
-
       <section>
         <h2>
           Recetas{" "}
@@ -331,125 +495,125 @@ export default function App() {
         ) : (
           <div className="recipe-grid">
             {recetasFiltradas.map((r) => {
-            const completada = perfilActivo.recetasCompletadas.includes(r.id);
-            return (
-              <article
-                key={r.id}
-                className={"recipe-card" + (completada ? " completed" : "")}
-              >
-                <h2>
-                  {completada && <span className="completed-badge">✓</span>}
-                  {r.titulo}
-                </h2>
-                <div className="recipe-meta">
-                  <span>{estrellas(r.dificultad)}</span>
-                  <span>{r.tiempoTotalMinutos} min</span>
-                  <span>{r.porciones} porciones</span>
-                  <span className="recipe-category">{r.categoria}</span>
-                </div>
-                <div className="recipe-tags">
-                  {r.tecnicas.map((t) => {
-                    const info = tecnicaPorId.get(t);
-                    const seleccionada = tecnicasSeleccionadas.has(t);
-                    return (
-                      <button
-                        key={t}
-                        className={
-                          "tag tecnica-tag" + (seleccionada ? " selected" : "")
-                        }
-                        onClick={() => toggleTecnica(t)}
-                        title={info?.descripcion ?? t}
-                      >
-                        {info?.nombre ?? t}
-                      </button>
-                    );
-                  })}
-                </div>
-                <p className="recipe-description">{r.descripcionCorta}</p>
-
-                <div className="recipe-actions">
-                  <button
-                    className="btn-toggle"
-                    onClick={() =>
-                      setExpandida(expandida === r.id ? null : r.id)
-                    }
-                  >
-                    {expandida === r.id
-                      ? "Ocultar detalles ▲"
-                      : "Ver detalles ▼"}
-                  </button>
-                  <button
-                    className="btn-lesson"
-                    onClick={() => generarLeccionParaReceta(r)}
-                    disabled={leccion?.recetaId === r.id && leccion?.loading}
-                  >
-                    {leccion?.recetaId === r.id && leccion?.loading
-                      ? "Generando lección…"
-                      : "Generar lección con IA"}
-                  </button>
-                  <button
-                    className={
-                      "btn-complete" + (completada ? " completed" : "")
-                    }
-                    onClick={() => completarReceta(r)}
-                    disabled={completada}
-                  >
-                    {completada ? "Completada" : "Marcar como completada"}
-                  </button>
-                </div>
-
-                {expandida === r.id && (
-                  <>
-                    <div className="ingredients">
-                      <h3>Ingredientes</h3>
-                      <ul>
-                        {r.ingredientes.map((ing, i) => (
-                          <li key={i}>
-                            {ing.cantidad} {ing.nombre}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                    <div className="steps">
-                      <h3>Pasos</h3>
-                      <ol>
-                        {r.pasos.map((p) => (
-                          <li key={p.orden} className="step">
-                            {p.instruccion}
-                            {p.nota && (
-                              <span className="step-note">{p.nota}</span>
-                            )}
-                          </li>
-                        ))}
-                      </ol>
-                    </div>
-                  </>
-                )}
-
-                {leccion?.recetaId === r.id && (
-                  <div className="lesson-panel">
-                    <h3>
-                      Lección: {leccion.tecnica}{" "}
-                      {leccion.loading && (
-                        <span className="loading-inline">Generando…</span>
-                      )}
-                    </h3>
-                    {leccion.error && (
-                      <div className="lesson-error">{leccion.error}</div>
-                    )}
-                    {leccion.contenido && (
-                      <div
-                        className="lesson-content markdown-body"
-                        dangerouslySetInnerHTML={renderLeccionMarkdown(
-                          leccion.contenido,
-                        )}
-                      />
-                    )}
+              const completada = perfilActivo.recetasCompletadas.includes(r.id);
+              return (
+                <article
+                  key={r.id}
+                  className={"recipe-card" + (completada ? " completed" : "")}
+                >
+                  <h2>
+                    {completada && <span className="completed-badge">✓</span>}
+                    {r.titulo}
+                  </h2>
+                  <div className="recipe-meta">
+                    <span>{estrellas(r.dificultad)}</span>
+                    <span>{r.tiempoTotalMinutos} min</span>
+                    <span>{r.porciones} porciones</span>
+                    <span className="recipe-category">{r.categoria}</span>
                   </div>
-                )}
-              </article>
-            );
-          })}
+                  <div className="recipe-tags">
+                    {r.tecnicas.map((t) => {
+                      const info = tecnicaPorId.get(t);
+                      const seleccionada = tecnicasSeleccionadas.has(t);
+                      return (
+                        <button
+                          key={t}
+                          className={
+                            "tag tecnica-tag" + (seleccionada ? " selected" : "")
+                          }
+                          onClick={() => toggleTecnica(t)}
+                          title={info?.descripcion ?? t}
+                        >
+                          {info?.nombre ?? t}
+                        </button>
+                      );
+                    })}
+                  </div>
+                  <p className="recipe-description">{r.descripcionCorta}</p>
+
+                  <div className="recipe-actions">
+                    <button
+                      className="btn-toggle"
+                      onClick={() =>
+                        setExpandida(expandida === r.id ? null : r.id)
+                      }
+                    >
+                      {expandida === r.id
+                        ? "Ocultar detalles ▲"
+                        : "Ver detalles ▼"}
+                    </button>
+                    <button
+                      className="btn-lesson"
+                      onClick={() => generarLeccionParaReceta(r)}
+                      disabled={leccion?.recetaId === r.id && leccion?.loading}
+                    >
+                      {leccion?.recetaId === r.id && leccion?.loading
+                        ? "Generando lección…"
+                        : "Generar lección con IA"}
+                    </button>
+                    <button
+                      className={
+                        "btn-complete" + (completada ? " completed" : "")
+                      }
+                      onClick={() => completarReceta(r)}
+                      disabled={completada}
+                    >
+                      {completada ? "Completada" : "Marcar como completada"}
+                    </button>
+                  </div>
+
+                  {expandida === r.id && (
+                    <>
+                      <div className="ingredients">
+                        <h3>Ingredientes</h3>
+                        <ul>
+                          {r.ingredientes.map((ing, i) => (
+                            <li key={i}>
+                              {ing.cantidad} {ing.nombre}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                      <div className="steps">
+                        <h3>Pasos</h3>
+                        <ol>
+                          {r.pasos.map((p) => (
+                            <li key={p.orden} className="step">
+                              {p.instruccion}
+                              {p.nota && (
+                                <span className="step-note">{p.nota}</span>
+                              )}
+                            </li>
+                          ))}
+                        </ol>
+                      </div>
+                    </>
+                  )}
+
+                  {leccion?.recetaId === r.id && (
+                    <div className="lesson-panel">
+                      <h3>
+                        Lección: {leccion.tecnica}{" "}
+                        {leccion.loading && (
+                          <span className="loading-inline">Generando…</span>
+                        )}
+                      </h3>
+                      {leccion.error && (
+                        <div className="lesson-error">{leccion.error}</div>
+                      )}
+                      {leccion.contenido && (
+                        <div
+                          className="lesson-content markdown-body"
+                          dangerouslySetInnerHTML={renderLeccionMarkdown(
+                            leccion.contenido,
+                          )}
+                        />
+                      )}
+                    </div>
+                  )}
+                </article>
+              );
+            })}
           </div>
         )}
       </section>
