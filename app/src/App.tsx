@@ -386,6 +386,36 @@ function RecetasView({
   renderLeccionMarkdown,
 }: RecetasViewProps) {
   const [busquedaTecnica, setBusquedaTecnica] = useState('');
+  const [activeSuggestion, setActiveSuggestion] = useState(-1);
+  
+  const tecnicasFiltradas = busquedaTecnica
+    ? tecnicasOrdenadas.filter(id => {
+        const t = tecnicaPorId.get(id);
+        const nombre = t?.nombre ?? id;
+        return nombre.toLowerCase().includes(busquedaTecnica.toLowerCase());
+      }).slice(0, 8)
+    : [];
+  
+  function handleTecnicaKeyDown(e: React.KeyboardEvent) {
+    if (e.key === 'ArrowDown') {
+      e.preventDefault();
+      setActiveSuggestion(prev => Math.min(prev + 1, tecnicasFiltradas.length - 1));
+    } else if (e.key === 'ArrowUp') {
+      e.preventDefault();
+      setActiveSuggestion(prev => Math.max(prev - 1, 0));
+    } else if (e.key === 'Enter' && activeSuggestion >= 0) {
+      e.preventDefault();
+      const id = tecnicasFiltradas[activeSuggestion];
+      if (id) {
+        toggleTecnica(id);
+        setBusquedaTecnica('');
+        setActiveSuggestion(-1);
+      }
+    } else if (e.key === 'Escape') {
+      setBusquedaTecnica('');
+      setActiveSuggestion(-1);
+    }
+  }
   
   return (
     <div>
@@ -423,40 +453,56 @@ function RecetasView({
               className="search-input"
               placeholder="Técnica…"
               value={busquedaTecnica}
-              onChange={(e) => setBusquedaTecnica(e.target.value)}
+              onChange={(e) => {
+                setBusquedaTecnica(e.target.value);
+                setActiveSuggestion(-1);
+              }}
+              onKeyDown={handleTecnicaKeyDown}
+              onBlur={() => setTimeout(() => {
+                setBusquedaTecnica('');
+                setActiveSuggestion(-1);
+              }, 200)}
+              role="combobox"
+              aria-expanded={busquedaTecnica.length > 0}
+              aria-controls="tecnica-listbox"
+              aria-activedescendant={activeSuggestion >= 0 ? `tecnica-${tecnicasFiltradas[activeSuggestion]}` : undefined}
+              aria-label="Buscar técnica"
             />
-            {busquedaTecnica && (
-              <div className="tecnica-suggestions">
-                {tecnicasOrdenadas
-                  .filter(id => {
-                    const t = tecnicaPorId.get(id);
-                    const nombre = t?.nombre ?? id;
-                    return nombre.toLowerCase().includes(busquedaTecnica.toLowerCase());
-                  })
-                  .slice(0, 8)
-                  .map(id => {
-                    const t = tecnicaPorId.get(id);
-                    const seleccionada = tecnicasSeleccionadas.has(id);
-                    const dominada = perfilActivo.tecnicasDominadas.includes(id);
-                    return (
-                      <button
-                        key={id}
-                        className={
-                          "tecnica-suggestion" +
-                          (seleccionada ? " selected" : "") +
-                          (dominada ? " mastered" : "")
-                        }
-                        onClick={() => {
-                          toggleTecnica(id);
-                          setBusquedaTecnica('');
-                        }}
-                      >
-                        <span>{t?.nombre ?? id}</span>
-                        {dominada && <span className="mastered-badge">✓</span>}
-                        {seleccionada && <span className="check-icon">✓</span>}
-                      </button>
-                    );
-                  })}
+            {busquedaTecnica && tecnicasFiltradas.length > 0 && (
+              <div 
+                className="tecnica-suggestions"
+                id="tecnica-listbox"
+                role="listbox"
+                aria-label="Técnicas sugeridas"
+              >
+                {tecnicasFiltradas.map((id, idx) => {
+                  const t = tecnicaPorId.get(id);
+                  const seleccionada = tecnicasSeleccionadas.has(id);
+                  const dominada = perfilActivo.tecnicasDominadas.includes(id);
+                  return (
+                    <button
+                      key={id}
+                      id={`tecnica-${id}`}
+                      role="option"
+                      aria-selected={seleccionada}
+                      className={
+                        "tecnica-suggestion" +
+                        (seleccionada ? " selected" : "") +
+                        (dominada ? " mastered" : "") +
+                        (idx === activeSuggestion ? " active" : "")
+                      }
+                      onClick={() => {
+                        toggleTecnica(id);
+                        setBusquedaTecnica('');
+                        setActiveSuggestion(-1);
+                      }}
+                    >
+                      <span>{t?.nombre ?? id}</span>
+                      {dominada && <span className="mastered-badge">✓</span>}
+                      {seleccionada && <span className="check-icon">✓</span>}
+                    </button>
+                  );
+                })}
               </div>
             )}
           </div>
@@ -479,7 +525,7 @@ function RecetasView({
                 </span>
               );
             })}
-            <button className="btn-link search-clear" onClick={limpiarFiltros}>
+            <button className="btn-link search-clear" onClick={limpiarFiltros} aria-label="Limpiar todos los filtros">
               Limpiar
             </button>
           </div>
@@ -540,6 +586,7 @@ function RecetasView({
                       onClick={() =>
                         setExpandida(expandida === r.id ? null : r.id)
                       }
+                      aria-label={expandida === r.id ? `Ocultar detalles de ${r.titulo}` : `Ver detalles de ${r.titulo}`}
                     >
                       {expandida === r.id
                         ? "Ocultar detalles ▲"
@@ -549,6 +596,7 @@ function RecetasView({
                       className="btn-lesson"
                       onClick={() => generarLeccionParaReceta(r)}
                       disabled={leccionPagina?.recetaId === r.id && leccionPagina?.loading}
+                      aria-label={`Generar lección con IA para ${r.titulo}`}
                     >
                       {leccionPagina?.recetaId === r.id && leccionPagina?.loading
                         ? "Generando lección…"
@@ -559,6 +607,7 @@ function RecetasView({
                         "btn-complete" + (completada ? " completed" : "")
                       }
                       onClick={() => completarReceta(r)}
+                      aria-label={completada ? `Desmarcar ${r.titulo} como completada` : `Marcar ${r.titulo} como completada`}
                     >
                       {completada ? "✓ Completada (desmarcar)" : "Marcar como completada"}
                     </button>
