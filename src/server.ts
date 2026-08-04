@@ -17,6 +17,7 @@ import { leerFichas } from "./build/parser.js";
 import { tecnicasDeReceta } from "./build/tecnicas-por-receta.js";
 import { armarRuta } from "./engine/path.js";
 import { generarLeccion } from "./pedagogy/tutor.js";
+import { guardarFeedbackReceta } from "./pedagogy/feedback.js";
 import { loadConfig } from "./pedagogy/llm.js";
 import type { Dificultad, PerfilUsuario, Receta } from "./types.js";
 
@@ -114,6 +115,7 @@ const server = createServer(async (req, res) => {
         recetaId?: number;
         perfilNombre?: string;
         perfil?: PerfilUsuario;
+        forzar?: boolean;
       };
 
       const recetas = loadRecetas();
@@ -138,11 +140,38 @@ const server = createServer(async (req, res) => {
       };
 
       const config = loadConfig();
-      const leccion = await generarLeccion(paso, receta, perfil);
-      sendJson(res, 200, { leccion, provider: config.provider, model: config.model });
+      const leccion = await generarLeccion(paso, receta, perfil, undefined, payload.forzar);
+      sendJson(res, 200, { 
+        leccion, 
+        provider: config.provider, 
+        model: config.model,
+        fueCacheada: leccion.fueCacheada,
+      });
     } catch (err) {
       sendJson(res, 500, {
         error: "No se pudo generar la lección.",
+        detail: err instanceof Error ? err.message : String(err),
+      });
+    }
+    return;
+  }
+
+  if (path === "/api/feedback" && req.method === "POST") {
+    try {
+      const body = await parseBody(req);
+      const payload = JSON.parse(body) as {
+        recetaId: number;
+        resultado: "excelente" | "bien" | "regular" | "mal";
+        problema?: string;
+        comentario?: string;
+        perfil: PerfilUsuario;
+      };
+
+      const resultado = guardarFeedbackReceta(payload);
+      sendJson(res, 200, { ok: true, sugerencias: resultado.sugerencias });
+    } catch (err) {
+      sendJson(res, 500, {
+        error: "No se pudo guardar el feedback.",
         detail: err instanceof Error ? err.message : String(err),
       });
     }
@@ -159,5 +188,5 @@ const server = createServer(async (req, res) => {
 
 server.listen(PORT, () => {
   console.log(`[ensulugar-server] http://localhost:${PORT}`);
-  console.log(`[ensulugar-server] endpoints: /api/recetas, /api/leccion, /api/health`);
+  console.log(`[ensulugar-server] endpoints: /api/recetas, /api/leccion, /api/feedback, /api/health`);
 });

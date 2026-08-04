@@ -27,6 +27,23 @@ interface LeccionState {
   contenido: string | null;
   error: string | null;
   tecnica: string;
+  evaluacion?: {
+    preguntas: Array<{
+      pregunta: string;
+      opciones: string[];
+      correcta: number;
+      explicacion: string;
+    }>;
+  };
+  variaciones?: {
+    variaciones: Array<{
+      nombre: string;
+      cambio: string;
+      desafio: string;
+      nivel: number;
+    }>;
+  };
+  fueCacheada?: boolean;
 }
 
 export default function App() {
@@ -160,6 +177,9 @@ export default function App() {
         contenido: data.leccion.contenido,
         error: null,
         tecnica: data.leccion.tecnica,
+        evaluacion: data.leccion.evaluacion,
+        variaciones: data.leccion.variaciones,
+        fueCacheada: data.fueCacheada,
       });
     } catch (err) {
       setLeccion({
@@ -387,6 +407,60 @@ function RutaView({ ruta, perfil, onSeleccionarTecnica }: RutaViewProps) {
   );
 }
 
+interface QuizQuestionProps {
+  question: {
+    pregunta: string;
+    opciones: string[];
+    correcta: number;
+    explicacion: string;
+  };
+}
+
+function QuizQuestion({ question }: QuizQuestionProps) {
+  const [selected, setSelected] = useState<number | null>(null);
+  const [showExplanation, setShowExplanation] = useState(false);
+  
+  const isCorrect = selected !== null && selected === question.correcta;
+  
+  function handleSelect(idx: number) {
+    if (selected !== null) return; // ya seleccionó
+    setSelected(idx);
+    setShowExplanation(true);
+  }
+  
+  return (
+    <div className="quiz-question">
+      <div className="question-text">{question.pregunta}</div>
+      <div className="options-grid">
+        {question.opciones.map((opcion, idx) => {
+          let stateClass = "";
+          if (selected !== null) {
+            if (idx === question.correcta) stateClass = " correct";
+            else if (idx === selected) stateClass = " incorrect";
+          }
+          
+          return (
+            <button
+              key={idx}
+              className={`option-btn${stateClass}`}
+              onClick={() => handleSelect(idx)}
+              disabled={selected !== null}
+            >
+              {opcion}
+            </button>
+          );
+        })}
+      </div>
+      {showExplanation && (
+        <div className={`explanation ${isCorrect ? "correct" : "incorrect"}`}>
+          {isCorrect ? "✅ ¡Correcto! " : "❌ Incorrecto. "}
+          {question.explicacion}
+        </div>
+      )}
+    </div>
+  );
+}
+
 interface RecetasViewProps {
   recetasFiltradas: Receta[];
   tecnicasSeleccionadas: Set<string>;
@@ -592,12 +666,17 @@ function RecetasView({
 
                   {leccion?.recetaId === r.id && (
                     <div className="lesson-panel">
-                      <h3>
-                        Lección: {leccion.tecnica}{" "}
+                      <div className="lesson-header">
+                        <h3>
+                          Lección: {leccion.tecnica}
+                          {leccion.fueCacheada && (
+                            <span className="badge-cached" title="Lección cacheada">⚡</span>
+                          )}
+                        </h3>
                         {leccion.loading && (
                           <span className="loading-inline">Generando…</span>
                         )}
-                      </h3>
+                      </div>
                       {leccion.error && (
                         <div className="lesson-error">{leccion.error}</div>
                       )}
@@ -608,6 +687,31 @@ function RecetasView({
                             leccion.contenido,
                           )}
                         />
+                      )}
+                      
+                      {leccion.evaluacion && !leccion.loading && (
+                        <div className="quiz-section">
+                          <h4>📝 Ponete a prueba</h4>
+                          {leccion.evaluacion.preguntas.map((q, idx) => (
+                            <QuizQuestion key={idx} question={q} />
+                          ))}
+                        </div>
+                      )}
+                      
+                      {leccion.variaciones && !leccion.loading && (
+                        <div className="variations-section">
+                          <h4>🔀 Variaciones para practicar</h4>
+                          <div className="variations-grid">
+                            {leccion.variaciones.variaciones.map((v, idx) => (
+                              <div key={idx} className="variation-card">
+                                <div className="variation-name">{v.nombre}</div>
+                                <div className="variation-change">{v.cambio}</div>
+                                <div className="variation-challenge">{v.desafio}</div>
+                                <div className="variation-level">Nivel {v.nivel} {estrellas(v.nivel)}</div>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
                       )}
                     </div>
                   )}
